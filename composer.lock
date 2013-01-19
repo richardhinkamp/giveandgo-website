@@ -1,5 +1,5 @@
 {
-    "hash": "67b6c48fa149914f908016534ab05a6a",
+    "hash": "854266c00a4258129d93d62551aa0222",
     "packages": [
         {
             "name": "bobdenotter/bolt",
@@ -356,12 +356,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Silex.git",
-                "reference": "e82a9a3b8ae0d3969a249ff0e61ef94debc5c4df"
+                "reference": "86b9a18de51e289d930cdce7f88a8aedb4053911"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Silex/archive/e82a9a3b8ae0d3969a249ff0e61ef94debc5c4df.zip",
-                "reference": "e82a9a3b8ae0d3969a249ff0e61ef94debc5c4df",
+                "url": "https://github.com/fabpot/Silex/archive/86b9a18de51e289d930cdce7f88a8aedb4053911.zip",
+                "reference": "86b9a18de51e289d930cdce7f88a8aedb4053911",
                 "shasum": ""
             },
             "require": {
@@ -396,7 +396,7 @@
                 "symfony/css-selector": ">=2.1,<2.3-dev",
                 "symfony/dom-crawler": ">=2.1,<2.3-dev"
             },
-            "time": "2013-01-19 07:41:31",
+            "time": "2013-01-19 14:44:48",
             "type": "library",
             "extra": {
                 "branch-alias": {

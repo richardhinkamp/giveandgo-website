@@ -13,6 +13,11 @@
         }
     ],
 
+    "autoload": {
+        "psr-0": {"Local": "./app/src/"}
+    },
+
+
     "require": {
         "bobdenotter/bolt": "dev-paths",
         "twitter/bootstrap": "2.2.*",
