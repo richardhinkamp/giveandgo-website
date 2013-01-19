@@ -1,0 +1,205 @@
+<!doctype html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    {% if app.config.general.debug == true %}
+        <meta content="NOINDEX,NOFOLLOW" name="ROBOTS">
+    {% endif %}
+    <title>{% if record.title is defined %}{{ record.title|striptags }} - {% endif %}{{ app.config.general.sitename }}</title>
+
+    {# <meta name="viewport" content="width=device-width, initial-scale=1"/> #}
+    <link href="/favicon.ico" type="images/ico" rel="SHORTCUT ICON">
+    <link rel="stylesheet" href="/css/layout.css"/>
+    {% if app.config.general.debug != true %}
+        <!-- Google Code for Analytics -->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-430776-10']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+                        'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    {% endif %}
+
+</head>
+
+<body>
+    {% block body_content %}
+        <div id="container">
+        <div id="header1">
+            <a href="/" title="Home" class="headerlogo"><img src="/img/logo2.png" alt="Give & Go" width="444" height="122" title="Give & Go"></a>
+            <a href="/pagina/lid-worden-van-basketbal-vereniging-give-and-go-uit-aalten" title="Lid worden? klik hier" class="lidworden">Lid worden?</a>
+            <img src="/img/silhouette1.png" alt="Give & Go" width="179" height="270" class="silhouette1" title="Give & Go">
+        </div>
+        <div id="menucontainer">
+            <div id="menu">
+                <ul>
+                    <li class="Menu{% if record is defined and record.link == "/pagina/home" %} Selected{% endif %}">
+                        <a href="/" title="Home">Home</a>
+                        <ul>
+                            {% setcontent pages = 'paginas' where { menu: 'Ja' } orderby 'menu_order' %}
+                            {% for entry in pages %}
+                                <li class="Menu">
+                                    <a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.menu_name }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="Menu{% if record is defined and record.link == "/pagina/wedstrijdschema" %} Selected{% endif %}">
+                        <a href="/pagina/wedstrijdschema" title="Wedstrijdschema">Wedstrijdschema</a>
+                    </li>
+                    <li class="Menu{% if mededelingen is defined or ( record is defined and record.contenttype.slug == "mededelingen" ) %} Selected{% endif %}">
+                        <a href="/mededelingen" title="Mededelingen">Mededelingen</a>
+                        <ul>
+                            {% setcontent mededelingen = "mededelingen/latest/5" %}
+                            {% for entry in mededelingen %}
+                                <li class="Menu">
+                                    <a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="Menu{% if wedstrijdverslagen is defined or ( record is defined and record.contenttype.slug == "wedstrijdverslagen" ) %} Selected{% endif %}">
+                        <a href="/wedstrijdverslagen" title="Wedstrijdverslagen">Wedstrijdverslagen</a>
+                        <ul>
+                            {% setcontent wedstrijdverslagen = "wedstrijdverslagen/latest/10" %}
+                            {% for entry in wedstrijdverslagen %}
+                                <li class="Menu">
+                                    <a href="{{ entry.link }}" title="{{ entry.team_id }}: {{ entry.title }}">{{ entry.team_id }}: {{ entry.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="Menu{% if teams is defined or ( record is defined and record.contenttype.slug == "teams" ) %} Selected{% endif %}">
+                        <a href="/teams" title="Teams">Teams</a>
+                        <ul>
+                            {% setcontent teams = "teams" %}
+                            {% for entry in teams %}
+                                <li class="Menu">
+                                    <a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    {#
+                    <li class="Menu">
+                        <a href="/foto-album.html" title="Foto album">Foto album</a>
+                        <ul>
+                            <li class="Menu">
+                                <a href="/foto-album/5794012432477981633/wedstrijden-29-september-2012.html" title="Wedstrijden 29 september 2012">Wedstrijden 29 septem...</a>
+                            </li>
+                            <li class="Menu">
+                                <a href="/foto-album/5752363077263586289/streetball-masters-achterhoek-9-juni-2012.html" title="Streetball Masters Achterhoek - 9 juni 2012">Streetball Masters A...</a>
+                            </li>
+                            <li class="Menu">
+                                <a href="/foto-album/5713894362681108049/u18-wedstrijd-25-feb-2012.html" title="u18 wedstrijd 25 feb 2012">u18 wedstrijd 25 feb 2...</a>
+                            </li>
+                            <li class="Menu">
+                                <a href="/foto-album/5711684895173003665/wedstrijd-u18-18-feb-2012.html" title="Wedstrijd U18 18 feb 2012">Wedstrijd U18 18 feb...</a>
+                            </li>
+                            <li class="Menu">
+                                <a href="/foto-album/5617710487618900625/overige-wedstrijden.html" title="Overige wedstrijden">Overige wedstrijden</a>
+                            </li>
+                            <li class="Menu">
+                                <a href="/foto-album/5617697085358974081/jubileum-25-jaar-basketbal-clinic-matrixx.html" title="Jubileum 25 jaar - Basketbal-Clinic-Matrixx">Jubileum 25 jaar - B...</a>
+                            </li>
+                            <li class="Menu">
+                                <a href="/foto-album/5617711266971287537/3-tegen-3-toernooi-2008.html" title="3-tegen-3 toernooi 2008">3-tegen-3 toernooi 20...</a>
+                            </li>
+                            <li class="Menu">
+                                <a href="/foto-album/5617694117073941201/jubileum-25-jaar-landstede-zwolle-vs-matrixx-magixx.html" title="Jubileum 25 jaar - Landstede-Zwolle-vs-Matrixx-Magixx">Jubileum 25 jaar - La...</a>
+                            </li>
+                            <li class="Menu">
+                                <a href="/foto-album/5617714296100354369/amical-toernooi-2008.html" title="Amical toernooi 2008">Amical toernooi 2008</a>
+                            </li>
+                            <li class="Menu">
+                                <a href="/foto-album/5617688252845048433/wedstrijden-2008-04-12.html" title="Wedstrijden 2008-04-12">Wedstrijden 2008-04-12</a>
+                            </li>
+                        </ul>
+                    </li>
+                    #}
+                </ul>
+            </div>
+        </div>
+        {% setcontent headers = 'headers' limit 1 orderby 'RANDOM' %}
+        {% for header in headers %}
+            <div id="header2" style="background-image:url('{{ header.image|thumbnail(988, 156) }}');"></div>
+        {% endfor %}
+        <div id="contentcontainer">
+            <div id="sidebar">
+                <div id="submenu">
+                    <h2 class="sidebar">
+                        {% block submenu_title %}<a href="/" title="Home">Home</a>{% endblock %}
+                    </h2>
+                    <ul>
+                        {% block submenu_list %}
+                        {% setcontent entries = 'paginas' where { menu: 'Ja' } orderby 'menu_order' %}
+                        {% for entry in entries %}
+                            <li class="Menu">
+                                <a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.menu_name }}</a>
+                            </li>
+                        {% endfor %}
+                        {% endblock %}
+                    </ul>
+                </div>
+                {# <div id="zoeken"><h2 class="sidebar"><a href="/zoeken.html" title="Zoeken">Zoeken</a></h2><form action="/" name="SearchForm" method="POST" onsubmit="return checkForm( this );"><input name="_actionUrl" value="/zoek.html" type="hidden"><input name="_formname" value="SearchForm" type="hidden"><input name="_referrer" value="/" type="hidden"><input name="_actionname" value="SearchAction" type="hidden"><input name="limit" value="10" type="hidden"><input name="parts[informationpages]" value="on" type="hidden"><input name="parts[11]" value="on" type="hidden"><input name="search" value="Zoeken..." type="text" class="Required" onclick="if ( this.value == &quot;Zoeken...&quot; ) { this.value = &quot;&quot; };" onblur="if ( this.value == &quot;&quot; ) { this.value = &quot;Zoeken...&quot; };" id="SearchInput" tabindex="1"><input name="_formcheckType[search]" value="String" type="hidden"><input name="submit" value="Z" type="submit" class="Submit submit" id="SearchSubmit" tabindex="2"></form></div> #}
+                {# <div id="laatstenieuws"></div> #}
+                {# <div id="rss">
+                    <a href="http://www.giveandgo.nl/feed/rss.xml" title="RSS 2.0 feed">RSS<img src="/img/rss.png" alt="XML nieuws feed" width="16" height="16" title="XML nieuws feed"></a>
+                </div> #}
+                <div class="fb-like-box" data-href="http://www.facebook.com/GiveAndGoAalten" data-width="244" data-height="320" data-show-faces="true" data-stream="false" data-header="true"></div>
+            </div>
+            <div id="content">
+                {% block page_content %}{% endblock %}
+            </div>
+        </div>
+        <div id="footer">
+            <a href="#" title="Ga omhoog" class="omhoog"></a>
+            <img src="/img/silhouette2.png" alt="Give & Go" width="95" height="138" class="silhouette2" title="Give & Go">
+            <p class="footer1">
+                &copy; 2006-{{ "now"|date("Y") }} Give &amp; Go - <a href="/sitemap" title="Sitemap">Sitemap</a>
+            </p>
+            <p class="footer2">
+                Correspondentieadres: Grote Maote 70 - 7123 CE Aalten -
+                <a href="mailto:info@giveandgo.nl" title="info@giveandgo.nl">info@giveandgo.nl</a>
+            </p>
+            <div id="footermenu">
+                <ul>
+                    <li class="Menu Selected">
+                        <a href="/" title="Home">Home</a>
+                    </li>
+                    <li class="Menu">
+                        <a href="/pagina/wedstrijdschema" title="Wedstrijdschema">Wedstrijdschema</a>
+                    </li>
+                    <li class="Menu">
+                        <a href="/mededelingen" title="Mededelingen">Mededelingen</a>
+                    </li>
+                    <li class="Menu">
+                        <a href="/wedstrijdverslagen" title="Wedstrijdverslagen">Wedstrijdverslagen</a>
+                    </li>
+                    <li class="Menu">
+                        <a href="/teams" title="Teams">Teams</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    {% endblock %}
+
+    <div id="fb-root"></div><script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1&appId=174357555989898"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    {% block js_files %}{% endblock %}
+</body>
+
+</html>

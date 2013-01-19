@@ -1,0 +1,1086 @@
+@import "style";
+
+/* Algemeen
+-------------------------------------------------------------- */
+
+body, html, div, a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
+p {
+  color: #333;
+  text-align: justify;
+  line-height: 1.6em;
+  margin: 5px 0 15px 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+IMG#PoweredByTractare {
+  height: 16px;
+  margin-bottom: 4px;
+  vertical-align: middle;
+  width: 16px;
+}
+
+/* Body
+-------------------------------------------------------------- */
+
+body {
+  background: #0254a3 url(/img/bg.png) repeat-x top;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1;
+}
+
+/* Container
+-------------------------------------------------------------- */
+
+DIV#container {
+  background: none;
+  width: 988px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* Header1
+-------------------------------------------------------------- */
+
+DIV#header1 {
+  background: none;
+  float: left;
+  height: 156px;
+  width: 988px;
+}
+
+DIV#header1 A.lidworden {
+  background-image: url(/img/lidworden.png);
+  text-indent: -3000em;
+  height: 77px;
+  left: 50%;
+  margin: 43px 0 0 153px;
+  position: absolute;
+  width: 155px;
+  display: block;
+}
+
+DIV#header1 IMG.silhouette1 {
+  background-image: url(/img/silhouette1.png);
+  height: 270px;
+  left: 50%;
+  margin: 36px 0 0 289px;
+  position: absolute;
+  width: 179px;
+  z-index: 99;
+}
+
+/* Logo
+-------------------------------------------------------------- */
+
+A.headerlogo {
+  display: block;
+  float: left;
+  height: 122px;
+  margin: 20px 0 0 0;
+  outline: none;
+  width: 444px;
+}
+
+/* Header2
+-------------------------------------------------------------- */
+
+DIV#header2 {
+  float: left;
+  height: 156px;
+  width: 988px;
+  position: relative;
+  background-image: url(/img/header.jpg);
+}
+
+/* Kruimelpad
+-------------------------------------------------------------- */
+
+DIV#kruimelpad {
+  height: 26px;
+  margin-top: 130px;
+}
+
+DIV#kruimelpad P {
+  color: white;
+  font-size: .8em;
+  line-height: 26px;
+  padding: 0 20px 0 0;
+  text-align: right;
+}
+
+DIV#kruimelpad P span {
+  margin: 0 2px;
+}
+
+DIV#kruimelpad P span A {
+  color: white;
+}
+
+/* Menucontainer
+-------------------------------------------------------------- */
+
+DIV#menucontainer {
+  background: #fff url(/img/menubg.png) repeat-x;
+  float: left;
+  height: 36px;
+  width: 988px;
+}
+
+/* Menu
+-------------------------------------------------------------- */
+
+DIV#menu {
+  float: left;
+  height: 36px;
+  width: 815px;
+}
+
+DIV#menu ul {
+  padding: 0;
+  margin: 0;
+  width: 815px;
+  height: 36px;
+  list-style: none;
+  z-index: 100;
+}
+
+DIV#menu ul li {
+  background: transparent url(/img/menu-bg.png) no-repeat left top;
+  margin: 0 0 0 -1px;
+  float: left;
+  height: 36px;
+
+}
+
+DIV#menu ul li a {
+  background: none;
+  color: black;
+  display: inline-block;
+  font-size: 1.05em;
+  float: left;
+  height: 14px;
+  padding: 11px 0;
+  margin: 0 12px;
+  list-style: none;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  line-height: 1;
+}
+
+DIV#menu ul li:hover a,
+DIV#menu ul li.Selected a,
+DIV#menu ul li.Selected:hover a {
+  color: white;
+  text-decoration: none;
+}
+
+DIV#menu ul li a.submenu {
+  background: transparent url(/img/menupijl.png) no-repeat right center;
+  color: black;
+  display: inline-block;
+  font-size: 1.05em;
+  float: left;
+  height: 14px;
+  padding: 11px 15px 11px 0;
+  margin: 0 12px;
+  list-style: none;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+}
+
+DIV#menu ul li:hover a.submenu,
+DIV#menu ul li.Selected a.submenu,
+DIV#menu ul li.Selected:hover a.submenu {
+  color: white;
+  background: transparent url(/img/menupijl2.png) no-repeat right center;
+  text-decoration: none;
+}
+
+/* Submenu in het Menu ------------------------------------------------- */
+
+#menu ul li ul {
+  display: none;
+  position: absolute;
+  width: 182px;
+  height: auto;
+}
+
+#menu ul li:hover ul {
+  display: block;
+  width: 182px;
+  padding: 0 0 15px 0;
+  margin: 36px 0 0 0;
+  background: transparent url(/img/submenu-bg.png) no-repeat left bottom;
+  behavior: url('/bsl/htc/iepngfix.htc');
+}
+
+#menu ul li:hover ul li {
+  background: none;
+  width: 180px;
+  margin: 0 1px;
+  padding: 0;
+  height: auto;
+  border: none;
+}
+
+#menu ul li:hover ul li a,
+#menu ul li:hover ul li.Selected a {
+  background: transparent url(/img/pijlsubmenu.png) no-repeat 9px 12px !important;
+  border-bottom: 1px solid #d3d3d3;
+  color: #000000 !important;
+  font-size: .9em;
+  font-weight: normal !important;
+  display: block;
+  width: 150px;
+  height: auto;
+  padding: 8px 10px 9px 20px !important;
+  margin: 0;
+  text-align: left;
+  text-decoration: none;
+}
+
+#menu ul li ul li a:hover {
+  color: #FFF !important;
+  background: #eda601 url(/img/pijlsubmenuhover2.png) no-repeat 9px 12px !important;
+}
+
+#menu ul li:hover ul li.Selected a {
+  color: #FFF !important;
+  background: #888888 url(/img/pijlsubmenuhover2.png) no-repeat 9px 12px !important;
+}
+
+/* Menulogin
+-------------------------------------------------------------- */
+
+DIV#menulogin {
+  float: left;
+  height: 36px;
+  margin: 0 0 0 73px;
+  width: 100px;
+  z-index: 101;
+}
+
+DIV#menulogin ul,
+DIV#menulogin ul li {
+  height: 36px;
+  padding: 0;
+  margin: 0;
+  width: 100px;
+  list-style: none;
+}
+
+DIV#menulogin ul li a {
+  background: transparent url(/img/inloggen.png) no-repeat top center;
+  text-indent: -4000em;
+  color: #0052a3;
+  display: block;
+  font-size: 1.05em;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  height: 36px;
+  line-height: 36px;
+  left: 50%;
+  margin-left: 394px;
+  position: absolute;
+  width: 100px;
+  z-index: 101;
+}
+
+DIV#menulogin ul li a:hover {
+  background: transparent url(/img/inloggen.png) no-repeat bottom center;
+}
+
+DIV#menulogin ul li a:hover {
+  color: white;
+}
+
+/* Contentcontainer
+-------------------------------------------------------------- */
+
+DIV#contentcontainer {
+  background: white;
+  float: left;
+  overflow: hidden;
+  width: 988px;
+}
+
+/* Sidebar
+-------------------------------------------------------------- */
+
+DIV#sidebar {
+  border-right: 1px solid #08426c;
+  float: left;
+  padding: 0 18px 0;
+  margin: 20px 0 0 0;
+  width: 244px;
+}
+
+/* Submenu Zijkant
+-------------------------------------------------------------- */
+
+DIV#submenu {
+  float: left;
+  width: 244px;
+}
+
+DIV#submenu ul {
+  margin: 0 0 40px 0;
+  padding: 0;
+  list-style: none;
+}
+
+DIV#submenu ul li {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0;
+  margin: 0;
+  width: 244px;
+}
+
+DIV#submenu ul li a {
+  background: #fff url(/img/pijlsubmenu.png) no-repeat 3px 13px;
+  color: black;
+  display: block;
+  line-height: 1.4em;
+  padding: 6px 6px 6px 14px;
+}
+
+DIV#submenu ul li a:hover,
+DIV#submenu ul li.Selected a,
+DIV#submenu ul li.Selected a:hover {
+  background: #f6e8bc url(/img/pijlsubmenuhover.png) no-repeat 3px 13px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Sidebar H2
+-------------------------------------------------------------- */
+
+H2.sidebar {
+  border-bottom: 3px solid #feb919;
+  color: #333;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0 0 5px 0;
+  width: 244px;
+}
+
+H2.sidebar A {
+  color: #333;
+}
+
+/* Zoeken
+-------------------------------------------------------------- */
+
+DIV#zoeken {
+  background-color: white;
+  float: left;
+  margin: -22px 0 47px 0;
+  padding: 0;
+  width: 244px;
+}
+
+INPUT#SearchInput {
+  background-color: white;
+  background-image: none;
+  border: 1px solid #feb919;
+  margin: 10px 0 0 0;
+  padding: 5px 5px;
+  vertical-align: top;
+  width: 204px;
+  height: 17px;
+  line-height: 17px;
+}
+
+INPUT#SearchInput:focus {
+  background-color: #f6e8bc;
+}
+
+INPUT#SearchSubmit {
+  background-color: #feb919;
+  border-top: 1px solid #feb919;
+  border-left: none;
+  border-bottom: 1px solid #feb919;
+  border-right: 1px solid #feb919;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  height: 29px;
+  margin: 10px 0 0 -5px;
+  outline: none;
+  padding: 0;
+  vertical-align: top;
+  width: 29px;
+}
+
+/* Laatste nieuws en wedstrijdverslagen
+-------------------------------------------------------------- */
+
+DIV#laatstenieuws {
+  background-color: white;
+  float: left;
+  padding: 0;
+  margin: -22px 0 0 0;
+  width: 244px;
+}
+
+DIV#laatstenieuws ul {
+  list-style: none;
+  margin: 0 0 25px 0;
+  padding: 0;
+  width: 244px;
+}
+
+DIV#laatstenieuws ul li {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0;
+  margin: 0;
+  width: 244px;
+}
+
+DIV#laatstenieuws ul li a {
+  display: block;
+  padding: 6px;
+  text-decoration: none;
+}
+
+DIV#laatstenieuws ul li a span {
+  color: black;
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+DIV#laatstenieuws ul li a span.datum {
+  font-weight: bold;
+}
+
+DIV#laatstenieuws ul li a span.bericht {
+  margin: 0 0 0 10px;
+}
+
+DIV#laatstenieuws ul li a:hover {
+  background-color: #f6e8bc;
+}
+
+/* RSS knopje
+-------------------------------------------------------------- */
+
+DIV#rss {
+  float: left;
+  margin: -15px 0 10px 0;
+  padding: 0;
+  text-align: right;
+  width: 244px;
+}
+
+DIV#rss IMG {
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+DIV#rss A {
+  color: #999;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+DIV#rss A:hover {
+  color: #999;
+  text-decoration: none;
+}
+
+/* Content
+-------------------------------------------------------------- */
+
+DIV#content {
+  border-left: 1px solid #08426c;
+  float: left;
+  margin: 20px 0 0 -1px;
+  padding: 0 22px;
+  width: 663px;
+}
+
+/* Footer
+-------------------------------------------------------------- */
+
+DIV#footer {
+  background: transparent url(/img/footerbg.png) repeat-x top left;
+  float: left;
+  height: 112px;
+  width: 988px;
+}
+
+DIV#footer IMG.silhouette2 {
+  background-image: url(/img/silhouette2.png);
+  height: 138px;
+  left: 50%;
+  margin: -27px 0 0 -494px;
+  position: absolute;
+  width: 95px;
+}
+
+DIV#footer A.omhoog {
+  background-image: url(/img/blank.png);
+  display: block;
+  height: 36px;
+  left: 50%;
+  margin: 20px 0 0 -494px;
+  position: absolute;
+  width: 25px;
+  z-index: 101;
+}
+
+DIV#footer A.omhoog:hover {
+  background: transparent url(/img/pijlomhoog.png) no-repeat center;
+}
+
+DIV#footer P.footer1,
+DIV#footer P.footer2 {
+  color: white;
+  float: left;
+  font-size: .8em;
+  font-weight: bold;
+  height: 36px;
+  line-height: 36px;
+}
+
+DIV#footer P.footer1 {
+  margin: 20px 0 0 100px;
+  width: 435px
+}
+
+DIV#footer P.footer2 {
+  text-align: right;
+  margin: 20px 10px 0 0;
+  width: 443px;
+}
+
+DIV#footer P.footer1 A,
+DIV#footer P.footer2 A {
+  color: white;
+}
+
+DIV#footer P.footer1 A:hover,
+DIV#footer P.footer2 A:hover {
+  color: #fff;
+}
+
+DIV#footermenu {
+  display: inline;
+  float: left;
+  height: 112px;
+  text-align: right;
+  margin: 0 0 0 400px;
+  width: 588px;
+}
+
+DIV#footermenu ul {
+  padding: 0;
+  margin: 2px -9px 0 0;
+  list-style: none;
+  float: right;
+}
+
+DIV#footermenu ul li {
+  margin: 0;
+  padding: 5px 8px 0;
+  border-right: 1px solid #728363;
+  float: left;
+}
+
+DIV#footermenu ul li a {
+  color: #aa9a42;
+  font-size: .8em;
+  list-style: none;
+  text-align: center;
+  text-decoration: none;
+}
+
+DIV#footermenu ul li a:hover,
+DIV#footermenu ul li.Selected a:hover {
+  color: #c0d4e8;
+}
+
+DIV#footermenu ul li a:hover,
+DIV#footermenu ul li.Selected a,
+DIV#footermenu ul li.Selected a:hover {
+  text-decoration: none;
+}
+
+/* Content opmaak
+-------------------------------------------------------------- */
+
+DIV.NewsContainer {
+  border: 1px solid #eee;
+  background-color: #fcfcfc;
+  margin: 10px;
+}
+
+DIV.NewsContainer H2 {
+  color: #3f80b6;
+  margin: 2px;
+  margin-left: 3px;
+}
+
+DIV.News {
+  padding: 3px;
+  border-top: 1px solid #eee;
+  background-color: #fefefe;
+}
+
+DIV.News SPAN.Date {
+  color: #666;
+  font-size: 9pt;
+}
+
+p.ReadMore {
+  border-bottom: 1px solid #E5E5E5;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.NewsItemIntroInfo {
+  margin: 0;
+  padding: 0;
+}
+
+.NewsItemIntro p.Intro {
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+p.NewsItemInfo {
+  font-size: 11px;
+  color: #999;
+  margin: 0;
+  padding: 0;
+}
+
+div.NewsItemBottom,
+div.IntroListBottom {
+  border-top: 1px solid #E5E5E5;
+}
+
+.NewsItemIntro h2 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  padding: 6px 0;
+}
+
+DIV.News DIV.Reactions {
+  font-size: 9pt;
+  text-align: right;
+}
+
+DIV.TeamMenu {
+  width: 125px;
+  float: right;
+  margin-left: 5px;
+}
+
+DIV.TeamMenu DIV {
+  border: 1px solid #0254a3;
+  color: red;
+  background-color: #fff;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+DIV#IFrame.TeamMenu {
+  width: 655px;
+  float: left;
+  margin: 0;
+}
+
+DIV#IFrame.TeamMenu DIV {
+  float: left;
+  margin: 2px 10px 2px 0;
+}
+
+DIV.TeamMenu DIV A {
+  display: block;
+  height: 16px;
+  line-height: 16px;
+  color: black;
+  padding: 5px;
+}
+
+DIV.TeamMenu DIV A:hover {
+  background: #feb919;
+  text-decoration: none;
+}
+
+TABLE.Speler TH {
+  text-align: left;
+  background-color: #fafafa;
+  width: 150px;
+}
+
+TABLE.Speler TD {
+  border-bottom: 1px solid #fafafa;
+  width: 150px;
+  padding-left: 5px;
+}
+
+DIV.SpelerLeft {
+  float: left;
+  width: 45%;
+  padding-left: 20px;
+}
+
+DIV.SpelerRight {
+  float: right;
+  width: 45%;
+  padding-right: 20px;
+}
+
+IFRAME {
+  border: 0;
+}
+
+INPUT.Required, SELECT.Required, TEXTAREA.Required {
+  background-color: white;
+}
+
+INPUT, SELECT, TEXTAREA {
+  border: 1px solid black;
+  padding: 2px;
+}
+
+DIV.Reaction DIV.Meta {
+  border-top: 1px solid #4e8fc7;
+  padding: 2px;
+  border-bottom: 1px solid #4e8fc7;
+  background-color: #f5f8fd;
+}
+
+DIV.Reaction DIV.Content {
+  padding: 2px;
+  padding-bottom: 5px;
+}
+
+DIV.ReactNew {
+  text-align: left;
+  height: auto;
+  padding: 5px 0;
+}
+
+TABLE.React {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+TABLE.React TEXTAREA {
+  width: 400px;
+}
+
+TABLE.Gallery,
+TABLE.Gallery TH,
+TABLE.Gallery TD,
+TABLE.VisitorLogin,
+TABLE.VisitorLogin TH,
+TABLE.VisitorLogin TD,
+TABLE.VisitorRequest,
+TABLE.VisitorRequest TH,
+TABLE.VisitorRequest TD,
+TABLE.VisitorRegister,
+TABLE.VisitorRegister TH,
+TABLE.VisitorRegister TD,
+TABLE.React,
+TABLE.React TH,
+TABLE.React TD {
+  border: 0;
+}
+
+DIV#GMap {
+  width: 600px;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+DIV#GMap DIV SPAN {
+  font-size: 6pt;
+}
+
+DIV#GMap DIV SPAN.gmapDirHead {
+  font-size: 10pt;
+}
+
+DIV#GMap INPUT {
+  padding: 2px 3px 2px 3px;
+  margin: 0;
+  vertical-align: middle;
+  line-height: auto;
+}
+
+DIV#GMap INPUT.gmapDirButton {
+  background-color: #4e8fc7;
+  color: white;
+  font-weight: bold;
+  width: auto;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 0;
+}
+
+DIV#GMap INPUT.gmapTextBox {
+  width: 200px;
+}
+
+P.gmapDirItem {
+  width: 350px;
+}
+
+BODY#IE P.gmapDirItem {
+  width: 390px;
+}
+
+TD span.Comment {
+  margin: 5px 0px;
+  display: block;
+}
+
+TD.Submit {
+  padding: 10px;
+}
+
+TD.Submit INPUT.Submit {
+  border: none;
+  color: #fff;
+  background-color: #feb919;
+  padding: 3px;
+  margin: 0;
+}
+
+TD.Submit INPUT.Submit:hover,
+TD.Submit INPUT.Submit:focus {
+  color: #000;
+  cursor: pointer;
+}
+
+SELECT#tickets {
+  width: 50px;
+}
+
+/* Wedstrijdverslagen
+-------------------------------------------------------------- */
+
+DIV.Intro {
+  line-height: 1.4em;
+  padding: 5pt 0;
+}
+
+DIV.NewsItem {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+
+DIV.RowMore {
+  text-align: center;
+  padding: 10px;
+}
+
+DIV.RowMore A:hover {
+  text-decoration: underline;
+}
+
+div#content UL.NewsLinksHome {
+  margin-left: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+
+div#content UL.NewsLinksHome LI {
+  list-style: none;
+  background: none;
+  padding: 0;
+  margin-bottom: 8pt;
+}
+
+div#content UL.NewsLinksHome LI DIV.Date {
+  margin-bottom: 3px;
+  font-size: 9pt;
+  font-style: italic;
+}
+
+TABLE.Gallery TD DIV.Category A {
+  color: #feb919;
+}
+
+TABLE.Gallery TD DIV.Category DIV.Description {
+  color: #666;
+}
+
+DIV.PhotoalbumCategoryBlock,
+DIV.PhotoalbumImageBlock {
+  height: 150px;
+  width: 190px;
+  border: 0;
+  background-color: white;
+}
+
+DIV.PhotoalbumCategoryBlock {
+  height: 25px;
+  line-height: 25px;
+}
+
+DIV.PhotoalbumCategoryBlock H3 {
+  margin: 0;
+}
+
+DIV#PhotoalbumCategoriesContainer,
+DIV#PhotoalbumImagesContainer {
+  border: 0;
+}
+
+DIV.Browse {
+  clear: left;
+  padding-top: 20px;
+}
+
+DIV.Browse A,
+DIV.Browse SPAN.Current {
+  text-align: center;
+  padding: 5px 9px;
+  line-height: 20px;
+  border: 1px solid gray;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+DIV.Browse A:hover {
+  border: 1px solid black;
+}
+
+DIV.Browse A.Disabled {
+  color: #666;
+}
+
+DIV.Browse A.Disabled:hover {
+  border: 1px solid gray;
+}
+
+DIV.Browse SPAN.Current {
+  font-weight: bold;
+  border: 1px solid gray;
+}
+
+/* Picasa */
+
+ul.albums,
+#album-photos ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul.albums li {
+  margin: 0;
+  padding: 20px 10px 20px 10px;
+  list-style: none;
+  float: left;
+  width: 180px;
+  text-align: center;
+  border: 1px solid #ccc;
+  height: 180px;
+  margin-bottom: 14px;
+  margin-right: 14px;
+  box-shadow: 1px 1px 4px #ccc;
+}
+
+ul.albums h2 {
+  font-size: 12px;
+}
+
+#album-photos ul li {
+  list-style: none;
+  float: left;
+  margin: 10px;
+}
+
+.youtubeThumb {
+  width: 320;
+  height: 240;
+}
+
+body.full-width div#sidebar {
+  display: none;
+}
+
+body.full-width div#content {
+  width: 944px;
+}
+
+div#newsdiv1 {
+  width: 300px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  float: left;
+}
+
+div#newsdiv2 {
+  width: 300px;
+  border-left: 1px solid #B3CBE3;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: -1px;
+}
+
+div#newsdiv {
+  border-top: 1px solid #B3CBE3;
+  float: left;
+  overflow: hidden;
+  border-bottom: 1px solid #B3CBE3;
+  margin-bottom: 10pt;
+}
+
+li.newsitembottom {
+  border-bottom: 1px solid #b3cbe3;
+  font-size: 11pt;
+}
+
+p.ReadMore {
+  border-bottom: 0px !important;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+p.Intro {
+  height: 65px;
+  overflow: hidden;
+}
+
+#streetball-masters-achterhoek {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 150px;
+  height: 128px;
+  z-index: 200;
+}
+
+.picasa-page #navigation {
+  display: none;
+}

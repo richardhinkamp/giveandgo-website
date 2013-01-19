@@ -1,0 +1,36 @@
+{
+    "name": "richardhinkamp/zobriuz",
+    "description": "Zobriuz website",
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/richardhinkamp/bolt"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/jlong/sass-twitter-bootstrap"
+        }
+    ],
+
+    "require": {
+        "bobdenotter/bolt": "dev-paths",
+        "twitter/bootstrap": "2.2.*",
+        "leafo/scssphp": "*"
+    },
+    "require-dev": {
+    },
+    "minimum-stability": "dev",
+    "scripts": {
+        "post-install-cmd": [
+            "Bolt\\Composer\\ScriptHandler::installAssets"
+        ],
+        "post-update-cmd": [
+            "Bolt\\Composer\\ScriptHandler::installAssets"
+        ]
+    },
+    "extra": {
+        "bolt-web-dir": "web",
+        "bolt-dir-mode": "0755"
+    }
+}

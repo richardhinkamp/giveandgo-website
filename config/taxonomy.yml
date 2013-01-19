@@ -1,0 +1,40 @@
+# This file defines the different types of taxonomies in Bolt. This will be
+# further developed and documented, as we get closer to version 1.0.
+
+tags:
+    slug: tags
+    singular_slug: tag
+    behaves_like: tags
+
+#chapters:
+#    slug: chapters
+#    singular_slug: chapter
+#    behaves_like: grouping
+#    options: [ main, meta, other ]
+#
+#categories:
+#    name: Categories
+#    slug: categories
+#    singular_name: Category
+#    singular_slug: category
+#    behaves_like: categories
+#    multiple: 1
+#    options: [ news, events, movies, music, books, life, love, fun ]
+
+teams:
+    name: Teams
+    slug: for-teams
+    singular_name: Team
+    singular_slug: for-team
+    behaves_like: categories
+    multiple: 0
+    options: [ U10, U12, U14, U16M, U18, D1, H1, RC ]
+
+auteurs:
+    name: Auteurs
+    slug: auteurs
+    singular_name: Auteur
+    singular_slug: auteur
+    behaves_like: categories
+    multiple: 0
+    options: [ "Edward Jansen", "Tom Eugelink", "Ed Nawijn", "Karin Mateman" ]

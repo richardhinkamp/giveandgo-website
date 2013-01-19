@@ -1,0 +1,110 @@
+.head {
+    background-color: #feb919;
+    color: black;
+}
+TR.light, TR.dark
+{
+  background: WHITE;
+}
+
+TR.dark TH
+{
+    background-color: #eee;
+}
+
+.highlight {
+ color : #F75A08;
+}
+.gh {
+  background: #1319C7;
+  color: WHITE;
+  font-weight: bold;
+  font-family : Arial;
+  font-size: 12px;
+}
+.bd {
+  background: black;
+  padding: 0;
+}
+.msg {
+
+font-size : 14px;
+}
+.titel {
+display: none;
+color : #F75A08;
+}
+.ads {
+
+}
+
+/* GnG enhancements */
+
+TABLE
+{
+    margin: 0;
+    width: 600px;
+}
+
+TD.bd TABLE TH.head
+{
+    width: 600px;
+}
+
+TD.bd TABLE TR.dark TD
+{
+    background-color: #fcfcfc;
+}
+
+td.bd table td
+{
+    text-align: center;
+}
+
+td.bd table td:nth-child(1)
+{
+    width: 65px;
+}
+
+td.bd table td:nth-child(2)
+{
+    width: 100px;
+}
+
+td.bd table td:nth-child(3)
+{
+    width: 165px;
+}
+
+td.bd table td:nth-child(5)
+{
+    width: 70px;
+}
+
+BODY, TABLE, INPUT, SELECT, TEXTAREA
+{
+    font-family: Arial, helvetica, sans-serif;
+    font-size: 9pt;
+}
+
+A
+{
+    display: none;
+}
+
+A:hover
+{
+    text-decoration: underline;
+}
+
+TD, TH
+{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+BODY
+{
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,21 @@
+{% extends "page.twig" %}
+
+{% block page_content %}
+    <h1>Onze teams</h1>
+    <ul>
+    {% for record in records %}
+        <li><a href="{{ record.link }}" title="{{ record.title }}">{{ record.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block submenu_title %}<a href="/teams" title="Teams">Teams</a>{% endblock %}
+
+{% block submenu_list %}
+    {% setcontent entries = "teams" %}
+    {% for entry in entries %}
+        <li class="Menu">
+            <a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.title }}</a>
+        </li>
+    {% endfor %}
+{% endblock %}

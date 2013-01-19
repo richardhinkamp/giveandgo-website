@@ -1,0 +1,6 @@
+.idea/
+vendor/
+.sass-cache/
+web/bolt-public/
+web/files/*
+config/config_local.yml

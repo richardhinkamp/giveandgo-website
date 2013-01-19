@@ -1,0 +1,250 @@
+/*
+ * Corrects `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+/*
+ * Corrects `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/*
+ * Addresses styling for `hidden` attribute not present in IE 8/9.
+ */
+[hidden] {
+  display: none;
+}
+
+$linkColor:             #6D88B9;
+$iconSpritePath:          "/bolt-public/view/img/glyphicons-halflings.png"; // TODO
+$iconWhiteSpritePath:     "/bolt-public/view/img/glyphicons-halflings-white.png"; // TODO
+
+//@import "../../lib/bsl/scss/base-styling.scss";
+@import "../../vendor/twitter/bootstrap/twitter/bootstrap/lib/variables";
+
+$baseFontFamily:        $serifFontFamily;
+$altFontFamily:         $sansFontFamily;
+
+@import "../../vendor/twitter/bootstrap/twitter/bootstrap/lib/mixins";
+@import "../../vendor/twitter/bootstrap/twitter/bootstrap/lib/reset";
+@import "../../vendor/twitter/bootstrap/twitter/bootstrap/lib/type";
+@import "../../vendor/twitter/bootstrap/twitter/bootstrap/lib/scaffolding";
+
+BODY {
+    background-color: white;
+    color: #333;
+    margin: 0;
+    padding: 5px;
+}
+
+BODY, TABLE, INPUT, SELECT, TEXTAREA {
+    font-family: Arial, helvetica, sans-serif;
+    font-size: 10pt;
+}
+
+INPUT.Radio, INPUT.RadioRequired, INPUT.CheckBox, INPUT.CheckBoxRequired {
+    border: 0px;
+    width: inherit;
+    height: inherit;
+}
+
+BODY#IE INPUT.Radio, BODY#IE INPUT.RadioRequired, BODY#IE INPUT.CheckBox, BODY#IE INPUT.CheckBoxRequired {
+    border: 0px;
+    width: 13px;
+    height: 13px;
+    background-color: transparent;
+}
+
+A {
+    color: #0253a3;
+    outline:none;
+}
+
+A:hover {
+    text-decoration: underline;
+}
+
+DIV#content P A {
+    font-weight: bold;
+}
+
+H1 {
+    color:#feb919;
+    font-size: 1.7em;
+    margin: 0 0 12px 0;
+    padding: 0 0 12px 0;
+    font-weight: normal;
+    border-bottom: 1px dotted #08426c;
+}
+
+H2 {
+    color: #0254a3;
+    font-size: 1.4em;
+    margin: 15px 0 15px 0;
+    font-weight: normal;
+}
+
+H3 {
+    color: #0254a3;
+    font-size: 1.1em;
+    margin: 15px 0 5px 0;
+}
+
+H4, H5, H6 {
+    font-size: 1.1em;
+    margin-top: 8px;
+}
+
+P, LI {
+    margin-top: 0;
+    margin-bottom: 5pt;
+}
+
+UL {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+IMG {
+    border: 0;
+}
+
+FORM {
+    margin: 0;
+    padding: 0;
+}
+
+HR {
+    border: 0;
+    height: 1px;
+    background-color: #4e8fc7;
+}
+
+TABLE {
+    border:none;
+    border-collapse:collapse;
+    line-height: 1.6em;
+}
+
+TH, TD {
+    border: 1px solid #08426c;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+TABLE.NoBorder,
+TABLE.NoBorder TH,
+TABLE.NoBorder TD {
+    border: 0;
+}
+
+INPUT.Submit {
+    background-color: #3f80b6;
+    color: white;
+    font-weight: bold;
+}
+
+TABLE.Roster {
+    width: 100%;
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+}
+
+TABLE.Roster TH {
+    background-color: #0254a3;
+    color: white;
+    padding: 5px;
+}
+
+TABLE.Roster TH.Date {
+    background-color: #feb919;
+    color: white;
+    padding: 5px 10px;
+    text-align: left;
+}
+
+TABLE.Roster TR.Change {
+    background-color: orange;
+}
+
+TABLE.Roster .Time {
+    text-align: left;
+    width: 50px;
+}
+
+TABLE.Roster .Team {
+    text-align: left;
+}
+
+TABLE.Roster .Oponent,
+TABLE.Roster .Town,
+TABLE.Roster .Gym {
+    text-align: left;
+}
+
+TABLE.Roster TD.Shirts,
+SPAN.Shirts {
+    background-color: #f6e8bc;
+    color:black;
+}
+
+.Toernooi
+{
+    background-color: #ddd;
+    color: black;
+}
+
+.Hal
+{
+    background-color: #0e0;
+    color: black;
+}
+
+
+TABLE.Roster TH.OtherDay {
+    background-color: #eea601;
+}
+
+
+DIV#content ul li a    {
+    font-weight: bold;
+}
+
+table.bestuur
+{
+    width: 390px;
+    float: left;
+    margin: 0 3px;
+}
+
+table.bestuur td:nth-child(2)
+{
+    width: 150px;
+}
+
+table.bestuur td:last-child
+{
+    width: 75px;
+}

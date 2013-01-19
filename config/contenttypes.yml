@@ -1,0 +1,163 @@
+# This file defines the contenttypes on the website. See the documentation for
+# details: http://docs.bolt.cm/content#defining-contenttypes
+
+wedstrijdverslagen:
+    name: Wedstrijdverslagen
+    singular_name: Wedstrijdverslag
+    fields:
+        title:
+            type: text
+            class: large
+        slug:
+            type: slug
+            uses: title
+        date:
+            type: date
+        team_id:
+            type: select
+            label: Team
+            values: [ U10, U12, U14, U16M, U18, D1, H1, RC ]
+        teaser:
+            type: textarea
+        body:
+            type: html
+            height: 300px
+    taxonomy: [ auteurs ]
+    record_template: wedstrijdverslagen-detail.twig
+    listing_template: wedstrijdverslagen-list.twig
+    listing_records: 10
+    sort: date DESC
+    recordsperpage: 10
+    rss:
+      enabled: true
+      feed_records: 10
+      feed_template: rss.twig
+      content_length: 250
+
+mededelingen:
+    name: Mededelingen
+    singular_name: Mededeling
+    fields:
+        title:
+            type: text
+            class: large
+        slug:
+            type: slug
+            uses: title
+        date:
+            type: date
+        teaser:
+            type: textarea
+        body:
+            type: html
+            height: 300px
+    record_template: mededelingen-detail.twig
+    listing_template: mededelingen-list.twig
+    listing_records: 10
+    sort: date DESC
+    recordsperpage: 10
+    rss:
+      enabled: true
+      feed_records: 10
+      feed_template: rss.twig
+      content_length: 250
+
+page:
+    name: Paginas
+    singular_name: Pagina
+    fields:
+        title:
+            type: text
+            class: large
+        slug:
+            type: slug
+            uses: title
+        introduction:
+            type: html
+            height: 150px
+        body:
+            type: html
+            height: 300px
+        menu:
+            type: select
+            label: In menu?
+            values: [ Nee, Ja ]
+        menu_name:
+            type: text
+            class: large
+            label: Naam in menu
+        menu_order:
+            type: integer
+            label: Menu sortering
+        template:
+            type: templateselect
+            filter: 'page-*.twig'
+    sort: title
+    recordsperpage: 100
+    record_template: page.twig
+
+team:
+    name: Teams
+    singular_name: Team
+    fields:
+        title:
+            type: text
+            class: large
+        slug:
+            type: slug
+            uses: title
+        introduction:
+            type: html
+            height: 150px
+        body:
+            type: html
+            height: 300px
+        team_id:
+            type: select
+            label: Team
+            values: [ U10, U12, U14, U16M, U18, D1, H1, RC ]
+        nbb_competitie_id:
+            type: integer
+            label: NBB Competitie ID
+        nbb_team_id:
+            type: integer
+            label: NBB Team ID
+        menu_order:
+            type: integer
+            label: Menu sortering
+    taxonomy: [ teams ]
+    sort: menu_order
+    record_template: team-detail.twig
+    listing_template: team-list.twig
+    listing_records: 100
+    recordsperpage: 100
+
+header:
+    name: Headers
+    singular_name: Header
+    fields:
+        title:
+            type: text
+            class: large
+        image:
+            type: image
+    sort: name
+
+
+# possible field types:
+# text - varchar(256) - input type text.
+# integer - integer - Input field for integer numbers.
+# float - double - Input field for floating numbers, stored as 'Double'.
+# geolocation - text (65kb) - Input field for geolocation. Enter an address, and the location is geocoded to latitude/longitude coordinates
+# imagelist - text (65kb) - Input type for imagelists. Add multiple images with a description. Useful for image sliders, galleries, etcetera.
+# image - varchar(256) - image select/upload widget, stored as filename.
+# file - varchar(256) - file select/upload widget, stored as filename.
+# video - varchar(256) - Video embed widget, stored as filename.
+# html - text (65kb) - wysiwyg element.
+# textarea - varchar(32768) - Simple, plain < textarea > field.
+# datetime - datetime - date and time selector widget.
+# date - datetime - date selector widget.
+# templateselect - varchar(256) - select with template filenames
+
+
+# number (deprecated) - input type decimal(18,9), useful for storing number that need to be sortable

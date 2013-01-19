@@ -1,0 +1,11 @@
+{% extends "layout/layout.twig" %}
+
+{% block page_content %}
+    <h1>Sitemap</h1>
+    <ul>
+        {% for entry in entries %}
+            <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

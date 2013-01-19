@@ -1,0 +1,46 @@
+{% extends "page.twig" %}
+
+{% block page_content %}
+    {% setcontent wedstrijdverslagen = "wedstrijdverslagen/latest/5" where { team_id: record.team_id }  %}
+    <h1>{{ record.title }}</h1>
+    <div class="TeamMenu">
+        {% if wedstrijdverslagen is not empty %}
+            <div><a href="#wedstrijdverslagen" title="Wedstrijdverslagen van {{ record.title }}">Wedstrijdverslagen</a></div>
+        {% endif %}
+        {% if record.nbb_competitie_id > 0 and record.nbb_team_id > 0 %}
+            <div><a href="#stand" title="Stand van {{ record.title }}">Stand</a></div>
+            <div><a href="#uitslagen" title="Uitslagen van {{ record.title }}">Uitslagen</a></div>
+        {% endif %}
+    </div>
+    {{ record.body }}
+    {% if wedstrijdverslagen is not empty %}
+        <a name="wedstrijdverslagen"></a>
+        <h2>Wedstrijdverslagen</h2>
+        <ul class="latest-blogs">
+        {% for entry in wedstrijdverslagen %}
+            <li><a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.date|date("d-m")}} {{ entry.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if record.nbb_competitie_id > 0 and record.nbb_team_id > 0 %}
+        <a name="stand"></a>
+        <h2>Stand</h2>
+        <iframe height="950" width="100%" frameborder="0" src="http://west.basketball.nl/db/wedstrijd/stand.pl?szn_Naam=2012-2013&amp;cmp_ID={{ record.nbb_competitie_id }}&amp;menubalk=off&amp;title=off&amp;link=off&amp;CSS={{ app.paths.hosturl }}/css/nbbdb.css"></iframe>
+        <br>
+        <a name="uitslagen"></a>
+        <h2>Uitslagen</h2>
+        <iframe height="1650" width="100%" frameborder="0" src="http://west.basketball.nl/db/wedstrijd/uitslag.pl?szn_Naam=2012-2013&amp;cmp_ID={{ record.nbb_competitie_id }}&amp;Sorteer=wed_Datum&amp;LVactie=Wedstrijdgegevens&amp;plg_ID={{ record.nbb_team_id }}&amp;CSS=http://www.giveandgo.nl/css/nbbdb.css&amp;menubalk=off&amp;title=off&amp;link=off"></iframe>
+    {% endif %}
+{% endblock %}
+
+{% block submenu_title %}<a href="/teams" title="Teams">Teams</a>{% endblock %}
+
+{% block submenu_list %}
+    {% setcontent entries = "teams" %}
+    {% for entry in entries %}
+        <li class="Menu">
+            <a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.title }}</a>
+        </li>
+    {% endfor %}
+{% endblock %}
