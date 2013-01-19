@@ -13,16 +13,21 @@ wedstrijdverslagen:
             uses: title
         date:
             type: date
+        auteur:
+            type: select
+            label: Auteur
+            values: [ "Give & Go", "Bestuur", "Edward Jansen", "Tom Eugelink", "Richard Hinkamp", "NBB", "Ed Nawijn", "Igor Hoogakker", "Jeroen Melissen",  "Ria Scholten",  "Chantal Onnink", "Wedstrijdsecretariaat",  "Robin Fukking", "Femke Ormel" ]
         team_id:
             type: select
             label: Team
-            values: [ U10, U12, U14, U16M, U18, D1, H1, RC ]
+            values: [ U10, U12, U14, U16, U16M, U18, U20, D1, H1, RC ]
         teaser:
             type: textarea
         body:
             type: html
             height: 300px
-    taxonomy: [ auteurs ]
+        old_id:
+            type: integer
     record_template: wedstrijdverslagen-detail.twig
     listing_template: wedstrijdverslagen-list.twig
     listing_records: 10
@@ -46,11 +51,17 @@ mededelingen:
             uses: title
         date:
             type: date
+        auteur:
+            type: select
+            label: Auteur
+            values: [ "Give & Go", "Tom Eugelink", "Ed Nawijn", "Karin Mateman", "Edward Jansen", "Richard Hinkamp", "Alco Joling", "Yvo Taken", "Johan Scholten", "Ria Scholten", "Chantal Onnink", "Ingelot klein Geltink", "Frank Hakstege", "Marca Adema", "Paul Knipscheer", "Saskia Hakstege", "Teysir Turunc" ]
         teaser:
             type: textarea
         body:
             type: html
             height: 300px
+        old_id:
+            type: integer
     record_template: mededelingen-detail.twig
     listing_template: mededelingen-list.twig
     listing_records: 10
@@ -115,7 +126,7 @@ team:
         team_id:
             type: select
             label: Team
-            values: [ U10, U12, U14, U16M, U18, D1, H1, RC ]
+            values: [ U10, U12, U14, U16, U16M, U18, U20, D1, H1, RC ]
         nbb_competitie_id:
             type: integer
             label: NBB Competitie ID
@@ -141,7 +152,6 @@ header:
             class: large
         image:
             type: image
-    sort: name
 
 
 # possible field types:
