@@ -3,5 +3,6 @@ vendor/
 .sass-cache/
 web/bolt-public/
 web/files/*
+web/upload/*
 config/config_local.yml
 tmp/
