@@ -1,0 +1,6 @@
+{% extends "page.twig" %}
+
+{% block page_content %}
+    <h1>{{ record.title }}</h1>
+    <p>De gevraagde URL "{{ app.request.getRequestUri }}" kon niet gevonden worden.</p>
+{% endblock %}
