@@ -1,13 +1,6 @@
 <article class="news-intro">
-    {% if record.image!="" %}
-        <div class='imageholder'><img src="{{ record.image|thumbnail(120, 120) }}">
-        </div>
-    {% endif %}
-
-    <h2><a href="{{ record.link }}">{{ record.title }}</a></h2>
+    <h2><a href="{{ record.link }}">{% if record.team_id is defined %}{{ record.team_id }}: {% endif %}{{ record.title }}</a></h2>
     <p class="meta">Geplaatst op {{ record.date|date("d-m-Y")}}</p>
-
-    {{ record.teaser }}
-
+    <p class="teaser">{{ record.teaser }}</p>
     <p class="read-more"><a href="{{ record.link }}">Lees verder »</a></p>
 </article>

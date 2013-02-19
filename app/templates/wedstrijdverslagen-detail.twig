@@ -24,7 +24,7 @@
     {% setcontent entries = "wedstrijdverslagen/latest/10" %}
     {% for entry in entries %}
         <li class="Menu">
-            <a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.date|date("d-m")}} {{ entry.title }}</a>
+            <a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.date|date("d-m")}} {{ entry.team_id }}: {{ entry.title }}</a>
         </li>
     {% endfor %}
 {% endblock %}

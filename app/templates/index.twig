@@ -4,20 +4,36 @@
     {{ parent() }}
 
     <div id="newsdiv">
-        <div id="newsdiv1">
+        <div id="newsdiv1" class="index-news">
             <h2>Laatste mededelingen</h2>
-            {% setcontent entries = "mededelingen/latest/4" %}
+            {% setcontent entries = "mededelingen/latest/1" %}
             {% for entry in entries %}
-                {% include 'blocks/news-intro.twig' with {'record': entry} only %}
+                {% include 'blocks/index-news-intro.twig' with {'record': entry} only %}
             {% endfor %}
+            {% setcontent entries = "mededelingen/latest/4" %}
+            <ul class="index-more-news">
+                {% for entry in entries %}
+                    {% if loop.index > 1 %}
+                        {% include 'blocks/index-news-small.twig' with {'record': entry} only %}
+                    {% endif %}
+                {% endfor %}
+            </ul>
             <p class="HomeNewsAll"><a href="/mededelingen" title="Alle mededelingen">Alle mededelingen &raquo;</a></p>
         </div>
-        <div id="newsdiv2">
+        <div id="newsdiv2" class="index-news">
             <h2>Laatste wedstrijdverslagen</h2>
-            {% setcontent entries = "wedstrijdverslagen/latest/3" %}
+            {% setcontent entries = "wedstrijdverslagen/latest/1" %}
             {% for entry in entries %}
-                {% include 'blocks/news-intro.twig' with {'record': entry} only %}
+                {% include 'blocks/index-news-intro.twig' with {'record': entry} only %}
             {% endfor %}
+            {% setcontent entries = "wedstrijdverslagen/latest/4" %}
+            <ul class="index-more-news">
+            {% for entry in entries %}
+                {% if loop.index > 1 %}
+                    {% include 'blocks/index-news-small.twig' with {'record': entry} only %}
+                {% endif %}
+            {% endfor %}
+            </ul>
             <p class="HomeNewsAll"><a href="/wedstrijdverslagen" title="Alle wedstrijdverslagen">Alle wedstrijdverslagen &raquo;</a></p>
         </div>
     </div>

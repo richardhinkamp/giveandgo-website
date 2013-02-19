@@ -18,7 +18,7 @@
         <h2>Wedstrijdverslagen</h2>
         <ul class="latest-blogs">
         {% for entry in wedstrijdverslagen %}
-            <li><a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.date|date("d-m")}} {{ entry.title }}</a></li>
+            <li><a href="{{ entry.link }}" title="{{ entry.title }}"><span class="blog-date">{{ entry.date|date("d-m-Y")}}</span> {{ entry.title }}</a></li>
         {% endfor %}
         </ul>
     {% endif %}

@@ -22,7 +22,7 @@
     <h2>{{ name }}</h2>
     <ul class="latest-blogs">
         {% for entry in entries %}
-            <li><a href="{{ entry.link }}"><span class="blog-date">{{ entry.date|date("M jS")}}</span> {{ entry.title }}</a></li>
+            <li><a href="{{ entry.link }}"><span class="blog-date">{{ entry.date|date("d-m-Y")}}</span> {{ entry.title }}</a></li>
         {% endfor %}
     </ul>
 {% endmacro %}
