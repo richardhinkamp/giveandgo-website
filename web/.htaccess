@@ -13,8 +13,6 @@ DirectoryIndex index.php index.html index.htm
   # RewriteBase /
   RewriteRule ^thumbs/(.*)?$ ./thumb.php [L]
 
-  RewriteRule ^nieuws/([0-9]+)/.*$ ./forward.php?nws=$1 [L]
-
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !=/favicon.ico
