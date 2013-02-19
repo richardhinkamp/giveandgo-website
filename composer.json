@@ -5,7 +5,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/richardhinkamp/bolt"
+            "url": "https://github.com/bobdenotter/bolt"
         },
         {
             "type": "vcs",
@@ -19,13 +19,13 @@
 
 
     "require": {
-        "bobdenotter/bolt": "dev-paths",
-        "twitter/bootstrap": "2.2.*",
-        "leafo/scssphp": "*"
+        "silex/silex": "1.0.*@dev",
+        "bobdenotter/bolt": "dev-master",
+        "twitter/bootstrap": "2.2.*"
     },
     "require-dev": {
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "scripts": {
         "post-install-cmd": [
             "Bolt\\Composer\\ScriptHandler::installAssets"
