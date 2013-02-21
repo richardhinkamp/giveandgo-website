@@ -8,7 +8,7 @@
     {% if app.config.general.debug == true %}
         <meta content="NOINDEX,NOFOLLOW" name="ROBOTS">
     {% endif %}
-    <title>{% if record.title is defined %}{{ record.title|striptags }}</title>
+    <title>{% if record.title is defined %}{{ record.title|striptags }}{% else %}{{ app.config.general.sitename }}{% endif %}</title>
 
     {# <meta name="viewport" content="width=device-width, initial-scale=1"/> #}
     <link href="/favicon.ico" type="images/ico" rel="SHORTCUT ICON">
@@ -34,7 +34,7 @@
     {% block body_content %}
         <div id="container">
         <div id="header1">
-            <a href="/" title="Home" class="headerlogo"><img src="/img/logo2.png" alt="Give & Go" width="444" height="122" title="Give & Go"></a>
+            <a href="/" title="Home" class="headerlogo"><img src="/img/logo2.png" alt="Give & Go" width="444" height="123" title="Give & Go"></a>
             <a href="/pagina/lid-worden-van-basketbal-vereniging-give-and-go-uit-aalten" title="Lid worden? klik hier" class="lidworden">Lid worden?</a>
             <img src="/img/silhouette1.png" alt="Give & Go" width="179" height="270" class="silhouette1" title="Give & Go">
         </div>
