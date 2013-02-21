@@ -8,7 +8,7 @@
     {% if app.config.general.debug == true %}
         <meta content="NOINDEX,NOFOLLOW" name="ROBOTS">
     {% endif %}
-    <title>{% if record.title is defined %}{{ record.title|striptags }} - {% endif %}{{ app.config.general.sitename }}</title>
+    <title>{% if record.title is defined %}{{ record.title|striptags }}</title>
 
     {# <meta name="viewport" content="width=device-width, initial-scale=1"/> #}
     <link href="/favicon.ico" type="images/ico" rel="SHORTCUT ICON">
