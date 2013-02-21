@@ -13,7 +13,7 @@
     {# <meta name="viewport" content="width=device-width, initial-scale=1"/> #}
     <link href="/favicon.ico" type="images/ico" rel="SHORTCUT ICON">
     <link rel="stylesheet" href="/css/layout.css"/>
-    {% if app.config.general.debug != true %}
+    {% if app.config.general.debug != true and app.request.host != "test.giveandgo.nl" %}
         <!-- Google Code for Analytics -->
         <script type="text/javascript">
             var _gaq = _gaq || [];
