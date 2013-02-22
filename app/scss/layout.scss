@@ -1,5 +1,11 @@
 @import "style";
 
+%text-overflow-hidden {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 /* Algemeen
 -------------------------------------------------------------- */
 
@@ -248,9 +254,7 @@ DIV#menu ul li.Selected:hover a.submenu {
   margin: 0;
   text-align: left;
   text-decoration: none;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    @extend %text-overflow-hidden;
 }
 
 #menu ul li ul li a:hover {
@@ -311,9 +315,7 @@ DIV#submenu ul li a {
   display: block;
   line-height: 1.4em;
   padding: 6px 6px 6px 14px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    @extend %text-overflow-hidden;
 }
 
 DIV#submenu ul li a:hover,
@@ -986,9 +988,7 @@ div#newsdiv {
         line-height: normal;
         font-size: 110%;
         font-weight: bold;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        @extend %text-overflow-hidden;
     }
     .teaser {
         margin: 10px 0 0;
@@ -1016,9 +1016,7 @@ div#newsdiv {
         margin-bottom: 8pt;
         border-bottom: 1px solid #B3CBE3;
         font-size: 110%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        @extend %text-overflow-hidden;
 
         .date {
             margin-bottom: 3px;
@@ -1043,5 +1041,38 @@ ul.latest-blogs {
         .blog-date {
             font-weight: normal;
         }
+    }
+}
+
+.picasagallery_header {
+    @extend H2;
+    @extend a;
+    display: block;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.picasagallery_title {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.picasagallery_thumbnail {
+    display: inline-block;
+    float: left;
+    width: 180px;
+    margin: 15px;
+}
+
+.picasagallery_album {
+    @extend .picasagallery_thumbnail;
+
+    img {
+        cursor: pointer;
+    }
+
+    p {
+        @extend %text-overflow-hidden;
+        margin-bottom: 0;
     }
 }

@@ -13,6 +13,7 @@
     {# <meta name="viewport" content="width=device-width, initial-scale=1"/> #}
     <link href="/favicon.ico" type="images/ico" rel="SHORTCUT ICON">
     <link rel="stylesheet" href="/css/layout.css"/>
+    {% block extra_css_files %}{% endblock %}
     {% if app.config.general.debug != true and app.request.host != "test.giveandgo.nl" %}
         <!-- Google Code for Analytics -->
         <script type="text/javascript">
@@ -88,43 +89,9 @@
                             {% endfor %}
                         </ul>
                     </li>
-                    {#
                     <li class="Menu">
-                        <a href="/foto-album.html" title="Foto album">Foto album</a>
-                        <ul>
-                            <li class="Menu">
-                                <a href="/foto-album/5794012432477981633/wedstrijden-29-september-2012.html" title="Wedstrijden 29 september 2012">Wedstrijden 29 septem...</a>
-                            </li>
-                            <li class="Menu">
-                                <a href="/foto-album/5752363077263586289/streetball-masters-achterhoek-9-juni-2012.html" title="Streetball Masters Achterhoek - 9 juni 2012">Streetball Masters A...</a>
-                            </li>
-                            <li class="Menu">
-                                <a href="/foto-album/5713894362681108049/u18-wedstrijd-25-feb-2012.html" title="u18 wedstrijd 25 feb 2012">u18 wedstrijd 25 feb 2...</a>
-                            </li>
-                            <li class="Menu">
-                                <a href="/foto-album/5711684895173003665/wedstrijd-u18-18-feb-2012.html" title="Wedstrijd U18 18 feb 2012">Wedstrijd U18 18 feb...</a>
-                            </li>
-                            <li class="Menu">
-                                <a href="/foto-album/5617710487618900625/overige-wedstrijden.html" title="Overige wedstrijden">Overige wedstrijden</a>
-                            </li>
-                            <li class="Menu">
-                                <a href="/foto-album/5617697085358974081/jubileum-25-jaar-basketbal-clinic-matrixx.html" title="Jubileum 25 jaar - Basketbal-Clinic-Matrixx">Jubileum 25 jaar - B...</a>
-                            </li>
-                            <li class="Menu">
-                                <a href="/foto-album/5617711266971287537/3-tegen-3-toernooi-2008.html" title="3-tegen-3 toernooi 2008">3-tegen-3 toernooi 20...</a>
-                            </li>
-                            <li class="Menu">
-                                <a href="/foto-album/5617694117073941201/jubileum-25-jaar-landstede-zwolle-vs-matrixx-magixx.html" title="Jubileum 25 jaar - Landstede-Zwolle-vs-Matrixx-Magixx">Jubileum 25 jaar - La...</a>
-                            </li>
-                            <li class="Menu">
-                                <a href="/foto-album/5617714296100354369/amical-toernooi-2008.html" title="Amical toernooi 2008">Amical toernooi 2008</a>
-                            </li>
-                            <li class="Menu">
-                                <a href="/foto-album/5617688252845048433/wedstrijden-2008-04-12.html" title="Wedstrijden 2008-04-12">Wedstrijden 2008-04-12</a>
-                            </li>
-                        </ul>
+                        <a href="/pagina/fotos" title="Foto's">Foto's</a>
                     </li>
-                    #}
                 </ul>
             </div>
         </div>
