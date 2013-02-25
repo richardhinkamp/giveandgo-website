@@ -16,7 +16,7 @@ wedstrijdverslagen:
         auteur:
             type: select
             label: Auteur
-            values: [ "Give & Go", "Bestuur", "Edward Jansen", "Tom Eugelink", "Richard Hinkamp", "NBB", "Ed Nawijn", "Igor Hoogakker", "Jeroen Melissen",  "Ria Scholten",  "Chantal Onnink", "Wedstrijdsecretariaat",  "Robin Fukking", "Femke Ormel" ]
+            values: [ "Give & Go", "Bestuur", "Edward Jansen", "Tom Eugelink", "Richard Hinkamp", "NBB", "Ed Nawijn", "Bart Demkes", "Igor Hoogakker", "Jeroen Melissen",  "Ria Scholten",  "Chantal Onnink", "Wedstrijdsecretariaat",  "Robin Fukking", "Femke Ormel" ]
         team_id:
             type: select
             label: Team
