@@ -7,12 +7,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobdenotter/bolt.git",
-                "reference": "8f050740fbd42f4fe98372c4625d17e635e31525"
+                "reference": "e18f9fe8ad7adf9fc6b5898324e2face850bf1ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobdenotter/bolt/zipball/8f050740fbd42f4fe98372c4625d17e635e31525",
-                "reference": "8f050740fbd42f4fe98372c4625d17e635e31525",
+                "url": "https://api.github.com/repos/bobdenotter/bolt/zipball/e18f9fe8ad7adf9fc6b5898324e2face850bf1ae",
+                "reference": "e18f9fe8ad7adf9fc6b5898324e2face850bf1ae",
                 "shasum": ""
             },
             "require": {
@@ -34,7 +34,7 @@
                 "phpunit/php-code-coverage": "1.2.*@dev",
                 "phpunit/phpunit": "3.7.13"
             },
-            "time": "2013-02-24 10:09:44",
+            "time": "2013-02-25 18:43:02",
             "type": "library",
             "autoload": {
                 "psr-0": {
