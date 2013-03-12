@@ -2,6 +2,7 @@
 vendor/
 .sass-cache/
 web/bolt-public/
+web/kcfinder
 web/files/*
 web/upload/*
 config/config_local.yml

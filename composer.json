@@ -1,11 +1,15 @@
 {
-    "name": "richardhinkamp/zobriuz",
-    "description": "Zobriuz website",
+    "name": "richardhinkamp/giveandgo-website",
+    "description": "Give & Go website",
 
     "repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/bobdenotter/bolt"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/richardhinkamp/kcfinder"
         },
         {
             "type": "vcs",
@@ -20,7 +24,10 @@
 
     "require": {
         "silex/silex": "1.0.*@dev",
+        "htmlawed/htmlawed": "dev-master",
+        "hautelook/phpass": "dev-master",
         "bobdenotter/bolt": "dev-master",
+        "richardhinkamp/kcfinder": "dev-master",
         "twitter/bootstrap": "2.2.*"
     },
     "require-dev": {
@@ -28,14 +35,19 @@
     "minimum-stability": "stable",
     "scripts": {
         "post-install-cmd": [
-            "Bolt\\Composer\\ScriptHandler::installAssets"
+            "Bolt\\Composer\\ScriptHandler::installAssets",
+            "KCFinder\\Composer\\ScriptHandler::installAssets"
         ],
         "post-update-cmd": [
-            "Bolt\\Composer\\ScriptHandler::installAssets"
+            "Bolt\\Composer\\ScriptHandler::installAssets",
+            "KCFinder\\Composer\\ScriptHandler::installAssets"
         ]
     },
     "extra": {
         "bolt-web-dir": "web",
-        "bolt-dir-mode": "0755"
+        "bolt-dir-mode": "0755",
+        "kcfinder-web-dir": "web",
+        "kcfinder-assets-install": "relative",
+        "kcfinder-dir-mode": "0755"
     }
 }
