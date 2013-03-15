@@ -7,12 +7,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobdenotter/bolt.git",
-                "reference": "17a186a428b4f80642f0764162f64dd5e0688c18"
+                "reference": "6dfd8fda572d82fd8270d1e9642acfab0ed957d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobdenotter/bolt/zipball/17a186a428b4f80642f0764162f64dd5e0688c18",
-                "reference": "17a186a428b4f80642f0764162f64dd5e0688c18",
+                "url": "https://api.github.com/repos/bobdenotter/bolt/zipball/6dfd8fda572d82fd8270d1e9642acfab0ed957d9",
+                "reference": "6dfd8fda572d82fd8270d1e9642acfab0ed957d9",
                 "shasum": ""
             },
             "require": {
@@ -21,6 +21,7 @@
                 "guzzle/guzzle": "3.3.*",
                 "hautelook/phpass": "dev-master",
                 "htmlawed/htmlawed": "dev-master",
+                "jbroadway/urlify": "1.0.0-stable",
                 "silex/silex": "1.0.*@dev",
                 "swiftmailer/swiftmailer": "4.3.*",
                 "symfony/config": "~2.1",
@@ -37,7 +38,7 @@
                 "phpunit/php-code-coverage": "1.2.*@dev",
                 "phpunit/phpunit": "3.7.13"
             },
-            "time": "2013-03-11 21:20:56",
+            "time": "2013-03-13 20:53:14",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -346,12 +347,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hautelook/phpass.git",
-                "reference": "da4c2c693aa4e1c616a350015c90af0da82a0fd8"
+                "reference": "0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hautelook/phpass/zipball/da4c2c693aa4e1c616a350015c90af0da82a0fd8",
-                "reference": "da4c2c693aa4e1c616a350015c90af0da82a0fd8",
+                "url": "https://api.github.com/repos/hautelook/phpass/zipball/0.3",
+                "reference": "0.3",
                 "shasum": ""
             },
             "require": {
@@ -416,6 +417,55 @@
                 "sanitize",
                 "strip",
                 "tags"
+            ]
+        },
+        {
+            "name": "jbroadway/urlify",
+            "version": "1.0.0-stable",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jbroadway/urlify.git",
+                "reference": "1.0.0-stable"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jbroadway/urlify/zipball/1.0.0-stable",
+                "reference": "1.0.0-stable",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "time": "2013-02-11 14:41:22",
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "URLify": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Johnny Broadway",
+                    "email": "johnny@johnnybroadway.com",
+                    "homepage": "http://www.johnnybroadway.com/"
+                }
+            ],
+            "description": "PHP port of URLify.js from the Django project. Transliterates non-ascii characters for use in URLs.",
+            "homepage": "https://github.com/jbroadway/urlify",
+            "keywords": [
+                "encode",
+                "iconv",
+                "link",
+                "slug",
+                "translit",
+                "transliterate",
+                "transliteration",
+                "url",
+                "urlify"
             ]
         },
         {
