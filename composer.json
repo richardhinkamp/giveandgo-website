@@ -5,7 +5,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/bobdenotter/bolt"
+            "url": "https://github.com/bolt/bolt"
         },
         {
             "type": "vcs",
@@ -26,7 +26,8 @@
         "silex/silex": "1.0.*@dev",
         "htmlawed/htmlawed": "dev-master",
         "hautelook/phpass": "dev-master",
-        "bobdenotter/bolt": "dev-master",
+        "filp/whoops": "dev-master",
+        "bolt/bolt": "dev-master",
         "richardhinkamp/kcfinder": "dev-master",
         "twitter/bootstrap": "2.2.*"
     },

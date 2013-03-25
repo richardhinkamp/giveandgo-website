@@ -1,32 +1,35 @@
 {
-    "hash": "c1b59c869f9c637eb9ad09dc050f64b1",
+    "hash": "07fcbbfc6fa502465b281e029f0f651b",
     "packages": [
         {
-            "name": "bobdenotter/bolt",
+            "name": "bolt/bolt",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bobdenotter/bolt.git",
-                "reference": "6dfd8fda572d82fd8270d1e9642acfab0ed957d9"
+                "url": "https://github.com/bolt/bolt.git",
+                "reference": "364a3d66fcb6fdf5aa6a7d50fb82b5519f2b8c52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobdenotter/bolt/zipball/6dfd8fda572d82fd8270d1e9642acfab0ed957d9",
-                "reference": "6dfd8fda572d82fd8270d1e9642acfab0ed957d9",
+                "url": "https://api.github.com/repos/bolt/bolt/zipball/364a3d66fcb6fdf5aa6a7d50fb82b5519f2b8c52",
+                "reference": "364a3d66fcb6fdf5aa6a7d50fb82b5519f2b8c52",
                 "shasum": ""
             },
             "require": {
                 "dflydev/markdown": "1.0.*",
                 "doctrine/dbal": "2.3.*",
+                "filp/whoops": "dev-master",
                 "guzzle/guzzle": "3.3.*",
                 "hautelook/phpass": "dev-master",
                 "htmlawed/htmlawed": "dev-master",
                 "jbroadway/urlify": "1.0.0-stable",
+                "php": ">=5.3.2",
                 "silex/silex": "1.0.*@dev",
                 "swiftmailer/swiftmailer": "4.3.*",
                 "symfony/config": "~2.1",
                 "symfony/console": "~2.1",
                 "symfony/filesystem": "~2.1",
+                "symfony/finder": "~2.1",
                 "symfony/form": "~2.1",
                 "symfony/translation": "~2.1",
                 "symfony/twig-bridge": "~2.1",
@@ -36,9 +39,8 @@
             },
             "require-dev": {
                 "phpunit/php-code-coverage": "1.2.*@dev",
-                "phpunit/phpunit": "3.7.13"
+                "phpunit/phpunit": "3.7.18"
             },
-            "time": "2013-03-13 20:53:14",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -58,9 +60,10 @@
                 "Symfony"
             ],
             "support": {
-                "source": "https://github.com/bobdenotter/bolt/tree/master",
-                "issues": "https://github.com/bobdenotter/bolt/issues"
-            }
+                "source": "https://github.com/bolt/bolt/tree/master",
+                "issues": "https://github.com/bolt/bolt/issues"
+            },
+            "time": "2013-03-25 20:11:14"
         },
         {
             "name": "dflydev/markdown",
@@ -79,7 +82,6 @@
             "require": {
                 "php": ">=5.3"
             },
-            "time": "2012-01-15 19:36:37",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -114,7 +116,8 @@
             "homepage": "http://github.com/dflydev/dflydev-markdown",
             "keywords": [
                 "markdown"
-            ]
+            ],
+            "time": "2012-01-15 19:36:37"
         },
         {
             "name": "doctrine/common",
@@ -133,7 +136,6 @@
             "require": {
                 "php": ">=5.3.2"
             },
-            "time": "2012-09-19 22:55:18",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -183,27 +185,27 @@
                 "eventmanager",
                 "persistence",
                 "spl"
-            ]
+            ],
+            "time": "2012-09-19 22:55:18"
         },
         {
             "name": "doctrine/dbal",
-            "version": "2.3.2",
+            "version": "2.3.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/doctrine/dbal",
-                "reference": "2.3.2"
+                "url": "https://github.com/doctrine/dbal.git",
+                "reference": "2.3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/dbal/archive/2.3.2.zip",
-                "reference": "2.3.2",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/2.3.3",
+                "reference": "2.3.3",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": "2.3.*",
+                "doctrine/common": ">=2.3.0,<2.5-dev",
                 "php": ">=5.3.2"
             },
-            "time": "2013-01-07 20:03:43",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -246,7 +248,58 @@
                 "dbal",
                 "persistence",
                 "queryobject"
-            ]
+            ],
+            "time": "2013-03-24 19:16:29"
+        },
+        {
+            "name": "filp/whoops",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filp/whoops.git",
+                "reference": "004db920189f6bd0cd15e2283678e17b4b901f1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/004db920189f6bd0cd15e2283678e17b4b901f1a",
+                "reference": "004db920189f6bd0cd15e2283678e17b4b901f1a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master",
+                "silex/silex": "1.0.*@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Whoops": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Filipe Dobreira",
+                    "homepage": "https://github.com/filp",
+                    "role": "Developer"
+                }
+            ],
+            "description": "php error handling for cool kids",
+            "homepage": "https://github.com/filp/whoops",
+            "keywords": [
+                "error",
+                "exception",
+                "handling",
+                "library",
+                "silex-provider",
+                "whoops"
+            ],
+            "time": "2013-03-23 13:43:02"
         },
         {
             "name": "guzzle/guzzle",
@@ -301,7 +354,6 @@
                 "zendframework/zend-cache": "2.0.*",
                 "zendframework/zend-log": "2.0.*"
             },
-            "time": "2013-03-10 23:05:38",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -339,7 +391,8 @@
                 "http client",
                 "rest",
                 "web service"
-            ]
+            ],
+            "time": "2013-03-10 23:05:38"
         },
         {
             "name": "hautelook/phpass",
@@ -358,7 +411,6 @@
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "2012-08-31 19:32:39",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -383,7 +435,8 @@
                 "crypt",
                 "password",
                 "security"
-            ]
+            ],
+            "time": "2012-08-31 19:32:39"
         },
         {
             "name": "htmlawed/htmlawed",
@@ -402,7 +455,6 @@
             "require": {
                 "php": ">4.4.0"
             },
-            "time": "2013-02-07 13:54:54",
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -417,7 +469,8 @@
                 "sanitize",
                 "strip",
                 "tags"
-            ]
+            ],
+            "time": "2013-02-07 13:54:54"
         },
         {
             "name": "jbroadway/urlify",
@@ -436,7 +489,6 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2013-02-11 14:41:22",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -466,7 +518,8 @@
                 "transliteration",
                 "url",
                 "urlify"
-            ]
+            ],
+            "time": "2013-02-11 14:41:22"
         },
         {
             "name": "pimple/pimple",
@@ -485,7 +538,6 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2013-03-08 08:21:40",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -512,7 +564,8 @@
             "keywords": [
                 "container",
                 "dependency injection"
-            ]
+            ],
+            "time": "2013-03-08 08:21:40"
         },
         {
             "name": "psr/log",
@@ -528,7 +581,6 @@
                 "reference": "1.0.0",
                 "shasum": ""
             },
-            "time": "2012-12-21 11:40:51",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -550,7 +602,8 @@
                 "log",
                 "psr",
                 "psr-3"
-            ]
+            ],
+            "time": "2012-12-21 11:40:51"
         },
         {
             "name": "richardhinkamp/kcfinder",
@@ -569,7 +622,6 @@
             "require": {
                 "symfony/filesystem": "2.*"
             },
-            "time": "2013-03-11 10:41:43",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -584,7 +636,8 @@
             "support": {
                 "source": "https://github.com/richardhinkamp/kcfinder/tree/master",
                 "issues": "https://github.com/richardhinkamp/kcfinder/issues"
-            }
+            },
+            "time": "2013-03-11 10:41:43"
         },
         {
             "name": "silex/silex",
@@ -634,7 +687,6 @@
                 "symfony/dom-crawler": ">=2.1,<2.3-dev",
                 "symfony/form": "To make use of the FormServiceProvider, >= 2.1.4 is required"
             },
-            "time": "2013-03-08 16:56:52",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -665,7 +717,8 @@
             "homepage": "http://silex.sensiolabs.org",
             "keywords": [
                 "microframework"
-            ]
+            ],
+            "time": "2013-03-08 16:56:52"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -684,7 +737,6 @@
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "2013-01-08 15:50:34",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -714,7 +766,8 @@
             "keywords": [
                 "mail",
                 "mailer"
-            ]
+            ],
+            "time": "2013-01-08 15:50:34"
         },
         {
             "name": "symfony/config",
@@ -734,7 +787,6 @@
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "2013-02-17 12:27:42",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -761,7 +813,8 @@
                 }
             ],
             "description": "Symfony Config Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2013-02-17 12:27:42"
         },
         {
             "name": "symfony/console",
@@ -781,7 +834,6 @@
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "2013-03-01 06:43:14",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -808,7 +860,8 @@
                 }
             ],
             "description": "Symfony Console Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2013-03-01 06:43:14"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -835,7 +888,6 @@
                 "symfony/dependency-injection": "2.2.*",
                 "symfony/http-kernel": "2.2.*"
             },
-            "time": "2013-02-11 11:26:43",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -862,7 +914,8 @@
                 }
             ],
             "description": "Symfony EventDispatcher Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2013-02-11 11:26:43"
         },
         {
             "name": "symfony/filesystem",
@@ -882,7 +935,6 @@
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "2013-01-17 15:25:59",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -909,7 +961,55 @@
                 }
             ],
             "description": "Symfony Filesystem Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2013-01-17 15:25:59"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v2.2.0",
+            "target-dir": "Symfony/Component/Finder",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Finder.git",
+                "reference": "v2.2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/v2.2.0",
+                "reference": "v2.2.0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Finder\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-02-28 14:06:36"
         },
         {
             "name": "symfony/form",
@@ -941,7 +1041,6 @@
                 "symfony/http-foundation": "2.2.*",
                 "symfony/validator": "2.2.*"
             },
-            "time": "2013-02-23 06:46:07",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -968,7 +1067,8 @@
                 }
             ],
             "description": "Symfony Form Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2013-02-23 06:46:07"
         },
         {
             "name": "symfony/http-foundation",
@@ -988,7 +1088,6 @@
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "2013-02-26 09:42:13",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1018,7 +1117,8 @@
                 }
             ],
             "description": "Symfony HttpFoundation Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2013-02-26 09:42:13"
         },
         {
             "name": "symfony/http-kernel",
@@ -1060,7 +1160,6 @@
                 "symfony/dependency-injection": "2.2.*",
                 "symfony/finder": "2.2.*"
             },
-            "time": "2013-03-01 06:52:29",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1087,7 +1186,8 @@
                 }
             ],
             "description": "Symfony HttpKernel Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2013-03-01 06:52:29"
         },
         {
             "name": "symfony/locale",
@@ -1110,7 +1210,6 @@
             "suggest": {
                 "ext-intl": "to use other locales than built-in `en`"
             },
-            "time": "2013-02-01 09:33:53",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1140,7 +1239,8 @@
                 }
             ],
             "description": "Symfony Locale Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2013-02-01 09:33:53"
         },
         {
             "name": "symfony/options-resolver",
@@ -1160,7 +1260,6 @@
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "2013-01-17 15:25:59",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1192,7 +1291,8 @@
                 "config",
                 "configuration",
                 "options"
-            ]
+            ],
+            "time": "2013-01-17 15:25:59"
         },
         {
             "name": "symfony/property-access",
@@ -1212,7 +1312,6 @@
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "2013-02-04 20:27:45",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1250,7 +1349,8 @@
                 "property",
                 "property path",
                 "reflection"
-            ]
+            ],
+            "time": "2013-02-04 20:27:45"
         },
         {
             "name": "symfony/routing",
@@ -1281,7 +1381,6 @@
                 "symfony/config": "2.2.*",
                 "symfony/yaml": "2.2.*"
             },
-            "time": "2013-02-11 11:24:47",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1308,7 +1407,8 @@
                 }
             ],
             "description": "Symfony Routing Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2013-02-11 11:24:47"
         },
         {
             "name": "symfony/translation",
@@ -1336,7 +1436,6 @@
                 "symfony/config": "2.2.*",
                 "symfony/yaml": "2.2.*"
             },
-            "time": "2013-02-08 16:10:57",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1363,7 +1462,8 @@
                 }
             ],
             "description": "Symfony Translation Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2013-02-08 16:10:57"
         },
         {
             "name": "symfony/twig-bridge",
@@ -1402,7 +1502,6 @@
                 "symfony/translation": "2.2.*",
                 "symfony/yaml": "2.2.*"
             },
-            "time": "2013-03-01 06:43:14",
             "type": "symfony-bridge",
             "extra": {
                 "branch-alias": {
@@ -1429,7 +1528,8 @@
                 }
             ],
             "description": "Symfony Twig Bridge",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2013-03-01 06:43:14"
         },
         {
             "name": "symfony/validator",
@@ -1463,7 +1563,6 @@
                 "symfony/locale": "2.2.*",
                 "symfony/yaml": "2.2.*"
             },
-            "time": "2013-02-28 14:29:34",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1490,7 +1589,8 @@
                 }
             ],
             "description": "Symfony Validator Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2013-02-28 14:29:34"
         },
         {
             "name": "symfony/yaml",
@@ -1510,7 +1610,6 @@
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "2013-01-27 16:49:19",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1537,7 +1636,8 @@
                 }
             ],
             "description": "Symfony Yaml Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2013-01-27 16:49:19"
         },
         {
             "name": "twig/twig",
@@ -1556,7 +1656,6 @@
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "2013-02-09 18:21:53",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1586,7 +1685,8 @@
             "homepage": "http://twig.sensiolabs.org",
             "keywords": [
                 "templating"
-            ]
+            ],
+            "time": "2013-02-09 18:21:53"
         },
         {
             "name": "twitter/bootstrap",
@@ -1603,7 +1703,6 @@
                 "reference": "v2.2.2",
                 "shasum": ""
             },
-            "time": "2013-02-04 17:54:01",
             "type": "library",
             "license": [
                 "Apache-2.0"
@@ -1617,10 +1716,13 @@
             "support": {
                 "source": "https://github.com/jlong/sass-twitter-bootstrap/tree/v2.2.2",
                 "issues": "https://github.com/jlong/sass-twitter-bootstrap/issues"
-            }
+            },
+            "time": "2013-02-04 17:54:01"
         }
     ],
-    "packages-dev": null,
+    "packages-dev": [
+
+    ],
     "aliases": [
 
     ],
@@ -1629,7 +1731,14 @@
         "silex/silex": 20,
         "htmlawed/htmlawed": 20,
         "hautelook/phpass": 20,
-        "bobdenotter/bolt": 20,
+        "filp/whoops": 20,
+        "bolt/bolt": 20,
         "richardhinkamp/kcfinder": 20
-    }
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
 }
