@@ -1,6 +1,6 @@
 <?php
 
-require_once( '../vendor/bobdenotter/bolt/app/bootstrap.php' );
+require_once( '../vendor/bolt/bolt/app/bootstrap.php' );
 
 $app->before(function () use ( $app) {
     /** @var $app Bolt\Application */
