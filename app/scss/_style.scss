@@ -59,7 +59,7 @@ BODY {
     padding: 5px;
 }
 
-BODY, TABLE, INPUT, SELECT, TEXTAREA {
+BODY, TABLE, INPUT, SELECT, TEXTAREA, %fontstyle {
     font-family: Arial, helvetica, sans-serif;
     font-size: 10pt;
 }
@@ -247,4 +247,18 @@ table.bestuur td:nth-child(2)
 table.bestuur td:last-child
 {
     width: 75px;
+}
+
+body, html, div, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+
+p {
+    color: #333;
+    text-align: justify;
+    line-height: 1.6em;
+    margin: 5px 0 15px 0;
 }

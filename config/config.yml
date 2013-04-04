@@ -79,17 +79,24 @@ strict_variables: false
 # more ways of breaking the preciously designed layout. By default the most 'dangerous'
 # options are set to 'false'. If you choose to enable them for your editors, please
 # instruct them thoroughly on their responsibilty not to break the layout.
-wysiwyg_images: true
-wysiwyg_anchor: false
-wysiwyg_tables: false
-wysiwyg_fontcolor: false
-wysiwyg_align: false
-wysiwyg_subsuper: false
-wysiwyg_filebrowser:
-  browseUrl: /kcfinder/browse.php?type=files
-  imageBrowseUrl: /kcfinder/browse.php?type=images
-  uploadUrl: /kcfinder/upload.php?type=files
-  imageUploadUrl: /kcfinder/upload.php?type=images
+wysiwyg:
+  images: true
+  anchor: false
+  tables: false
+  fontcolor: false
+  align: false
+  subsuper: false
+  embed: true
+  ck:
+    #allowedContent: true # Set this to 'true' to allow any elements and attributes in Wysiwg Elements
+    contentsCss: '/css/ckeditor.css' # Absolute Path to CSS File on Server because it's loaded by JavaScript stylesheetparser
+    filebrowserWindowWidth: '480'
+    filebrowserWindowHeight: '480'
+  filebrowser:
+    browseUrl: /kcfinder/browse.php?type=files
+    imageBrowseUrl: /kcfinder/browse.php?type=images
+    uploadUrl: /kcfinder/upload.php?type=files
+    imageUploadUrl: /kcfinder/upload.php?type=images
 
 # Bolt allows some modifications to how 'strict' login sessions are. For every option
 # that is set to true, it becomes harder for a bad-willing person to spoof your login
