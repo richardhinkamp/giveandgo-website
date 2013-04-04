@@ -7,12 +7,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/bolt.git",
-                "reference": "b939058fafde2c2174b6c02a714e07528479a2eb"
+                "reference": "4bd74cf7aae0aaed6874ac69bf3444bb3b5e3791"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/bolt/zipball/b939058fafde2c2174b6c02a714e07528479a2eb",
-                "reference": "b939058fafde2c2174b6c02a714e07528479a2eb",
+                "url": "https://api.github.com/repos/bolt/bolt/zipball/4bd74cf7aae0aaed6874ac69bf3444bb3b5e3791",
+                "reference": "4bd74cf7aae0aaed6874ac69bf3444bb3b5e3791",
                 "shasum": ""
             },
             "require": {
@@ -63,7 +63,7 @@
                 "source": "https://github.com/bolt/bolt/tree/master",
                 "issues": "https://github.com/bolt/bolt/issues"
             },
-            "time": "2013-04-01 14:35:46"
+            "time": "2013-04-03 20:43:05"
         },
         {
             "name": "dflydev/markdown",
@@ -966,12 +966,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Silex.git",
-                "reference": "803f809cdaa409e5769b24db952655d7e9187677"
+                "reference": "31139babedb2a4f504737d1d8c5255fca102dae2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Silex/zipball/803f809cdaa409e5769b24db952655d7e9187677",
-                "reference": "803f809cdaa409e5769b24db952655d7e9187677",
+                "url": "https://api.github.com/repos/fabpot/Silex/zipball/31139babedb2a4f504737d1d8c5255fca102dae2",
+                "reference": "31139babedb2a4f504737d1d8c5255fca102dae2",
                 "shasum": ""
             },
             "require": {
@@ -1039,7 +1039,7 @@
             "keywords": [
                 "microframework"
             ],
-            "time": "2013-04-01 08:47:32"
+            "time": "2013-04-03 19:59:11"
         },
         {
             "name": "swiftmailer/swiftmailer",
