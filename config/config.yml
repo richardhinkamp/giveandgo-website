@@ -82,7 +82,7 @@ strict_variables: false
 wysiwyg:
   images: true
   anchor: false
-  tables: false
+  tables: true
   fontcolor: false
   align: false
   subsuper: false
