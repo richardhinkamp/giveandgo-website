@@ -1556,7 +1556,9 @@ div#newsdiv {
 
 .news-intro > h2 {
   margin: 0; }
-.news-intro .meta {
+
+.news-intro .meta,
+article.blog .meta {
   color: #333333;
   font-size: 0.9em;
   font-style: italic;
