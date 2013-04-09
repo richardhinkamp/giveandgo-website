@@ -3,7 +3,7 @@
 {% block page_content %}
 
     <article class="blog">
-        <h1><a href="{{ record.link }}">{{ record.title }}</a></h1>
+        <h1><a href="{{ record.link }}">{{ ( record.team_id ? record.team_id ~ ": " ) ~ record.title }}</a></h1>
         <p class="meta">Geplaatst op {{ record.date|date("d-m-Y")}}</p>
         <div class="blog-body">{{ record.body }}</div>
     </article>
@@ -22,7 +22,7 @@
     <h2>{{ name }}</h2>
     <ul class="latest-blogs">
         {% for entry in entries %}
-            <li><a href="{{ entry.link }}"><span class="blog-date">{{ entry.date|date("d-m-Y")}}</span> {{ entry.title }}</a></li>
+            <li><a href="{{ entry.link }}"><span class="blog-date">{{ entry.date|date("d-m-Y")}}</span> {{ ( entry.team_id ? entry.team_id ~ ": " ) ~ entry.title }}</a></li>
         {% endfor %}
     </ul>
 {% endmacro %}

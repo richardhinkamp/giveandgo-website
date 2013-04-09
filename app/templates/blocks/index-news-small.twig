@@ -1,4 +1,5 @@
+{% set title = ( record.team_id ? record.team_id ~ ": " ) ~ record.title %}
 <li>
     <div class="date">{{ record.date|date("d-m-Y")}}</div>
-    <a title="{{ record.title }}" href="{{ record.link }}">{{ record.title }}</a>
+    <a title="{{ title }}" href="{{ record.link }}">{{ title }}</a>
 </li>
