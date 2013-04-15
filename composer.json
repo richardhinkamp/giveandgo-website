@@ -26,7 +26,6 @@
         "silex/silex": "1.0.*@dev",
         "htmlawed/htmlawed": "dev-master",
         "hautelook/phpass": "dev-master",
-        "filp/whoops": "dev-master",
         "doctrine/dbal": "2.4.*@dev",
         "doctrine/common": "2.4.*@dev",
         "bolt/bolt": "dev-master",
