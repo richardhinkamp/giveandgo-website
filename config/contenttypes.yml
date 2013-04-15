@@ -10,7 +10,7 @@ wedstrijdverslagen:
             class: large
         slug:
             type: slug
-            uses: title
+            uses: [team_id,title]
         date:
             type: date
         auteur:
