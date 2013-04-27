@@ -16,7 +16,7 @@ wedstrijdverslagen:
         auteur:
             type: select
             label: Auteur
-            values: [ "Give & Go", "Bestuur", "Edward Jansen", "Tom Eugelink", "Richard Hinkamp", "NBB", "Ed Nawijn", "Bart Demkes", "Igor Hoogakker", "Jeroen Melissen",  "Ria Scholten",  "Chantal Onnink", "Wedstrijdsecretariaat",  "Robin Fukking", "Femke Ormel" ]
+            values: [ "", "Give & Go", "Bestuur", "Edward Jansen", "Tom Eugelink", "Richard Hinkamp", "NBB", "Ed Nawijn", "Bart Demkes", "Igor Hoogakker", "Jeroen Melissen",  "Ria Scholten",  "Chantal Onnink", "Wedstrijdsecretariaat",  "Robin Fukking", "Femke Ormel" ]
         team_id:
             type: select
             label: Team
@@ -54,7 +54,7 @@ mededelingen:
         auteur:
             type: select
             label: Auteur
-            values: [ "Give & Go", "Tom Eugelink", "Ed Nawijn", "Karin Mateman", "Edward Jansen", "Richard Hinkamp", "Alco Joling", "Yvo Taken", "Johan Scholten", "Ria Scholten", "Chantal Onnink", "Ingelot klein Geltink", "Frank Hakstege", "Marca Adema", "Paul Knipscheer", "Saskia Hakstege", "Teysir Turunc" ]
+            values: [ "", "Give & Go", "Tom Eugelink", "Ed Nawijn", "Karin Mateman", "Edward Jansen", "Richard Hinkamp", "Alco Joling", "Yvo Taken", "Johan Scholten", "Ria Scholten", "Chantal Onnink", "Ingelot klein Geltink", "Frank Hakstege", "Marca Adema", "Paul Knipscheer", "Saskia Hakstege", "Teysir Turunc" ]
         teaser:
             type: textarea
         body:
