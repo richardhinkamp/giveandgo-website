@@ -1,7 +1,7 @@
 {% set title = ( record.team_id ? record.team_id ~ ": " ) ~ record.title %}
 <article class="news-intro">
     <h2><a href="{{ record.link }}" title="{{ title }}">{{ title }}</a></h2>
-    <p class="meta">Geplaatst op {{ record.date|date("d-m-Y")}}</p>
+    <p class="meta">Geplaatst op {{ record.date|date("d-m-Y")}}{% if record.auteur %} door {{ record.auteur }}{% endif %}</p>
     <p class="teaser">{{ record.teaser }}</p>
     <p class="read-more"><a href="{{ record.link }}">Lees verder »</a></p>
 </article>

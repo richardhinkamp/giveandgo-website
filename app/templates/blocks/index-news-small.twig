@@ -1,5 +1,5 @@
 {% set title = ( record.team_id ? record.team_id ~ ": " ) ~ record.title %}
 <li>
-    <div class="date">{{ record.date|date("d-m-Y")}}</div>
+    <div class="date">{{ record.date|date("d-m-Y")}}{% if record.auteur %} door {{ record.auteur }}{% endif %}</div>
     <a title="{{ title }}" href="{{ record.link }}">{{ title }}</a>
 </li>
