@@ -30,7 +30,7 @@
         "doctrine/common": "2.4.*@dev",
         "bolt/bolt": "dev-master",
         "richardhinkamp/kcfinder": "dev-master",
-        "twitter/bootstrap": "2.2.*"
+        "jlong/sass-twitter-bootstrap": "2.3.*"
     },
     "require-dev": {
     },
