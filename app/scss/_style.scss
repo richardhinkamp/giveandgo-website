@@ -42,15 +42,15 @@ $iconSpritePath:          "/bolt-public/view/img/glyphicons-halflings.png"; // T
 $iconWhiteSpritePath:     "/bolt-public/view/img/glyphicons-halflings-white.png"; // TODO
 
 //@import "../../lib/bsl/scss/base-styling.scss";
-@import "../../vendor/twitter/bootstrap/twitter/bootstrap/lib/variables";
+@import "../../vendor/jlong/sass-twitter-bootstrap/lib/variables";
 
 $baseFontFamily:        $serifFontFamily;
 $altFontFamily:         $sansFontFamily;
 
-@import "../../vendor/twitter/bootstrap/twitter/bootstrap/lib/mixins";
-@import "../../vendor/twitter/bootstrap/twitter/bootstrap/lib/reset";
-@import "../../vendor/twitter/bootstrap/twitter/bootstrap/lib/type";
-@import "../../vendor/twitter/bootstrap/twitter/bootstrap/lib/scaffolding";
+@import "../../vendor/jlong/sass-twitter-bootstrap/lib/mixins";
+@import "../../vendor/jlong/sass-twitter-bootstrap/lib/reset";
+@import "../../vendor/jlong/sass-twitter-bootstrap/lib/type";
+@import "../../vendor/jlong/sass-twitter-bootstrap/lib/scaffolding";
 
 BODY {
     background-color: white;
