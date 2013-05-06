@@ -80,7 +80,7 @@
                 </ul>
             </div>
         </div>
-        {% setcontent headers = 'headers' limit 1 orderby 'RANDOM' %}
+        {% setcontent headers = 'headers/random/1' %}
         {% for header in headers %}
             <div id="header2" style="background-image:url('{{ header.image|thumbnail(988, 156) }}');"></div>
         {% endfor %}
