@@ -23,7 +23,6 @@
 
 
     "require": {
-        "silex/silex": "1.0.*@dev",
         "htmlawed/htmlawed": "dev-master",
         "hautelook/phpass": "dev-master",
         "doctrine/dbal": "2.4.*@dev",
