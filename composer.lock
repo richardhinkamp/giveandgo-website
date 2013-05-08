@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "8de89d79de38c1f25f61d40d85c415b7",
+    "hash": "815480422549f108c45b02a5f12aeead",
     "packages": [
         {
             "name": "bolt/bolt",
@@ -11,34 +11,34 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/bolt.git",
-                "reference": "00c0a40f5dd9d94a1eedd1035f21dccc04be457e"
+                "reference": "201e6ad24fbb14fe798a9aa804d7b75497ced022"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/bolt/zipball/00c0a40f5dd9d94a1eedd1035f21dccc04be457e",
-                "reference": "00c0a40f5dd9d94a1eedd1035f21dccc04be457e",
+                "url": "https://api.github.com/repos/bolt/bolt/zipball/201e6ad24fbb14fe798a9aa804d7b75497ced022",
+                "reference": "201e6ad24fbb14fe798a9aa804d7b75497ced022",
                 "shasum": ""
             },
             "require": {
                 "dflydev/markdown": "1.0.*",
-                "doctrine/dbal": "2.4.*@dev",
+                "doctrine/dbal": "2.4.x-dev",
                 "filp/whoops": "1.*",
                 "guzzle/guzzle": "3.3.*",
                 "hautelook/phpass": "dev-master",
                 "htmlawed/htmlawed": "dev-master",
                 "jbroadway/urlify": "1.0.0-stable",
                 "php": ">=5.3.2",
-                "silex/silex": "1.0.*@dev",
-                "swiftmailer/swiftmailer": "4.3.*",
-                "symfony/config": "~2.1",
-                "symfony/console": "~2.1",
-                "symfony/filesystem": "~2.1",
-                "symfony/finder": "~2.1",
-                "symfony/form": "~2.1",
-                "symfony/translation": "~2.1",
-                "symfony/twig-bridge": "~2.1",
-                "symfony/validator": "~2.1",
-                "symfony/yaml": "~2.1",
+                "silex/silex": "~1.0",
+                "swiftmailer/swiftmailer": "5.*",
+                "symfony/config": "~2.2",
+                "symfony/console": "~2.2",
+                "symfony/filesystem": "~2.2",
+                "symfony/finder": "~2.2",
+                "symfony/form": "~2.2",
+                "symfony/translation": "~2.2",
+                "symfony/twig-bridge": "~2.2",
+                "symfony/validator": "~2.2",
+                "symfony/yaml": "~2.2",
                 "twig/twig": ">=1.8,<2.0-dev"
             },
             "require-dev": {
@@ -67,7 +67,7 @@
                 "source": "https://github.com/bolt/bolt/tree/master",
                 "issues": "https://github.com/bolt/bolt/issues"
             },
-            "time": "2013-05-02 14:50:50"
+            "time": "2013-05-08 13:49:58"
         },
         {
             "name": "dflydev/markdown",
@@ -1003,16 +1003,16 @@
         },
         {
             "name": "silex/silex",
-            "version": "1.0.x-dev",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Silex.git",
-                "reference": "b5d9bad2adf42f82f58e3eda3908aabada67a77e"
+                "reference": "v1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Silex/zipball/b5d9bad2adf42f82f58e3eda3908aabada67a77e",
-                "reference": "b5d9bad2adf42f82f58e3eda3908aabada67a77e",
+                "url": "https://api.github.com/repos/fabpot/Silex/zipball/v1.0.0",
+                "reference": "v1.0.0",
                 "shasum": ""
             },
             "require": {
@@ -1081,20 +1081,20 @@
             "keywords": [
                 "microframework"
             ],
-            "time": "2013-05-04 16:24:16"
+            "time": "2013-05-03 16:49:57"
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v4.3.1",
+            "version": "v5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "v4.3.1"
+                "reference": "v5.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/v4.3.1",
-                "reference": "v4.3.1",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/v5.0.0",
+                "reference": "v5.0.0",
                 "shasum": ""
             },
             "require": {
@@ -1103,7 +1103,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.3-dev"
+                    "dev-master": "5.0-dev"
                 }
             },
             "autoload": {
@@ -1113,7 +1113,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL"
+                "MIT"
             ],
             "authors": [
                 {
@@ -1130,7 +1130,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2013-04-11 10:22:09"
+            "time": "2013-04-30 17:35:30"
         },
         {
             "name": "symfony/config",
@@ -2060,7 +2060,6 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "silex/silex": 20,
         "htmlawed/htmlawed": 20,
         "hautelook/phpass": 20,
         "doctrine/dbal": 20,
