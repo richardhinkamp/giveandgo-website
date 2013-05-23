@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "815480422549f108c45b02a5f12aeead",
+    "hash": "003393a3af6ba0a91a10063193a425b3",
     "packages": [
         {
             "name": "bolt/bolt",
@@ -11,18 +11,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/bolt.git",
-                "reference": "201e6ad24fbb14fe798a9aa804d7b75497ced022"
+                "reference": "6982ec11e106393435ccc9532f588a84209d48f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/bolt/zipball/201e6ad24fbb14fe798a9aa804d7b75497ced022",
-                "reference": "201e6ad24fbb14fe798a9aa804d7b75497ced022",
+                "url": "https://api.github.com/repos/bolt/bolt/zipball/6982ec11e106393435ccc9532f588a84209d48f1",
+                "reference": "6982ec11e106393435ccc9532f588a84209d48f1",
                 "shasum": ""
             },
             "require": {
                 "dflydev/markdown": "1.0.*",
                 "doctrine/dbal": "2.4.x-dev",
                 "filp/whoops": "1.*",
+                "garetjax/phpbrowscap": "*",
                 "guzzle/guzzle": "3.3.*",
                 "hautelook/phpass": "dev-master",
                 "htmlawed/htmlawed": "dev-master",
@@ -67,7 +68,7 @@
                 "source": "https://github.com/bolt/bolt/tree/master",
                 "issues": "https://github.com/bolt/bolt/issues"
             },
-            "time": "2013-05-08 13:49:58"
+            "time": "2013-05-21 15:06:04"
         },
         {
             "name": "dflydev/markdown",
@@ -328,12 +329,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "3506be7467dbd4f923691a00555cf80065d32e59"
+                "reference": "1459223adae87305d07c9ea5f742a7fd6c8a740e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/3506be7467dbd4f923691a00555cf80065d32e59",
-                "reference": "3506be7467dbd4f923691a00555cf80065d32e59",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/1459223adae87305d07c9ea5f742a7fd6c8a740e",
+                "reference": "1459223adae87305d07c9ea5f742a7fd6c8a740e",
                 "shasum": ""
             },
             "require": {
@@ -394,7 +395,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2013-04-16 21:50:30"
+            "time": "2013-05-21 02:44:34"
         },
         {
             "name": "doctrine/dbal",
@@ -402,16 +403,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "873b952c416b2d316ecb1e052f822d57390ac296"
+                "reference": "d3456743629fae7a560ce741b680a0998f6f8c06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/873b952c416b2d316ecb1e052f822d57390ac296",
-                "reference": "873b952c416b2d316ecb1e052f822d57390ac296",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/d3456743629fae7a560ce741b680a0998f6f8c06",
+                "reference": "d3456743629fae7a560ce741b680a0998f6f8c06",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": "2.4.x-dev",
+                "doctrine/common": "2.4.*@beta",
                 "php": ">=5.3.2"
             },
             "require-dev": {
@@ -464,7 +465,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2013-05-04 11:57:47"
+            "time": "2013-05-21 05:52:08"
         },
         {
             "name": "doctrine/inflector",
@@ -583,16 +584,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "1.0.4",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "1.0.4"
+                "reference": "1.0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/1.0.4",
-                "reference": "1.0.4",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/1.0.6",
+                "reference": "1.0.6",
                 "shasum": ""
             },
             "require": {
@@ -630,7 +631,50 @@
                 "whoops",
                 "zf2"
             ],
-            "time": "2013-04-24 15:55:28"
+            "time": "2013-05-10 22:13:22"
+        },
+        {
+            "name": "garetjax/phpbrowscap",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GaretJax/phpbrowscap.git",
+                "reference": "5d98900bb1205482e31002dbfa002a2b54fb9dd3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GaretJax/phpbrowscap/zipball/5d98900bb1205482e31002dbfa002a2b54fb9dd3",
+                "reference": "5d98900bb1205482e31002dbfa002a2b54fb9dd3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "phpbrowscap": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT License"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Stoppani",
+                    "email": "jonathan.stoppani@gmail.com"
+                }
+            ],
+            "description": "Standalone replacement for php's native get_browser() function",
+            "homepage": "http://github.com/GaretJax/phpbrowscap",
+            "keywords": [
+                "browser",
+                "capabilities",
+                "get_browser",
+                "user agent"
+            ],
+            "time": "2012-07-22 20:12:48"
         },
         {
             "name": "guzzle/guzzle",
@@ -854,16 +898,16 @@
         },
         {
             "name": "jlong/sass-twitter-bootstrap",
-            "version": "v2.3.1",
+            "version": "v2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jlong/sass-twitter-bootstrap.git",
-                "reference": "v2.3.1"
+                "reference": "v2.3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jlong/sass-twitter-bootstrap/zipball/v2.3.1",
-                "reference": "v2.3.1",
+                "url": "https://api.github.com/repos/jlong/sass-twitter-bootstrap/zipball/v2.3.2",
+                "reference": "v2.3.2",
                 "shasum": ""
             },
             "type": "library",
@@ -878,10 +922,10 @@
                 "sass"
             ],
             "support": {
-                "source": "https://github.com/jlong/sass-twitter-bootstrap/tree/v2.3.1",
+                "source": "https://github.com/jlong/sass-twitter-bootstrap/tree/v2.3.2",
                 "issues": "https://github.com/jlong/sass-twitter-bootstrap/issues"
             },
-            "time": "2013-04-16 17:04:14"
+            "time": "2013-05-21 19:52:16"
         },
         {
             "name": "pimple/pimple",
@@ -2004,16 +2048,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.12.3",
+            "version": "v1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "v1.12.3"
+                "reference": "v1.13.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/v1.12.3",
-                "reference": "v1.12.3",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/v1.13.0",
+                "reference": "v1.13.0",
                 "shasum": ""
             },
             "require": {
@@ -2022,7 +2066,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.12-dev"
+                    "dev-master": "1.13-dev"
                 }
             },
             "autoload": {
@@ -2049,7 +2093,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-04-08 12:40:11"
+            "time": "2013-05-10 15:12:43"
         }
     ],
     "packages-dev": [
@@ -2062,6 +2106,7 @@
     "stability-flags": {
         "htmlawed/htmlawed": 20,
         "hautelook/phpass": 20,
+        "garetjax/phpbrowscap": 20,
         "doctrine/dbal": 20,
         "doctrine/common": 20,
         "bolt/bolt": 20,
