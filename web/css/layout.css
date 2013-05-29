@@ -1661,3 +1661,42 @@ ul.latest-blogs {
   cursor: pointer; }
 .picasagallery_album p {
   margin-bottom: 0; }
+
+.standings {
+  width: 100%; }
+  .standings .place,
+  .standings .points,
+  .standings .played {
+    text-align: center;
+    width: 60px; }
+  .standings .team {
+    text-align: left; }
+  .standings .goal_difference {
+    text-align: center;
+    width: 40px; }
+  .standings .goals {
+    text-align: center;
+    width: 80px; }
+  .standings .winpct {
+    text-align: right;
+    width: 55px; }
+
+.standings-graph {
+  margin-top: 1em;
+  text-align: center; }
+
+.scores {
+  width: 100%; }
+  .scores .datetime {
+    text-align: center;
+    width: 80px; }
+  .scores .team_home {
+    text-align: right;
+    padding-right: 10px; }
+  .scores .result {
+    text-align: center;
+    width: 75px;
+    font-weight: bold; }
+  .scores .team_away {
+    text-align: left;
+    padding-left: 10px; }

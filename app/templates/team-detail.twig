@@ -24,13 +24,60 @@
     {% endif %}
 
     {% if record.nbb_competitie_id > 0 and record.nbb_team_id > 0 %}
+        {% setcontent entries = "standings/" where { team_id: record.team_id, season: app.season } %}
         <a name="stand"></a>
         <h2>Stand</h2>
-        <iframe height="950" width="100%" frameborder="0" src="http://west.basketball.nl/db/wedstrijd/stand.pl?szn_Naam=2012-2013&amp;cmp_ID={{ record.nbb_competitie_id }}&amp;menubalk=off&amp;title=off&amp;link=off&amp;CSS={{ app.paths.hosturl }}/css/nbbdb.css"></iframe>
-        <br>
+        {% if entries is not empty %}
+            <table class="standings">
+                <tr>
+                    <th class="place">Plek</th>
+                    <th class="team">Team</th>
+                    <th class="played">Gespeeld</th>
+                    <th class="points">Punten</th>
+                    <th class="goals" colspan="2">Doelsaldo</th>
+                    <th class="winpct">Winst %</th>
+                </tr>
+                {% for entry in entries %}
+                    <tr>
+                        <td class="place">{{ entry.place }}</td>
+                        <td class="team">{{ entry.team_name }}</td>
+                        <td class="played">{{ entry.played }}</td>
+                        <td class="points">{{ entry.points }}</td>
+                        <td class="goal_difference">{{ entry.goal_difference }}</td>
+                        <td class="goals">{{ entry.goals_scored }} - {{ entry.goals_allowed }}</td>
+                        <td class="winpct">{{ entry.win_percentage|number_format(2, ',') }} %</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <div class="standings-graph">
+                <img src="http://west.basketball.nl/db/graphs/grph_multiline_stand.pl?szn_Naam={{ app.season }}&cmp_ID={{ record.nbb_competitie_id }}&date={{ "now"|date("Y-m-d") }}" alt="Stand grafiek" width="500" height="400">
+            </div>
+        {% else %}
+            <p>Nog geen gegevens beschikbaar.</p>
+        {% endif %}
         <a name="uitslagen"></a>
         <h2>Uitslagen</h2>
-        <iframe height="1650" width="100%" frameborder="0" src="http://west.basketball.nl/db/wedstrijd/uitslag.pl?szn_Naam=2012-2013&amp;cmp_ID={{ record.nbb_competitie_id }}&amp;Sorteer=wed_Datum&amp;LVactie=Wedstrijdgegevens&amp;plg_ID={{ record.nbb_team_id }}&amp;CSS=http://www.giveandgo.nl/css/nbbdb.css&amp;menubalk=off&amp;title=off&amp;link=off"></iframe>
+        {% setcontent entries = "scores/" where { team_id: record.team_id, season: app.season } %}
+        {% if entries is not empty %}
+            <table class="scores">
+                <tr>
+                    <th class="datetime">Datum/tijd</th>
+                    <th class="team_home">Thuis</th>
+                    <th class="result">Uitslag</th>
+                    <th class="team_away">Uit</th>
+                </tr>
+                {% for entry in entries %}
+                    <tr>
+                        <td class="datetime">{{ entry.datetime|date("d-m H:i") }}</td>
+                        <td class="team_home">{{ entry.team_home }}</td>
+                        <td class="result">{{ entry.score_home }} - {{ entry.score_away }}</td>
+                        <td class="team_away">{{ entry.team_away }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>Nog geen gegevens beschikbaar.</p>
+        {% endif %}
     {% endif %}
 {% endblock %}
 

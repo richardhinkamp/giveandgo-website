@@ -18,7 +18,7 @@
     ],
 
     "autoload": {
-        "psr-0": {"Local": "./app/src/"}
+        "psr-0": {"Giveandgo": "./app/src/"}
     },
 
 
@@ -30,7 +30,9 @@
         "doctrine/common": "2.4.*@dev",
         "bolt/bolt": "dev-master",
         "richardhinkamp/kcfinder": "dev-master",
-        "jlong/sass-twitter-bootstrap": "2.3.*"
+        "jlong/sass-twitter-bootstrap": "2.3.*",
+        "symfony/css-selector": "~2.2",
+        "symfony/dom-crawler": "~2.2"
     },
     "require-dev": {
     },

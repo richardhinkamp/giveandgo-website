@@ -153,6 +153,73 @@ header:
         image:
             type: image
 
+score:
+    name: Scores
+    singular_name: Score
+    fields:
+        team_id:
+            type: select
+            label: Team
+            values: [ U10, U12, U14, U16, U16M, U18, U20, D1, H1, RC ]
+        season:
+            type: select
+            label: Seizoen
+            values: [ 2012-2013, 2013-2014 ]
+        datetime:
+            type: datetime
+            label: Datum + tijd
+        team_home:
+            type: text
+            label: Naam thuis team
+        team_away:
+            type: text
+            label: Naam uit team
+        score_home:
+            type: integer
+            label: Score thuis team
+        score_away:
+            type: integer
+            label: Score uit team
+    sort: datetime DESC
+
+standing:
+    name: Standings
+    singular_name: Standing
+    fields:
+        team_id:
+            type: select
+            label: Team
+            values: [ U10, U12, U14, U16, U16M, U18, U20, D1, H1, RC ]
+        season:
+            type: select
+            label: Seizoen
+            values: [ 2012-2013, 2013-2014 ]
+        place:
+            type: integer
+            label: Plek
+        team_name:
+            type: text
+            label: Naam team
+        played:
+            type: integer
+            label: Gespeelde wedstrijden
+        points:
+            type: integer
+            label: Punten
+        goal_difference:
+            type: integer
+            label: Doelsaldo
+        goals_scored:
+            type: integer
+            label: Scores voor
+        goals_allowed:
+            type: integer
+            label: Scores tegen
+        win_percentage:
+            type: float
+            label: Winst percentage
+    sort: place
+
 
 # possible field types:
 # text - varchar(256) - input type text.
