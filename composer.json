@@ -5,15 +5,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/bolt/bolt"
-        },
-        {
-            "type": "vcs",
             "url": "https://github.com/richardhinkamp/kcfinder"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/jlong/sass-twitter-bootstrap"
         }
     ],
 
