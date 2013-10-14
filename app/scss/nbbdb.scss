@@ -79,6 +79,11 @@ td.bd table td:nth-child(3)
 td.bd table td:nth-child(5)
 {
     width: 70px;
+
+    a
+    {
+        display: inline;
+    }
 }
 
 BODY, TABLE, INPUT, SELECT, TEXTAREA

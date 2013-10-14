@@ -1,116 +1,76 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\000031}}
 .head {
   background-color: #feb919;
-  color: black;
-}
+  color: black; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\000036}}
 TR.light, TR.dark {
-  background: WHITE;
-}
+  background: WHITE; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000311}}
 TR.dark TH {
-  background-color: #eee;
-}
+  background-color: #eee; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000315}}
 .highlight {
-  color: #F75A08;
-}
+  color: #F75A08; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000318}}
 .gh {
   background: #1319C7;
   color: WHITE;
   font-weight: bold;
   font-family: Arial;
-  font-size: 12px;
-}
+  font-size: 12px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000325}}
 .bd {
   background: black;
-  padding: 0;
-}
+  padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000329}}
 .msg {
-  font-size: 14px;
-}
+  font-size: 14px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000333}}
 .titel {
   display: none;
-  color: #F75A08;
-}
+  color: #F75A08; }
 
 /* GnG enhancements */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000344}}
 TABLE {
   margin: 0;
-  width: 600px;
-}
+  width: 600px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000350}}
 TD.bd TABLE TH.head {
-  width: 600px;
-}
+  width: 600px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000355}}
 TD.bd TABLE TR.dark TD {
-  background-color: #fcfcfc;
-}
+  background-color: #fcfcfc; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000360}}
 td.bd table td {
-  text-align: center;
-}
+  text-align: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000365}}
 td.bd table td:nth-child(1) {
-  width: 65px;
-}
+  width: 65px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000370}}
 td.bd table td:nth-child(2) {
-  width: 100px;
-}
+  width: 100px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000375}}
 td.bd table td:nth-child(3) {
-  width: 165px;
-}
+  width: 165px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000380}}
 td.bd table td:nth-child(5) {
-  width: 70px;
-}
+  width: 70px; }
+  td.bd table td:nth-child(5) a {
+    display: inline; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000385}}
 BODY, TABLE, INPUT, SELECT, TEXTAREA {
   font-family: Arial, helvetica, sans-serif;
-  font-size: 9pt;
-}
+  font-size: 9pt; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000391}}
 A {
-  display: none;
-}
+  display: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\0000396}}
 A:hover {
-  text-decoration: underline;
-}
+  text-decoration: underline; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\00003101}}
 TD, TH {
   padding-left: 3px;
-  padding-right: 3px;
-}
+  padding-right: 3px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/richard\/Documents\/www\/giveandgo-website\/app\/scss\/nbbdb\.scss}line{font-family:\00003107}}
 BODY {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
