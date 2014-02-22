@@ -15,16 +15,15 @@
 
 
     "require": {
-        "htmlawed/htmlawed": "dev-master",
-        "hautelook/phpass": "dev-master",
-        "garetjax/phpbrowscap": "*@dev",
-        "doctrine/dbal": "2.4.*@dev",
-        "doctrine/common": "2.4.*@dev",
+	"erusev/parsedown": "dev-master",
+	"garetjax/phpbrowscap": "dev-master",
+	"hautelook/phpass": "dev-master",
+	"ircmaxell/random-lib": "1.0.*@dev",
         "bolt/bolt": "dev-master",
         "richardhinkamp/kcfinder": "dev-master",
         "jlong/sass-twitter-bootstrap": "2.3.*",
-        "symfony/css-selector": "~2.2",
-        "symfony/dom-crawler": "~2.2"
+        "symfony/css-selector": "~2.4",
+        "symfony/dom-crawler": "~2.4"
     },
     "require-dev": {
     },

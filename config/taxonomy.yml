@@ -21,7 +21,7 @@ tags:
 #    multiple: 1
 #    options: [ news, events, movies, music, books, life, love, fun ]
 
-teams:
+for-teams:
     name: Teams
     slug: for-teams
     singular_name: Team
