@@ -156,6 +156,7 @@ header:
 score:
     name: Scores
     singular_name: Score
+    show_on_dashboard: false
     fields:
         team_id:
             type: select
@@ -185,6 +186,7 @@ score:
 standing:
     name: Standings
     singular_name: Standing
+    show_on_dashboard: false
     fields:
         team_id:
             type: select
