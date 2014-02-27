@@ -1,11 +1,14 @@
 {% extends "layout/layout.twig" %}
 
+{% block title_text %}{{ __('Sitemap') }}{% endblock %}
+
 {% block page_content %}
-    <h1>Sitemap</h1>
+    <h1>{{ __('Sitemap') }}</h1>
     <ul>
         {% for entry in entries %}
-            <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
+            {% if entry.link is defined %}
+                <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
+            {% endif %}
         {% endfor %}
     </ul>
 {% endblock %}
-

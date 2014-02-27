@@ -31,7 +31,7 @@ add_jquery: true
 # The list of enabled extensions.
 # TestSnippets, GoogleAnalytics
 #enabled_extensions: [ HelloWorld, FacebookLike, TwitterButton ]
-enabled_extensions: []
+enabled_extensions: [ Sitemap ]
 
 # The default amount of records to show on overview pages. Can be overridden
 # for each contenttype.

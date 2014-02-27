@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "4905e11f3af610af662da7242ca6a434",
+    "hash": "48496495b7c253fd0871d9e60301e947",
     "packages": [
         {
             "name": "bolt/bolt",
-            "version": "v1.5.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/bolt.git",
-                "reference": "2999dd3e8f0c947951b8e0c0d37585ad26115586"
+                "reference": "0cecd86df9cb410e628515b8be9a9fe8f8fd821c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/bolt/zipball/2999dd3e8f0c947951b8e0c0d37585ad26115586",
-                "reference": "2999dd3e8f0c947951b8e0c0d37585ad26115586",
+                "url": "https://api.github.com/repos/bolt/bolt/zipball/0cecd86df9cb410e628515b8be9a9fe8f8fd821c",
+                "reference": "0cecd86df9cb410e628515b8be9a9fe8f8fd821c",
                 "shasum": ""
             },
             "require": {
@@ -75,7 +75,7 @@
                 "silex",
                 "symfony"
             ],
-            "time": "2014-02-22 11:50:40"
+            "time": "2014-02-26 17:31:49"
         },
         {
             "name": "bolt/dumper",
@@ -248,7 +248,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
+                    "name": "Jonathan H. Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/",
                     "role": "Creator"
@@ -267,7 +267,7 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
-                    "name": "Johannes Schmitt",
+                    "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
                     "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
@@ -496,12 +496,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "54b8333d2a5682afdc690060c1cf384ba9f47f08"
+                "reference": "v1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/54b8333d2a5682afdc690060c1cf384ba9f47f08",
-                "reference": "54b8333d2a5682afdc690060c1cf384ba9f47f08",
+                "url": "https://github.com/doctrine/inflector/archive/v1.0.zip",
+                "reference": "v1.0",
                 "shasum": ""
             },
             "require": {
@@ -521,8 +521,7 @@
                 {
                     "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": "Creator"
+                    "homepage": "http://www.jwage.com/"
                 },
                 {
                     "name": "Guilherme Blanco",
@@ -560,12 +559,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "2f708a85bb3aab5d99dab8be435abd73e0b18acb"
+                "reference": "v1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/2f708a85bb3aab5d99dab8be435abd73e0b18acb",
-                "reference": "2f708a85bb3aab5d99dab8be435abd73e0b18acb",
+                "url": "https://github.com/doctrine/lexer/archive/v1.0.zip",
+                "reference": "v1.0",
                 "shasum": ""
             },
             "require": {
@@ -594,7 +593,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -612,12 +611,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/erusev/parsedown.git",
-                "reference": "a6756fd4fa733d51c0a8e1e3c6ff08e92105366a"
+                "reference": "886c6204400cd590aa2ad94353052da5ee6bf4ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/a6756fd4fa733d51c0a8e1e3c6ff08e92105366a",
-                "reference": "a6756fd4fa733d51c0a8e1e3c6ff08e92105366a",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/886c6204400cd590aa2ad94353052da5ee6bf4ea",
+                "reference": "886c6204400cd590aa2ad94353052da5ee6bf4ea",
                 "shasum": ""
             },
             "type": "library",
@@ -643,7 +642,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2014-02-22 10:35:54"
+            "time": "2014-02-27 12:14:14"
         },
         {
             "name": "filp/whoops",
@@ -977,12 +976,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jbroadway/urlify.git",
-                "reference": "2fa0f7b38d4faebbb94f62e97bd86e740e68f75a"
+                "reference": "1.0.0-stable"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jbroadway/urlify/zipball/2fa0f7b38d4faebbb94f62e97bd86e740e68f75a",
-                "reference": "2fa0f7b38d4faebbb94f62e97bd86e740e68f75a",
+                "url": "https://api.github.com/repos/jbroadway/urlify/zipball/1.0.0-stable",
+                "reference": "1.0.0-stable",
                 "shasum": ""
             },
             "require": {
@@ -1002,8 +1001,7 @@
                 {
                     "name": "Johnny Broadway",
                     "email": "johnny@johnnybroadway.com",
-                    "homepage": "http://www.johnnybroadway.com/",
-                    "role": "Main Developer"
+                    "homepage": "http://www.johnnybroadway.com/"
                 }
             ],
             "description": "PHP port of URLify.js from the Django project. Transliterates non-ascii characters for use in URLs.",
@@ -1102,13 +1100,13 @@
             "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-fig/log.git",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
+                "url": "https://github.com/php-fig/log",
+                "reference": "1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "url": "https://github.com/php-fig/log/archive/1.0.0.zip",
+                "reference": "1.0.0",
                 "shasum": ""
             },
             "type": "library",
@@ -2907,6 +2905,7 @@
         "garetjax/phpbrowscap": 20,
         "hautelook/phpass": 20,
         "ircmaxell/random-lib": 20,
+        "bolt/bolt": 20,
         "richardhinkamp/kcfinder": 20
     },
     "platform": [

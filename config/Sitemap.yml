@@ -1,0 +1,13 @@
+# sitemap settings
+
+template: sitemap.twig
+xml_template: assets/sitemap_xml.twig
+
+ignore:
+  - /pagina/home
+  - /pagina/pagina-niet-gevonden
+
+ignore_contenttype:
+  - headers
+  - scores
+  - standings
