@@ -15,10 +15,10 @@
 
 
     "require": {
-	"erusev/parsedown": "dev-master",
-	"garetjax/phpbrowscap": "dev-master",
-	"hautelook/phpass": "dev-master",
-	"ircmaxell/random-lib": "1.0.*@dev",
+        "erusev/parsedown": "dev-master",
+        "garetjax/phpbrowscap": "dev-master",
+        "hautelook/phpass": "dev-master",
+        "ircmaxell/random-lib": "1.0.*@dev",
         "bolt/bolt": "dev-master",
         "richardhinkamp/kcfinder": "dev-master",
         "jlong/sass-twitter-bootstrap": "2.3.*",
