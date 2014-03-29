@@ -33,6 +33,7 @@ wedstrijdverslagen:
     listing_records: 10
     sort: date DESC
     recordsperpage: 10
+    default_status: publish
     rss:
       enabled: true
       feed_records: 10
@@ -67,6 +68,7 @@ mededelingen:
     listing_records: 10
     sort: date DESC
     recordsperpage: 10
+    default_status: publish
     rss:
       enabled: true
       feed_records: 10
@@ -106,6 +108,7 @@ page:
     sort: title
     recordsperpage: 100
     record_template: page.twig
+    default_status: publish
 
 team:
     name: Teams
@@ -142,6 +145,7 @@ team:
     listing_template: team-list.twig
     listing_records: 100
     recordsperpage: 100
+    default_status: publish
 
 header:
     name: Headers
@@ -152,6 +156,7 @@ header:
             class: large
         image:
             type: image
+    default_status: publish
 
 score:
     name: Scores
