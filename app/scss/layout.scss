@@ -526,12 +526,24 @@ DIV#footer P.footer2 A:hover {
   color: #fff;
 }
 
+#plug {
+  float: left;
+  width: 300px;
+  padding: 7px 0 0 100px;
+  font-size: .8em;
+  line-height: 20px;
+
+  &, a {
+    color: white;
+  }
+}
+
 DIV#footermenu {
   display: inline;
   float: left;
   height: 112px;
   text-align: right;
-  margin: 0 0 0 400px;
+  margin: 0;
   width: 588px;
 }
 

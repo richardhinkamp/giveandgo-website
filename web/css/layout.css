@@ -64,7 +64,7 @@ html {
   -ms-text-size-adjust: 100%; }
 
 a:focus, .picasagallery_header:focus {
-  outline: thin dotted #333333;
+  outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
@@ -154,7 +154,7 @@ textarea {
 @media print {
   * {
     text-shadow: none !important;
-    color: black !important;
+    color: #000 !important;
     background: transparent !important;
     box-shadow: none !important; }
 
@@ -178,7 +178,7 @@ textarea {
 
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid; }
 
   thead {
@@ -470,7 +470,7 @@ a:focus,
 .img-polaroid {
   padding: 4px;
   background-color: #fff;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -782,8 +782,7 @@ p {
   font-size: 10.5px; }
 
 #menu ul li:hover ul li a, #menu ul li:hover ul li .picasagallery_header,
-#menu ul li:hover ul li.Selected a,
-#menu ul li:hover ul li.Selected .picasagallery_header, DIV#submenu ul li a, DIV#submenu ul li .picasagallery_header, .index-news-intro h2, .index-more-news li, .picasagallery_album p {
+#menu ul li:hover ul li.Selected a, DIV#submenu ul li a, DIV#submenu ul li .picasagallery_header, .index-news-intro h2, .index-more-news li, .picasagallery_album p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -981,8 +980,8 @@ DIV#menu ul li.Selected:hover .submenu.picasagallery_header {
 #menu ul li:hover ul li.Selected a,
 #menu ul li:hover ul li.Selected .picasagallery_header {
   background: transparent url(/img/pijlsubmenu.png) no-repeat 9px 12px !important;
-  border-bottom: 1px solid lightgrey;
-  color: black !important;
+  border-bottom: 1px solid #d3d3d3;
+  color: #000000 !important;
   font-size: .9em;
   font-weight: normal !important;
   display: block;
@@ -994,11 +993,11 @@ DIV#menu ul li.Selected:hover .submenu.picasagallery_header {
   text-decoration: none; }
 
 #menu ul li ul li a:hover, #menu ul li ul li .picasagallery_header:hover {
-  color: white !important;
+  color: #FFF !important;
   background: #eda601 url(/img/pijlsubmenuhover2.png) no-repeat 9px 12px !important; }
 
 #menu ul li:hover ul li.Selected a, #menu ul li:hover ul li.Selected .picasagallery_header {
-  color: white !important;
+  color: #FFF !important;
   background: #888888 url(/img/pijlsubmenuhover2.png) no-repeat 9px 12px !important; }
 
 /* Contentcontainer
@@ -1230,12 +1229,21 @@ DIV#footer P.footer1 A:hover,
 DIV#footer P.footer2 A:hover {
   color: #fff; }
 
+#plug {
+  float: left;
+  width: 300px;
+  padding: 7px 0 0 100px;
+  font-size: .8em;
+  line-height: 20px; }
+  #plug, #plug a, #plug .picasagallery_header {
+    color: white; }
+
 DIV#footermenu {
   display: inline;
   float: left;
   height: 112px;
   text-align: right;
-  margin: 0 0 0 400px;
+  margin: 0;
   width: 588px; }
 
 DIV#footermenu ul {
@@ -1272,7 +1280,7 @@ DIV#footermenu ul li.Selected .picasagallery_header:hover {
 /* Content opmaak
 -------------------------------------------------------------- */
 DIV.NewsContainer {
-  border: 1px solid #eeeeee;
+  border: 1px solid #eee;
   background-color: #fcfcfc;
   margin: 10px; }
 
@@ -1283,7 +1291,7 @@ DIV.NewsContainer H2, DIV.NewsContainer .picasagallery_header {
 
 DIV.News {
   padding: 3px;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #eee;
   background-color: #fefefe; }
 
 DIV.News SPAN.Date {
@@ -1291,7 +1299,7 @@ DIV.News SPAN.Date {
   font-size: 9pt; }
 
 p.ReadMore {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #E5E5E5;
   padding-bottom: 10px;
   margin: 0; }
 
@@ -1311,7 +1319,7 @@ p.NewsItemInfo {
 
 div.NewsItemBottom,
 div.IntroListBottom {
-  border-top: 1px solid #e5e5e5; }
+  border-top: 1px solid #E5E5E5; }
 
 .NewsItemIntro h2 {
   font-size: 14px;
@@ -1567,7 +1575,7 @@ div#newsdiv1 {
 
 div#newsdiv2 {
   width: 300px;
-  border-left: 1px solid #b3cbe3;
+  border-left: 1px solid #B3CBE3;
   padding-left: 15px;
   padding-right: 15px;
   float: left;
@@ -1576,10 +1584,10 @@ div#newsdiv2 {
   margin-left: -1px; }
 
 div#newsdiv {
-  border-top: 1px solid #b3cbe3;
+  border-top: 1px solid #B3CBE3;
   float: left;
   overflow: hidden;
-  border-bottom: 1px solid #b3cbe3;
+  border-bottom: 1px solid #B3CBE3;
   margin-bottom: 10pt; }
 
 .news-intro > h2 {
@@ -1625,7 +1633,7 @@ article.blog .meta {
     background: none;
     padding: 0;
     margin-bottom: 8pt;
-    border-bottom: 1px solid #b3cbe3;
+    border-bottom: 1px solid #B3CBE3;
     font-size: 110%; }
     .index-more-news li .date {
       margin-bottom: 3px;
