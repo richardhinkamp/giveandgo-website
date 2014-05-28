@@ -71,15 +71,6 @@ DIV#header1 IMG.silhouette1 {
   z-index: 99;
 }
 
-DIV#header1 IMG.henkpieterse {
-  height: 325px;
-  left: 50%;
-  margin: 17px 0 0 150px;
-  position: absolute;
-  width: 318px;
-  z-index: 99;
-}
-
 /* Logo
 -------------------------------------------------------------- */
 
@@ -101,12 +92,6 @@ DIV#header2 {
   width: 988px;
   position: relative;
   background-image: url(/img/header.jpg);
-
-  .clinic-header-info {
-    margin: 20px 0 0 20px;
-    position: absolute;
-    z-index: 99;
-  }
 }
 
 /* Kruimelpad

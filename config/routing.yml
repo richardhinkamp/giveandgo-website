@@ -14,11 +14,7 @@
 
 homepage:
   path:               /
-  defaults:           { _controller: 'Giveandgo\Controllers\Frontend::homepage' }
-
-oldclinic:
-  path:               /pagina/basketbal-clinic-henk-pietersen-10-mei
-  defaults:           { _controller: 'Giveandgo\Controllers\Frontend::oldClinicUrl' }
+  defaults:           { _controller: 'Bolt\Controllers\Frontend::homepage' }
 
 search:
   path:               /search
