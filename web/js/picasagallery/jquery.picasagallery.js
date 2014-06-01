@@ -24,7 +24,7 @@
 
     // Private methods
     
-    var picasagallery_load_albums = function() {
+    var picasagallery_load_albums = function(loadAlbum) {
         if(busy)
             return;
         busy = true;
@@ -86,6 +86,16 @@
             
             data.loaded = true;
             busy = false;
+
+            if (loadAlbum !== undefined && loadAlbum !== "") {
+                $(".picasagallery_album img").each(
+                    function() {
+                        if($(this).data("album") == loadAlbum) {
+                            $(this).click();
+                            return false;
+                        }
+                    });
+            }
         }, this));
     };
 
@@ -226,7 +236,7 @@
             return;
         }
         this.addClass('picasagallery');
-        picasagallery_load_albums.apply(this);
+        picasagallery_load_albums.apply(this, [options.load_album]);
         return this;
     };
 
