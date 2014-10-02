@@ -66,7 +66,7 @@
                     <li class="Menu{% if teams is defined or ( record is defined and record.contenttype.slug == "teams" ) %} Selected{% endif %}">
                         <a href="/teams" title="Teams">Teams</a>
                         <ul>
-                            {% setcontent teams = "teams" %}
+                            {% setcontent teams = "teams" orderby 'menu_order' %}
                             {% for entry in teams %}
                                 <li class="Menu">
                                     <a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.title }}</a>
