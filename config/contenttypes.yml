@@ -20,7 +20,7 @@ wedstrijdverslagen:
         team_id:
             type: select
             label: Team
-            values: [ U10, U12, U14, U16, U16M, U18, U20, D1, H1, RC ]
+            values: [ U10, U12, U14, U16, U16M, U18, U18M, U20, D1, H1, H2, RC ]
         teaser:
             type: textarea
         body:
@@ -129,7 +129,7 @@ team:
         team_id:
             type: select
             label: Team
-            values: [ U10, U12, U14, U16, U16M, U18, U20, D1, H1, RC ]
+            values: [ U10, U12, U14, U16, U16M, U18, U18M, U20, D1, H1, H2, RC ]
         nbb_competitie_id:
             type: integer
             label: NBB Competitie ID
@@ -166,11 +166,11 @@ score:
         team_id:
             type: select
             label: Team
-            values: [ U10, U12, U14, U16, U16M, U18, U20, D1, H1, RC ]
+            values: [ U10, U12, U14, U16, U16M, U18, U18M, U20, D1, H1, H2, RC ]
         season:
             type: select
             label: Seizoen
-            values: [ 2012-2013, 2013-2014 ]
+            values: [ 2012-2013, 2013-2014, 2014-2015 ]
         datetime:
             type: datetime
             label: Datum + tijd
@@ -196,11 +196,11 @@ standing:
         team_id:
             type: select
             label: Team
-            values: [ U10, U12, U14, U16, U16M, U18, U20, D1, H1, RC ]
+            values: [ U10, U12, U14, U16, U16M, U18, U18M, U20, D1, H1, H2, RC ]
         season:
             type: select
             label: Seizoen
-            values: [ 2012-2013, 2013-2014 ]
+            values: [ 2012-2013, 2013-2014, 2014-2015 ]
         place:
             type: integer
             label: Plek
