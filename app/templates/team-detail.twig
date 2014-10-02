@@ -24,7 +24,7 @@
     {% endif %}
 
     {% if record.nbb_competitie_id > 0 and record.nbb_team_id > 0 %}
-        {% setcontent entries = "standings/" where { team_id: record.team_id, season: app.season } %}
+        {% setcontent entries = "standings/" where { team_id: record.team_id, season: app.season } orderby 'place ASC' %}
         <a name="stand"></a>
         <h2>Stand</h2>
         {% if entries is not empty %}
@@ -57,7 +57,7 @@
         {% endif %}
         <a name="uitslagen"></a>
         <h2>Uitslagen</h2>
-        {% setcontent entries = "scores/" where { team_id: record.team_id, season: app.season } %}
+        {% setcontent entries = "scores/" where { team_id: record.team_id, season: app.season } orderby 'datetime' %}
         {% if entries is not empty %}
             <table class="scores">
                 <tr>
