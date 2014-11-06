@@ -75,7 +75,7 @@ mededelingen:
       feed_template: rss.twig
       content_length: 250
 
-page:
+paginas:
     name: Paginas
     singular_name: Pagina
     fields:
@@ -110,7 +110,7 @@ page:
     record_template: page.twig
     default_status: publish
 
-team:
+teams:
     name: Teams
     singular_name: Team
     fields:
@@ -147,7 +147,7 @@ team:
     recordsperpage: 100
     default_status: publish
 
-header:
+headers:
     name: Headers
     singular_name: Header
     fields:
@@ -158,7 +158,7 @@ header:
             type: image
     default_status: publish
 
-score:
+scores:
     name: Scores
     singular_name: Score
     show_on_dashboard: false
@@ -188,7 +188,7 @@ score:
             label: Score uit team
     sort: datetime DESC
 
-standing:
+standings:
     name: Standings
     singular_name: Standing
     show_on_dashboard: false

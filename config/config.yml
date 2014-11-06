@@ -23,7 +23,7 @@ notfound: pagina/pagina-niet-gevonden
 # name here accordingly. Don't edit the templates in theme/default, because
 # they _will_ get updated in next releases
 theme: templates
-theme_path: /app
+theme_path: /../app/
 
 # Add jQuery to the rendered HTML, whether or not it's added by an extension.
 add_jquery: true
