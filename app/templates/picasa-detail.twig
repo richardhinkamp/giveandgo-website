@@ -1,0 +1,33 @@
+{% extends "picasa-base.twig" %}
+
+{% block page_content %}
+    <h1>{{ record.title }}</h1>
+    <p>{{ record.description }}</p>
+
+    <div class="photos">
+        {% setcontent photos = "fotos" where { album_id: record.id } orderby 'datepublish ASC' %}
+        {% for photo in photos %}
+            <a class="col-sm-2 text-center photo" rel="album" href="{{ photo.url }}">
+                <img class="img-responsive" src="{{ photo.thumb_url }}" alt="{{ photo.title }}">
+                {#<h3>{{ record.title }}</h3>#}
+                {#<p>{{ record.description }}</p>#}
+            </a>
+        {% endfor %}
+        <div class="clearfix"></div>
+    </div>
+{% endblock %}
+
+{% block extra_css_files %}
+    <link href="/fancybox/source/jquery.fancybox.css" rel="stylesheet">
+{% endblock %}
+
+{% block js_files %}
+    {{ parent() }}
+    <script src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
+    <script src="/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.photo').fancybox();
+        });
+    </script>
+{% endblock %}

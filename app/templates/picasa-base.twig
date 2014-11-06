@@ -1,0 +1,12 @@
+{% extends "page.twig" %}
+
+{% block submenu_title %}<a href="/foto-albums" title="Foto's">Foto's</a>{% endblock %}
+
+{% block submenu_list %}
+    {% setcontent entries = "foto-albums/latest/10" %}
+    {% for entry in entries %}
+        <li class="Menu">
+            <a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.title }}</a>
+        </li>
+    {% endfor %}
+{% endblock %}

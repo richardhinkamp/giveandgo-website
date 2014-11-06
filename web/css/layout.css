@@ -782,7 +782,8 @@ p {
   font-size: 10.5px; }
 
 #menu ul li:hover ul li a, #menu ul li:hover ul li .picasagallery_header,
-#menu ul li:hover ul li.Selected a, DIV#submenu ul li a, DIV#submenu ul li .picasagallery_header, .index-news-intro h2, .index-more-news li, .picasagallery_album p {
+#menu ul li:hover ul li.Selected a,
+#menu ul li:hover ul li.Selected .picasagallery_header, DIV#submenu ul li a, DIV#submenu ul li .picasagallery_header, .index-news-intro h2, .index-more-news li, .picasagallery_album p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -1708,3 +1709,29 @@ ul.latest-blogs {
   .scores .team_away {
     text-align: left;
     padding-left: 10px; }
+
+.photo-albums .photo-album {
+  display: inline-block;
+  width: 190px;
+  height: 215px;
+  overflow: hidden;
+  margin: 0 10px 20px;
+  text-align: center; }
+  .photo-albums .photo-album:hover {
+    text-decoration: none; }
+  .photo-albums .photo-album h2, .photo-albums .photo-album p {
+    font-size: 100%;
+    line-height: 100%; }
+  .photo-albums .photo-album h2 {
+    font-weight: bold;
+    margin: 10px 0 5px 0; }
+  .photo-albums .photo-album p {
+    margin: 0;
+    text-align: center; }
+
+.photos .photo {
+  display: inline-block;
+  margin: 9px;
+  width: 144px;
+  height: 144px;
+  overflow: hidden; }

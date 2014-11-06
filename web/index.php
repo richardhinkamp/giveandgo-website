@@ -74,9 +74,9 @@ $app->before(function () use ( $app) {
     }
 
     // Foto album
-    if ( preg_match( '#^/foto-album(\.html|/.*)$#', $request->getRequestUri(), $m ) ) {
-        return new Symfony\Component\HttpFoundation\RedirectResponse('/pagina/fotos', 301);
-    }
+//    if ( preg_match( '#^/foto-album(\.html|/.*)$#', $request->getRequestUri(), $m ) ) {
+//        return new Symfony\Component\HttpFoundation\RedirectResponse('/pagina/fotos', 301);
+//    }
 
     // Other old urls
     switch( $request->getRequestUri() )

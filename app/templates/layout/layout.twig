@@ -74,8 +74,16 @@
                             {% endfor %}
                         </ul>
                     </li>
-                    <li class="Menu">
-                        <a href="/pagina/fotos" title="Foto's">Foto's</a>
+                    <li class="Menu{% if fotoalbums is defined or ( record is defined and record.contenttype.slug == "foto-album" ) %} Selected{% endif %}">
+                        <a href="/foto-albums" title="Foto albums">Foto's</a>
+                        <ul>
+                            {% setcontent albums = "foto-album/latest/10" %}
+                            {% for entry in albums %}
+                                <li class="Menu">
+                                    <a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
                     </li>
                 </ul>
             </div>
