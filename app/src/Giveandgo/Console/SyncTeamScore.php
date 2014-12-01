@@ -25,7 +25,7 @@ class SyncTeamScore extends BaseCommand
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $this->guzzleclient = new Client('http://west.basketball.nl/db/wedstrijd/uitslag.pl');
+        $this->guzzleclient = new Client('http://db.basketball.nl/db/wedstrijd/uitslag.pl');
         $teams = $this->app['storage']->getContent('teams',array());
         foreach($teams as $team) {
             if($team->get('nbb_team_id')>0 && $team->get('nbb_competitie_id')>0) {
