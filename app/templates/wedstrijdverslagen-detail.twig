@@ -2,6 +2,8 @@
 
 {% import "layout/news-detail.twig" as news %}
 
+{% block title_text %}Wedstrijdverslag {{ ( record.team_id ? record.team_id ~ ": " ) ~ record.title }}{% endblock %}
+
 {% block page_content %}
     {{ parent() }}
     {% setcontent entries = "wedstrijdverslagen/latest/5" where { id: "!" ~ record.id } %}
