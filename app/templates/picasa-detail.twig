@@ -1,5 +1,7 @@
 {% extends "picasa-base.twig" %}
 
+{% block title_text %}Fotos: {{ record.title }}{% endblock %}
+
 {% block page_content %}
     <h1>{{ record.title }}</h1>
     <p>{{ record.description }}</p>
