@@ -7,7 +7,8 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Guzzle\Service\Client;
-use Symfony\Component\DomCrawler\Crawler;
+
+// See: http://db.basketball.nl/help/koppelingen/json
 
 class SyncTeamStandings extends BaseCommand
 {
