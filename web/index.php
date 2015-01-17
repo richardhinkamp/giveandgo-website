@@ -3,8 +3,8 @@
 define('BOLT_WEB_DIR', __DIR__);
 require_once( '../app/src/bootstrap.php' );
 
-$app->before(function () use ( $app) {
-    /** @var $app Bolt\Application */
+/** @var $app Bolt\Application */
+$app->before(function () use ( $app ) {
 
     /** @var $storage \Bolt\Storage */
     $storage = $app['storage'];
