@@ -55,8 +55,8 @@ rm -rf vendor/guzzle/guzzle/phing/
 rm -rf vendor/swiftmailer/swiftmailer/notes/
 rm -rf app/scss/
 rm -rf .sass-cache
-rm -f web/kcfinder
-mv vendor/richardhinkamp/kcfinder web/kcfinder
+if [ -h web/kcfinder ]; then rm web/kcfinder; fi
+if [ -d vendor/richardhinkamp/kcfinder ]; then mv vendor/richardhinkamp/kcfinder web/kcfinder; fi
 rm -rf web/files/
 rm -rf web/upload/
 rm -rf web/fancybox/demo
