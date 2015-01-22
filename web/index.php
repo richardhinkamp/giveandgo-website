@@ -1,6 +1,5 @@
 <?php
 
-define('BOLT_WEB_DIR', __DIR__);
 require_once( '../app/src/bootstrap.php' );
 
 /** @var $app Bolt\Application */
