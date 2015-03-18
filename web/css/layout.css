@@ -6385,15 +6385,11 @@ footer {
   margin-bottom: 1em;
   height: 200px;
   overflow: hidden; }
-  .photo-album h2, .photo-album p {
-    font-size: 100%;
-    line-height: 100%; }
   .photo-album h2 {
+    font-size: 100%;
+    line-height: 100%;
     font-weight: bold;
     margin: 10px 0 5px 0; }
-  .photo-album p {
-    margin: 0;
-    text-align: center; }
 
 .standings {
   width: 100%; }

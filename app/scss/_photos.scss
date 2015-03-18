@@ -12,18 +12,10 @@
     height: 200px;
     overflow: hidden;
     
-    h2, p {
+    h2 {
         font-size: 100%;
         line-height: 100%;
-    }
-
-    h2 {
         font-weight: bold;
         margin: 10px 0 5px 0;
-    }
-    
-    p {
-        margin: 0;
-        text-align: center;
     }
 }

@@ -10,9 +10,9 @@
     {% setcontent records = "foto-albums/latest/100" %}
     {% for record in records %}
         <div class="col-sm-2 photo-album">
-            <a class="photo-album" href="{{ record.link }}">
+            <a href="{{ record.link }}">
                 <img src="{{ record.thumb_url }}|replace({'144c': '160c'}" alt="{{ record.title }}">
-                <h2>{{ record.title }}</h2>
+                {{ record.title }}
             </a>
         </div>
     {% endfor %}
