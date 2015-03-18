@@ -10,7 +10,7 @@
 }
 
 .dc_table_s4 thead th, .dc_table_s4 tbody th {
-  background: #FFF url(../images/th_bck.gif) repeat-x;
+  background: $white;
   border: 1px solid #CCC;
   color: #666;
   padding: 5px 10px
@@ -29,7 +29,7 @@
 }
 
 .dc_table_s4 tbody tr:hover {
-  background: #FFF url(../images/tr_bck.gif) repeat
+  background: $white;
 }
 
 .dc_table_s4 tbody tr:hover td {
@@ -37,7 +37,7 @@
 }
 
 .dc_table_s4 tfoot td, .dc_table_s4 tfoot th {
-  background: #FFF url(../images/foot_bck.gif) repeat;
+  background: $white;
   border-left: none;
   border: 1px solid #CCC;
   color: #666;

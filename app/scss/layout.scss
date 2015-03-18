@@ -48,10 +48,10 @@ section table {
     }
 
     a {
-      color: #333;
+      color: darken($textcolor, 20%);
       
       &:hover {
-        color: #1abc9c;
+        color: $highlight;
       }
     }
   }
@@ -65,7 +65,7 @@ footer {
   padding: 0;
   
   a {
-    color: lighten(#808080, 10%);
+    color: lighten($gray, 10%);
   }
 }
 
