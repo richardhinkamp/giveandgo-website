@@ -1,0 +1,61 @@
+.standings {
+    width: 100%;
+
+    .place,
+    .points,
+    .played {
+        text-align: center;
+        width: 60px;
+    }
+
+    .team {
+        text-align: left;
+
+    }
+
+    .goal_difference {
+        text-align: center;
+        width: 40px;
+    }
+
+    .goals {
+        text-align: center;
+        width: 100px;
+    }
+
+    .winpct {
+        text-align: right;
+        width: 75px;
+    }
+}
+
+.standings-graph {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.scores {
+    width: 100%;
+
+    .datetime {
+        text-align: center;
+        width: 100px;
+    }
+
+    .team_home {
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    .result {
+        text-align: center;
+        width: 75px;
+        font-weight: bold;
+    }
+
+    .team_away {
+        text-align: left;
+        padding-left: 10px;
+    }
+
+}

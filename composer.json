@@ -31,7 +31,7 @@
 
         "richardhinkamp/bolt-picasa": "dev-master",
         "richardhinkamp/kcfinder": "dev-master",
-		"jlong/sass-twitter-bootstrap": "2.3.*"
+        "jlong/sass-twitter-bootstrap": "3.0.*"
     },
     "require-dev": {
     },

@@ -29,7 +29,7 @@ wedstrijdverslagen:
         old_id:
             type: integer
     record_template: wedstrijdverslagen-detail.twig
-    listing_template: wedstrijdverslagen-list.twig
+    listing_template: layout/news-list.twig
     listing_records: 10
     sort: date DESC
     recordsperpage: 10
@@ -64,7 +64,7 @@ mededelingen:
         old_id:
             type: integer
     record_template: mededelingen-detail.twig
-    listing_template: mededelingen-list.twig
+    listing_template: layout/news-list.twig
     listing_records: 10
     sort: date DESC
     recordsperpage: 10

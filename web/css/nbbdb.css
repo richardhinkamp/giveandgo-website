@@ -31,11 +31,7 @@ TR.dark TH {
 
 /* GnG enhancements */
 TABLE {
-  margin: 0;
-  width: 600px; }
-
-TD.bd TABLE TH.head {
-  width: 600px; }
+  margin: 0; }
 
 TD.bd TABLE TR.dark TD {
   background-color: #fcfcfc; }
@@ -44,13 +40,13 @@ td.bd table td {
   text-align: center; }
 
 td.bd table td:nth-child(1) {
-  width: 65px; }
+  width: 80px; }
 
 td.bd table td:nth-child(2) {
   width: 100px; }
 
 td.bd table td:nth-child(3) {
-  width: 165px; }
+  width: 300px; }
 
 td.bd table td:nth-child(5) {
   width: 70px; }
