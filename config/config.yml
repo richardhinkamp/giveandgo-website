@@ -89,7 +89,7 @@ wysiwyg:
   embed: true
   ck:
     #allowedContent: true # Set this to 'true' to allow any elements and attributes in Wysiwg Elements
-    contentsCss: '/css/ckeditor.css' # Absolute Path to CSS File on Server because it's loaded by JavaScript stylesheetparser
+    #contentsCss: '/css/ckeditor.css' # Absolute Path to CSS File on Server because it's loaded by JavaScript stylesheetparser
     filebrowserWindowWidth: '480'
     filebrowserWindowHeight: '480'
   filebrowser:
