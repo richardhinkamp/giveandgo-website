@@ -16,7 +16,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/richardhinkamp/bolt/zipball/4cb0b28538f21ca92aba366c5fd5fe4cb7dc7da2",
+                "url": "https://api.github.com/repos/richardhinkamp/bolt/zipball/0bd634ddd900f431d63a6fd317cfaa7c3e9961fc",
                 "reference": "4cb0b28538f21ca92aba366c5fd5fe4cb7dc7da2",
                 "shasum": ""
             },
@@ -544,7 +544,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/inflector/archive/v1.0.zip",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/54b8333d2a5682afdc690060c1cf384ba9f47f08",
                 "reference": "v1.0",
                 "shasum": ""
             },
@@ -607,7 +607,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/lexer/archive/v1.0.zip",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/2f708a85bb3aab5d99dab8be435abd73e0b18acb",
                 "reference": "v1.0",
                 "shasum": ""
             },
@@ -698,7 +698,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/542400d23369c3c9f1ff221858ba4b220bcc4245",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/285e5152b8be85ef7e141a8b4c669775c338dbc1",
                 "reference": "542400d23369c3c9f1ff221858ba4b220bcc4245",
                 "shasum": ""
             },
@@ -893,7 +893,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ircmaxell/RandomLib/zipball/9c6f125fbeb8fcb4647fabed3c0058ec02c531f8",
+                "url": "https://api.github.com/repos/ircmaxell/RandomLib/zipball/338d2f594f7148983805ad56f47de7e47d84b2b9",
                 "reference": "9c6f125fbeb8fcb4647fabed3c0058ec02c531f8",
                 "shasum": ""
             },
@@ -988,7 +988,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jbroadway/urlify/zipball/1.0.0-stable",
+                "url": "https://api.github.com/repos/jbroadway/urlify/zipball/2fa0f7b38d4faebbb94f62e97bd86e740e68f75a",
                 "reference": "1.0.0-stable",
                 "shasum": ""
             },
@@ -1078,12 +1078,12 @@
             "version": "v1.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fabpot/Pimple.git",
+                "url": "https://github.com/silexphp/Pimple.git",
                 "reference": "2019c145fe393923f3441b23f29bbdfaa5c58c4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Pimple/zipball/2019c145fe393923f3441b23f29bbdfaa5c58c4d",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/2019c145fe393923f3441b23f29bbdfaa5c58c4d",
                 "reference": "2019c145fe393923f3441b23f29bbdfaa5c58c4d",
                 "shasum": ""
             },
@@ -1126,12 +1126,12 @@
             "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-fig/log",
+                "url": "https://github.com/php-fig/log.git",
                 "reference": "1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/php-fig/log/archive/1.0.0.zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
                 "reference": "1.0.0",
                 "shasum": ""
             },
@@ -1165,12 +1165,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/richardhinkamp/bolt-picasa.git",
-                "reference": "0b2ae24a92147410862432935af3cbdc3791f87e"
+                "reference": "563532b3c22c06114ee30edef899a14b1832072f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/richardhinkamp/bolt-picasa/zipball/0b2ae24a92147410862432935af3cbdc3791f87e",
-                "reference": "0b2ae24a92147410862432935af3cbdc3791f87e",
+                "url": "https://api.github.com/repos/richardhinkamp/bolt-picasa/zipball/563532b3c22c06114ee30edef899a14b1832072f",
+                "reference": "563532b3c22c06114ee30edef899a14b1832072f",
                 "shasum": ""
             },
             "require": {
@@ -1192,7 +1192,7 @@
                 "source": "https://github.com/richardhinkamp/bolt-picasa/tree/master",
                 "issues": "https://github.com/richardhinkamp/bolt-picasa/issues"
             },
-            "time": "2014-11-06 20:28:13"
+            "time": "2015-05-05 08:45:20"
         },
         {
             "name": "richardhinkamp/kcfinder",
@@ -2726,12 +2726,12 @@
             "version": "v1.16.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fabpot/Twig.git",
+                "url": "https://github.com/twigphp/Twig.git",
                 "reference": "42f758d9fe2146d1f0470604fc05ee43580873fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/42f758d9fe2146d1f0470604fc05ee43580873fc",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/42f758d9fe2146d1f0470604fc05ee43580873fc",
                 "reference": "42f758d9fe2146d1f0470604fc05ee43580873fc",
                 "shasum": ""
             },
