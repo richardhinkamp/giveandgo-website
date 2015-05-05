@@ -2,6 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% if app.config.get('general/debug') == true %}
+    <meta content="NOINDEX,NOFOLLOW" name="ROBOTS">
+    {% endif %}
     <title>{% block title_text %}{% if record.title is defined %}{{ record.title|striptags }}{% else %}{{ app.config.get('sitename') }}{% endif %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
