@@ -66,4 +66,6 @@ rm -rf web/tmp/
 rm -rf .idea
 rm -f config/config_local.yml
 rm -f pack.sh
+rm -f composer.json
+rm -f composer.lock
 mkdir -p cache
