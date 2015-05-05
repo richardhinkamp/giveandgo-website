@@ -2,12 +2,12 @@
 $white: #fff;
 $black: #000;
 $gray: #808080;
-$highlight: #1abc9c;
-$textcolor: #8f8f8f;
+$borderColor: #ccc;
+
+$navBackground: $darkPrimaryColor;
 
 $color_log_cabin_approx: #222;
 $color_conifer_approx: #adc648;
-$color_shark_approx: #272b2e;
 $color_pumice_approx: #c8c8c8;
 $color_tuatara_approx: #33313a;
 $color_silver_chalice_approx: #afafaf;
@@ -48,12 +48,12 @@ a, input, button {
 body {
   font-family: 'Open Sans', sans-serif;
   background: $white;
-  color: $textcolor;
+  color: $primaryTextColor;
 }
 /*Header*/
 
 header.main__header {
-  background: #272b2e;
+  background: $navBackground;
 }
 header.with-boxed {
   height: 500px;
@@ -61,10 +61,10 @@ header.with-boxed {
 /*Typography*/
 
 a {
-  color: $highlight;
+  color: $primaryColor;
 }
 a:hover {
-  color: $highlight;
+  color: $primaryColor;
 }
 hr {
   border-color: #c8c8c8;
@@ -106,7 +106,7 @@ h3 a {
 }
 h3 a:hover {
   text-decoration: none;
-  color: $highlight;
+  color: $primaryColor;
 }
 .typo {
   margin-top: 80px;
@@ -123,7 +123,7 @@ h4 a {
 }
 h4 a:hover {
   text-decoration: none;
-  color: $highlight;
+  color: $primaryColor;
 }
 h5 {
   font-size: 17px;
@@ -163,10 +163,10 @@ h5 {
   padding: 20px 0 16px;
   font-size: 60px;
   line-height: 1.2em;
-  color: #272b2e;
+  color: $navBackground;
 }
 .three-blocks h3 {
-  color: $highlight;
+  color: $primaryColor;
 }
 .three-blocks h3 + p {
   padding-top: 0;
@@ -334,12 +334,12 @@ p.big-paragraph {
   margin: 0 12px;
   text-align: center;
   width: 42px;
-  color: #272b2e;
+  color: $navBackground;
   background: $white;
   border-radius: 21px;
 }
 .navbar-default .navbar-brand a span {
-  color: #272b2e;
+  color: $navBackground;
 }
 .navbar-default .navbar-nav {
   float: none;
@@ -368,9 +368,9 @@ p.big-paragraph {
   border-bottom: 1px solid #404040;
 }
 .navbar-default .navbar-nav>li>a:hover,  .navbar-default .navbar-nav>li:hover>a,  .navbar-default .navbar-nav>li.active>a,  .navbar-default .navbar-nav>li.active>a:hover {
-  color: $highlight;
+  color: $primaryColor;
   background: none;
-  border-bottom: 1px solid $highlight;
+  border-bottom: 1px solid $primaryColor;
 }
 ul.dropdown-menu {
   padding: 1px 0 0;
@@ -397,7 +397,7 @@ ul.dropdown-menu>li>a {
   text-transform: uppercase;
 }
 ul.dropdown-menu>li>a:hover {
-  color: $highlight;
+  color: $primaryColor;
   background: none;
 }
 .navbar-default .navbar-nav>.open>a,  .navbar-default .navbar-nav>.open>a:hover,  .navbar-default .navbar-nav>.open>a:focus {
@@ -451,8 +451,8 @@ ul.dropdown-menu>li>a:hover {
 }
 .btn-default:hover,  .btn-default:focus {
   color: $white;
-  border-color: $highlight;
-  background: $highlight;
+  border-color: $primaryColor;
+  background: $primaryColor;
 }
 button.btn-primary:focus {
   outline: none;
@@ -461,7 +461,7 @@ button.btn-primary:focus {
   padding-left: 32px;
   padding-right: 32px;
   font-weight: normal;
-  color: $highlight;
+  color: $primaryColor;
   font-size: 14px;
   line-height: 1.2em;
   border: none;
@@ -475,7 +475,7 @@ button.btn-primary:focus {
   font-size: 14px;
   line-height: 1.2em;
   border: none;
-  background: $highlight;
+  background: $primaryColor;
 }
 /* Aside */
 
@@ -518,7 +518,7 @@ aside a.btn {
 /* Footer */
 
 footer {
-  background: #272b2e;
+  background: $navBackground;
   padding: 45px 0;
   color: $gray;
 }
@@ -703,12 +703,12 @@ footer button.btn-silver:focus {
     width: 100%;
   }
   .navbar-default .navbar-nav .open .dropdown-menu>li>a {
-    color: $highlight;
+    color: $primaryColor;
     display: block;
     width: 100%;
   }
   .dropdown-toggle {
-    color: $highlight !important;
+    color: $primaryColor !important;
   }
   .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
     color: $white;
@@ -811,7 +811,7 @@ footer button.btn-silver:focus {
   padding: 0px 0 20px 2px;
   overflow: hidden;
   margin: 20px 0;
-  border-bottom: $highlight solid 2px;
+  border-bottom: $primaryColor solid 2px;
 }
 #portfolio ul.controls li {
   float: left;
@@ -823,9 +823,9 @@ footer button.btn-silver:focus {
 }
 #portfolio ul.controls li:hover, #portfolio ul.controls li.active {
   padding: 4px 15px;
-  color: $highlight;
+  color: $primaryColor;
   margin: 0 -1px;
-  border: 1px solid $highlight;
+  border: 1px solid $primaryColor;
 }
 #portfolio ul#Grid {
   margin: 0 0 30px 0;
@@ -881,10 +881,10 @@ footer button.btn-silver:focus {
   bottom: 0;
   color: $white;
   line-height: 30px;
-  background: $highlight;
+  background: $primaryColor;
 }
 #portfolio ul#Grid li:hover span.text {
-  background: $highlight;
+  background: $primaryColor;
   opacity: 0.9;
 }
 #portfolio ul#Grid span.text span {
@@ -897,13 +897,13 @@ footer button.btn-silver:focus {
 }
 #portfolio ul#Grid span.text:after {
   border-color: rgba(63, 141, 191, 0);
-  border-bottom-color: $highlight;
+  border-bottom-color: $primaryColor;
   border-width: 10px;
   margin-left: -10px;
 }
 #portfolio ul#Grid span.text:before {
   border-color: rgba(63, 141, 191, 0);
-  border-bottom-color: $highlight;
+  border-bottom-color: $primaryColor;
   border-width: 16px;
   margin-left: -16px;
 }
@@ -974,7 +974,7 @@ ul.dropdown-menu {
     border: 0px !important;
   }
   .navbar-default .navbar-nav > li.open {
-    border-bottom: 1px solid $highlight;
+    border-bottom: 1px solid $primaryColor;
   }
   .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
     padding: 60px 0 32px 0;

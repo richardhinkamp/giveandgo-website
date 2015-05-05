@@ -24,12 +24,13 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="dropdown {% if record is defined and record.link == "/pagina/home" %}active{% endif %}">
-                        <a href="/" class="dropdown-toggle" data-toggle="dropdown" title="Home">Home</a>
+                    <li>
+                        <a href="/" title="Home" class="nav-logo"><img src="/img/logo_nav.png" title="Give &amp; Go"></a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="/" class="dropdown-toggle" data-toggle="dropdown" title="Algemeen">Algemeen</a>
                         <ul class="dropdown-menu">
-                            <li>
-                                <a href="/" title="Home">Home</a>
-                            </li>
                             {% setcontent pages = 'paginas' where { menu: 'Ja' } orderby 'menu_order' %}
                             {% for entry in pages %}
                                 <li>
@@ -109,9 +110,11 @@
     <div class="container">
         {% block page_content %}
         <div class="row">
+            {% block title_body %}
             {#<p class="text-center lined"><span>Nam convallis ipsum</span></p>#}
             <h1 class="text-center sz60">{% block page_title %}{{ record.title }}{% endblock %}</h1>
             {#<p class="text-center lined"><span>Pellentesque ut lacus velit consequat</span></p>#}
+            {% endblock %}
         </div>
         <div class="row no_padding nothing no-margin">
             {% block page_body %}{{ record.body }}{% endblock %}

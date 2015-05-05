@@ -1,3 +1,12 @@
+$primaryColor:       #2b70b3;
+$darkPrimaryColor:   darken($primaryColor, 10%);
+$lightPrimaryColor:  lighten($primaryColor, 60%);
+$textPrimaryColor:   #FFFFFF;
+$accentColor:        #ff9900;
+$primaryTextColor:   #212121;
+$secondaryTextColor: #727272;
+$dividerColor:       #B6B6B6;
+
 // Bootstrap
 @import "../../vendor/jlong/sass-twitter-bootstrap/lib/bootstrap";
 // From layout
@@ -40,6 +49,56 @@ section table {
   }
 }
 
+.icon-item {
+  color: $secondaryTextColor;
+  border-bottom: 1px solid $borderColor;
+  padding-bottom: 10px;
+  margin: 10px 0;
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 3px;
+    a {
+      color: $secondaryTextColor;
+      
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+}
+
+.navbar-default .navbar-nav > li {
+  &.active a,
+  &.active a:hover,
+  > a:hover {
+    color: darken($textPrimaryColor, 20%);
+    border-bottom-color: $darkPrimaryColor;
+  }
+
+  > a {
+    color: $textPrimaryColor;
+    
+    &.nav-logo {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  
+      img {
+        height: 48px;
+      }
+    }
+  }
+
+  ul.dropdown-menu li {
+    background-color: transparentize($darkPrimaryColor, 0.1);
+    border-bottom-color: darken($darkPrimaryColor, 10%);
+    
+    > a:hover {
+      color: $textPrimaryColor;
+    }
+  }
+}
+
 .row.home {
   .col-md-3 {
     & > h3 {
@@ -48,10 +107,10 @@ section table {
     }
 
     a {
-      color: darken($textcolor, 20%);
-      
+      color: darken($primaryTextColor, 20%);
+
       &:hover {
-        color: $highlight;
+        color: $primaryColor;
       }
     }
   }
@@ -63,9 +122,20 @@ iframe {
 
 footer {
   padding: 0;
-  
+  color: $textPrimaryColor;
+
   a {
-    color: lighten($gray, 10%);
+    color: darken($textPrimaryColor, 10%);
+    
+    &:hover {
+      color: darken($textPrimaryColor, 20%);
+    }
+  }
+
+  .container {
+    .row:first-child {
+      padding-top: 0;
+    }
   }
 }
 
