@@ -8,14 +8,3 @@
     {% endfor %}
     </ul>
 {% endblock %}
-
-{% block submenu_title %}<a href="/teams" title="Teams">Teams</a>{% endblock %}
-
-{% block submenu_list %}
-    {% setcontent entries = "teams" orderby 'menu_order' %}
-    {% for entry in entries %}
-        <li class="Menu">
-            <a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.title }}</a>
-        </li>
-    {% endfor %}
-{% endblock %}

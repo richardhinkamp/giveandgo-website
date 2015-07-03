@@ -1,20 +1,19 @@
-{% extends "picasa-base.twig" %}
+{% extends "page.twig" %}
 
 {% block title_text %}Foto's{% endblock %}
+{% block page_title %}Foto's{% endblock %}
 
-{% block page_content %}
-    <h1>Foto's</h1>
-    <p>Foto's van wedstrijden en andere evenementen van Give & Go.</p>
-
-    <div class="photo-albums">
-        {% setcontent records = "foto-albums/latest/100" %}
-        {% for record in records %}
-            <a class="photo-album" href="{{ record.link }}">
-                <img src="{{ record.thumb_url }}|replace({'144c': '160c'}" alt="{{ record.title }}">
-                <h2>{{ record.title }}</h2>
-                <p>{{ record.description }}</p>
-            </a>
-        {% endfor %}
-        <div class="clearfix"></div>
+{% block page_body %}
+    <div class="col-lg-12">
+        <p>Foto's van wedstrijden en andere evenementen van Give &amp; Go.</p>
     </div>
+    {% setcontent records = "foto-albums/latest/100" %}
+    {% for record in records %}
+        <div class="col-sm-2 photo-album">
+            <a href="{{ record.link }}">
+                <img src="{{ record.thumb_url }}|replace({'144c': '160c'}" alt="{{ record.title }}">
+                {{ record.title }}
+            </a>
+        </div>
+    {% endfor %}
 {% endblock %}

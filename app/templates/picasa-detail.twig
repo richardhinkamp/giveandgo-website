@@ -1,35 +1,60 @@
-{% extends "picasa-base.twig" %}
+{% extends "page.twig" %}
 
-{% block title_text %}Fotos: {{ record.title }}{% endblock %}
+{% block title_text %}Foto's: {{ record.title }}{% endblock %}
 
-{% block page_content %}
-    <h1>{{ record.title }}</h1>
-    <p>{{ record.description }}</p>
-
-    <div class="photos">
+{% block page_body %}
+    <div class="col-lg-12">
+        <p>{{ record.description }}</p>
+    </div>
+    <ul class="gallery">
         {% setcontent photos = "fotos" where { album_id: record.id } orderby 'datepublish ASC' %}
         {% for photo in photos %}
-            <a class="col-sm-2 text-center photo" rel="album" href="{{ photo.url }}">
-                <img class="img-responsive" src="{{ photo.thumb_url }}" alt="{{ photo.title }}">
-                {#<h3>{{ record.title }}</h3>#}
-                {#<p>{{ record.description }}</p>#}
+        <li class="col-sm-2">
+            <a href="{{ photo.url }}">
+                <img src="{{ photo.thumb_url }}" alt="{{ photo.title }}" class="img-responsive">
             </a>
+        </li>
         {% endfor %}
-        <div class="clearfix"></div>
-    </div>
+    </ul>
 {% endblock %}
 
+{#{% block page_content %}#}
+    {#<h1>{{ record.title }}</h1>#}
+    {#<p>{{ record.description }}</p>#}
+
+    {#<div class="photos">#}
+        {#{% setcontent photos = "fotos" where { album_id: record.id } orderby 'datepublish ASC' %}#}
+        {#{% for photo in photos %}#}
+            {#<a class="col-sm-2 text-center photo" rel="album" href="{{ photo.url }}">#}
+                {#<img class="img-responsive" src="{{ photo.thumb_url }}" alt="{{ photo.title }}">#}
+                {#&#123;&#35;<h3>{{ record.title }}</h3>&#35;&#125;#}
+                {#&#123;&#35;<p>{{ record.description }}</p>&#35;&#125;#}
+            {#</a>#}
+        {#{% endfor %}#}
+        {#<div class="clearfix"></div>#}
+    {#</div>#}
+{#{% endblock %}#}
+
 {% block extra_css_files %}
-    <link href="/fancybox/source/jquery.fancybox.css" rel="stylesheet">
+    <link href="/css/magnific-popup.css" rel="stylesheet">
 {% endblock %}
 
 {% block js_files %}
     {{ parent() }}
-    <script src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
-    <script src="/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script>
+    {#<script src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>#}
+    {#<script src="/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script>#}
+    <script src="/js/jquery.magnific-popup.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('.photo').fancybox();
+        $(document).ready(function () {
+            $('.gallery').each(function() { // the containers for all your galleries
+                $(this).magnificPopup({
+                    delegate: 'a', // the selector for gallery item
+                    type: 'image',
+                    gallery: {
+                        enabled:true
+                    }
+                });
+            });
         });
     </script>
 {% endblock %}

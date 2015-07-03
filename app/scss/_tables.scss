@@ -1,0 +1,69 @@
+/* Table Styles 1 */
+.dc_table_s4, .dc_table_s4 td {
+  border: 1px solid #CCC;
+  border-collapse: collapse
+}
+
+.dc_table_s4 {
+  border: 1px solid #CCC;
+  border: none
+}
+
+.dc_table_s4 thead th, .dc_table_s4 tbody th {
+  background: $white;
+  border: 1px solid #CCC;
+  color: #666;
+  padding: 5px 10px
+}
+
+.dc_table_s4 tbody th {
+  background: #fafafb;
+  border-top: 1px solid #CCC;
+  font-weight: normal;
+  text-align: left
+}
+
+.dc_table_s4 tbody tr td {
+  color: #666;
+  padding: 5px 10px
+}
+
+.dc_table_s4 tbody tr:hover {
+  background: $white;
+}
+
+.dc_table_s4 tbody tr:hover td {
+  color: #454545
+}
+
+.dc_table_s4 tfoot td, .dc_table_s4 tfoot th {
+  background: $white;
+  border-left: none;
+  border: 1px solid #CCC;
+  color: #666;
+  padding: 4px
+}
+
+.dc_table_s4 caption {
+  color: #666;
+  font-size: 120%;
+  padding: 10px 0;
+  text-align: left
+}
+
+.dc_table_s4 table a:link {
+  color: #666
+}
+
+.dc_table_s4 table a:visited {
+  color: #666
+}
+
+.dc_table_s4 table a:hover {
+  color: #003366;
+  text-decoration: none
+}
+
+.dc_table_s4 table a:active {
+  color: #003366
+}

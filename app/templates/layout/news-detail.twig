@@ -1,33 +1,28 @@
 {% extends "layout/layout.twig" %}
 
-{% block page_content %}
-
-    <article class="blog">
-        <h1><a href="{{ record.link }}">{{ ( record.team_id ? record.team_id ~ ": " ) ~ record.title }}</a></h1>
+{% block page_body %}
+    <div class="col-md-9 newsitem">
         <p class="meta">
             Geplaatst op {{ record.date|date("d-m-Y")}}
             {% if record.auteur %}
                 door {{ record.auteur }}
             {% endif %}
         </p>
-        <div class="blog-body">{{ record.body }}</div>
-    </article>
-
-    {# {% if record.taxonomy.tags is defined %}
-        <p class="tags">
-        {% for tag in record.taxonomy.tags %}
-            <a href="/tag/{{ tag }}">{{ tag }}</a>
-        {% endfor %}
-        </p>
-    {% endif %} #}
-
-{% endblock %}
-
-{% macro latest_list(name, entries) %}
-    <h2>{{ name }}</h2>
-    <ul class="latest-blogs">
+        <article>
+            {{ record.body }}
+        </article>
+        {% block news_below %}{% endblock %}
+    </div>
+    <div class="col-md-3">
+        {% setcontent entries = record.contenttype.slug ~ "/latest/5" where { id: "!" ~ record.id } %}
         {% for entry in entries %}
-            <li><a href="{{ entry.link }}"><span class="blog-date">{{ entry.date|date("d-m-Y")}}</span> {{ ( entry.team_id ? entry.team_id ~ ": " ) ~ entry.title }}</a></li>
+            <div class="icon-item">
+                <h4><a href="{{ entry.link }}" title="{{ ( entry.team_id ? entry.team_id ~ ": " ) ~ entry.title }}">{{ ( entry.team_id ? entry.team_id ~ ": " ) ~ entry.title }}</a></h4>
+                {{ entry.date|date("d-m-Y")}}
+                {% if entry.auteur %}
+                    - {{ entry.auteur }}
+                {% endif %}
+            </div>
         {% endfor %}
-    </ul>
-{% endmacro %}
+    </div>
+{% endblock %}

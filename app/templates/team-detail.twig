@@ -1,93 +1,78 @@
 {% extends "page.twig" %}
 
-{% block page_content %}
-    {% setcontent wedstrijdverslagen = "wedstrijdverslagen/latest/5" where { team_id: record.team_id }  %}
-    <h1>{{ record.title }}</h1>
-    <div class="TeamMenu">
-        {% if wedstrijdverslagen is not empty %}
-            <div><a href="#wedstrijdverslagen" title="Wedstrijdverslagen van {{ record.title }}">Wedstrijdverslagen</a></div>
-        {% endif %}
-        {% if record.nbb_competitie_id > 0 and record.nbb_team_id > 0 %}
-            <div><a href="#stand" title="Stand van {{ record.title }}">Stand</a></div>
-            <div><a href="#uitslagen" title="Uitslagen van {{ record.title }}">Uitslagen</a></div>
-        {% endif %}
+{% block page_body %}
+    <div class="col-md-9">
+        {{ record.body }}
     </div>
-    {{ record.body }}
-    {% if wedstrijdverslagen is not empty %}
-        <a name="wedstrijdverslagen"></a>
-        <h2>Wedstrijdverslagen</h2>
-        <ul class="latest-blogs">
-        {% for entry in wedstrijdverslagen %}
-            <li><a href="{{ entry.link }}" title="{{ entry.title }}"><span class="blog-date">{{ entry.date|date("d-m-Y")}}</span> {{ entry.title }}</a></li>
-        {% endfor %}
-        </ul>
-    {% endif %}
-
-    {% if record.nbb_competitie_id > 0 and record.nbb_team_id > 0 %}
-        {% setcontent entries = "standings/" where { team_id: record.team_id, season: app.season } orderby 'place ASC' %}
-        <a name="stand"></a>
-        <h2>Stand</h2>
-        {% if entries is not empty %}
-            <table class="standings">
-                <tr>
-                    <th class="place">Plek</th>
-                    <th class="team">Team</th>
-                    <th class="played">Gespeeld</th>
-                    <th class="points">Punten</th>
-                    <th class="goals" colspan="2">Doelsaldo</th>
-                    <th class="winpct">Winst %</th>
-                </tr>
-                {% for entry in entries %}
-                    <tr>
-                        <td class="place">{{ entry.place }}</td>
-                        <td class="team">{{ entry.team_name }}</td>
-                        <td class="played">{{ entry.played }}</td>
-                        <td class="points">{{ entry.points }}</td>
-                        <td class="goal_difference">{{ entry.goal_difference }}</td>
-                        <td class="goals">{{ entry.goals_scored }} - {{ entry.goals_allowed }}</td>
-                        <td class="winpct">{{ entry.win_percentage|number_format(2, ',') }} %</td>
-                    </tr>
-                {% endfor %}
-            </table>
-            <div class="standings-graph">
-                <img src="http://west.basketball.nl/db/graphs/grph_multiline_stand.pl?szn_Naam={{ app.season }}&cmp_ID={{ record.nbb_competitie_id }}&date={{ "now"|date("Y-m-d") }}" alt="Stand grafiek" width="500" height="400">
+    <div class="col-md-3">
+        {% setcontent entries = "wedstrijdverslagen/latest/5" where { team_id: record.team_id }  %}
+        {% for entry in entries %}
+            <div class="icon-item">
+                <h4><a href="{{ entry.link }}" title="{{ ( entry.team_id ? entry.team_id ~ ": " ) ~ entry.title }}">{{ ( entry.team_id ? entry.team_id ~ ": " ) ~ entry.title }}</a></h4>
+                {{ entry.date|date("d-m-Y")}}
+                {% if entry.auteur %}
+                    - {{ entry.auteur }}
+                {% endif %}
             </div>
-        {% else %}
-            <p>Nog geen gegevens beschikbaar.</p>
-        {% endif %}
-        <a name="uitslagen"></a>
-        <h2>Uitslagen</h2>
-        {% setcontent entries = "scores/" where { team_id: record.team_id, season: app.season } orderby 'datetime' %}
-        {% if entries is not empty %}
-            <table class="scores">
-                <tr>
-                    <th class="datetime">Datum/tijd</th>
-                    <th class="team_home">Thuis</th>
-                    <th class="result">Uitslag</th>
-                    <th class="team_away">Uit</th>
-                </tr>
-                {% for entry in entries %}
+        {% endfor %}
+    </div>
+    
+    {% if record.nbb_competitie_id > 0 and record.nbb_team_id > 0 %}
+        <div class="col-lg-12 nbb-data">
+            {% setcontent entries = "standings/" where { team_id: record.team_id, season: app.season } orderby 'place ASC' %}
+            <a name="stand"></a>
+            <h2>Stand</h2>
+            {% if entries is not empty %}
+                <table class="standings">
                     <tr>
-                        <td class="datetime">{{ entry.datetime|date("d-m H:i") }}</td>
-                        <td class="team_home">{{ entry.team_home }}</td>
-                        <td class="result">{{ entry.score_home }} - {{ entry.score_away }}</td>
-                        <td class="team_away">{{ entry.team_away }}</td>
+                        <th class="place">Plek</th>
+                        <th class="team">Team</th>
+                        <th class="played">Gespeeld</th>
+                        <th class="points">Punten</th>
+                        <th class="goals" colspan="2">Doelsaldo</th>
+                        <th class="winpct">Winst %</th>
                     </tr>
-                {% endfor %}
-            </table>
-        {% else %}
-            <p>Nog geen gegevens beschikbaar.</p>
-        {% endif %}
+                    {% for entry in entries %}
+                        <tr>
+                            <td class="place">{{ entry.place }}</td>
+                            <td class="team">{{ entry.team_name }}</td>
+                            <td class="played">{{ entry.played }}</td>
+                            <td class="points">{{ entry.points }}</td>
+                            <td class="goal_difference">{{ entry.goal_difference }}</td>
+                            <td class="goals">{{ entry.goals_scored }} - {{ entry.goals_allowed }}</td>
+                            <td class="winpct">{{ entry.win_percentage|number_format(2, ',') }} %</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+                <div class="standings-graph">
+                    <img src="http://west.basketball.nl/db/graphs/grph_multiline_stand.pl?szn_Naam={{ app.season }}&cmp_ID={{ record.nbb_competitie_id }}&date={{ "now"|date("Y-m-d") }}" alt="Stand grafiek">
+                </div>
+            {% else %}
+                <p>Nog geen gegevens beschikbaar.</p>
+            {% endif %}
+            <a name="uitslagen"></a>
+            <h2>Uitslagen</h2>
+            {% setcontent entries = "scores/" where { team_id: record.team_id, season: app.season } orderby 'datetime' %}
+            {% if entries is not empty %}
+                <table class="scores">
+                    <tr>
+                        <th class="datetime">Datum/tijd</th>
+                        <th class="team_home">Thuis</th>
+                        <th class="result">Uitslag</th>
+                        <th class="team_away">Uit</th>
+                    </tr>
+                    {% for entry in entries %}
+                        <tr>
+                            <td class="datetime">{{ entry.datetime|date("d-m H:i") }}</td>
+                            <td class="team_home">{{ entry.team_home }}</td>
+                            <td class="result">{{ entry.score_home }} - {{ entry.score_away }}</td>
+                            <td class="team_away">{{ entry.team_away }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <p>Nog geen gegevens beschikbaar.</p>
+            {% endif %}
+        </div>
     {% endif %}
-{% endblock %}
-
-{% block submenu_title %}<a href="/teams" title="Teams">Teams</a>{% endblock %}
-
-{% block submenu_list %}
-    {% setcontent entries = "teams" orderby 'menu_order' %}
-    {% for entry in entries %}
-        <li class="Menu">
-            <a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.title }}</a>
-        </li>
-    {% endfor %}
 {% endblock %}
