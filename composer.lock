@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "hash": "ae55db422fdf0573047452fec1bb38f1",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/richardhinkamp/bolt.git",
-                "reference": "4cb0b28538f21ca92aba366c5fd5fe4cb7dc7da2"
+                "reference": "c86a93c4d8d9f88b55d6dbb80ad8f24c9a38e1bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/richardhinkamp/bolt/zipball/0bd634ddd900f431d63a6fd317cfaa7c3e9961fc",
-                "reference": "4cb0b28538f21ca92aba366c5fd5fe4cb7dc7da2",
+                "url": "https://api.github.com/repos/richardhinkamp/bolt/zipball/c86a93c4d8d9f88b55d6dbb80ad8f24c9a38e1bb",
+                "reference": "c86a93c4d8d9f88b55d6dbb80ad8f24c9a38e1bb",
                 "shasum": ""
             },
             "require": {
@@ -77,7 +77,7 @@
             "support": {
                 "source": "https://github.com/richardhinkamp/bolt/tree/release/1.6"
             },
-            "time": "2014-11-10 12:53:12"
+            "time": "2015-07-03 12:54:26"
         },
         {
             "name": "bolt/dumper",
@@ -698,7 +698,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/285e5152b8be85ef7e141a8b4c669775c338dbc1",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/72538eeb70bbfb11964412a3d098d109efd012f7",
                 "reference": "542400d23369c3c9f1ff221858ba4b220bcc4245",
                 "shasum": ""
             },
@@ -849,7 +849,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hautelook/phpass/zipball/9590c12bf7c92f67f646d7bf2cf6384e7292cc41",
+                "url": "https://api.github.com/repos/hautelook/phpass/zipball/f0217d804225822f9bdb0d392839029b0fcb0914",
                 "reference": "9590c12bf7c92f67f646d7bf2cf6384e7292cc41",
                 "shasum": ""
             },
