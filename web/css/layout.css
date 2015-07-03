@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 article,
 aside,
@@ -6175,6 +6176,9 @@ ul.dropdown-menu {
 
 .main__middle__container .container {
   padding-bottom: 25px; }
+  .main__middle__container .container img {
+    max-width: 100%;
+    height: auto; }
 
 .container .row:first-child {
   padding: 30px 0 0 0; }
@@ -6201,12 +6205,20 @@ ul.dropdown-menu {
       .icon-item h4 a:hover {
         color: #2b70b3; }
 
-.navbar-default .navbar-nav > li.active a, .navbar-default .navbar-nav > li.active a:hover,
-.navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav > li:hover > a, .navbar-default .navbar-nav > li.open > a, .navbar-default .navbar-nav > li.open > a:hover, .navbar-default .navbar-nav > li.open > a:focus, .navbar-default .navbar-nav > li.active a, .navbar-default .navbar-nav > li.active a:hover, .navbar-default .navbar-nav > li.active a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
   color: #cccccc;
-  border-bottom-color: #21568a; }
+  border-bottom: 0; }
+.navbar-default .navbar-nav > li.dropdown > a {
+  cursor: default; }
+  .navbar-default .navbar-nav > li.dropdown > a:after {
+    content: " ▼"; }
 .navbar-default .navbar-nav > li > a {
-  color: white; }
+  color: white;
+  border-bottom: 0;
+  padding-left: 0;
+  padding-right: 0; }
   .navbar-default .navbar-nav > li > a.nav-logo {
     padding-top: 10px;
     padding-bottom: 10px; }
@@ -6218,6 +6230,12 @@ ul.dropdown-menu {
   .navbar-default .navbar-nav > li ul.dropdown-menu li > a:hover {
     color: white; }
 
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: white; }
+
+  .dropdown-toggle {
+    color: white !important; } }
 .row.home .col-md-3 > h3 {
   padding-top: 0;
   font-size: 22px; }
@@ -6232,6 +6250,9 @@ iframe {
 footer {
   padding: 0;
   color: white; }
+  footer h3 {
+    font-size: 20px;
+    padding-bottom: 0; }
   footer a {
     color: #e6e6e6; }
     footer a:hover {
@@ -6255,41 +6276,82 @@ footer {
     font-weight: bold;
     margin: 10px 0 5px 0; }
 
-.standings {
-  width: 100%; }
-  .standings .place,
-  .standings .points,
-  .standings .played {
-    text-align: center;
-    width: 60px; }
-  .standings .team {
-    text-align: left; }
-  .standings .goal_difference {
-    text-align: center;
-    width: 40px; }
-  .standings .goals {
-    text-align: center;
-    width: 100px; }
-  .standings .winpct {
-    text-align: right;
-    width: 75px; }
+.nbb-data {
+  text-align: center; }
+
+.standings,
+.scores {
+  width: 100%;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.standings .place,
+.standings .points,
+.standings .played {
+  text-align: center;
+  width: 60px; }
+.standings .team {
+  text-align: left; }
+.standings .goal_difference {
+  text-align: center;
+  width: 40px; }
+.standings .goals {
+  text-align: center;
+  width: 100px; }
+.standings .winpct {
+  text-align: right;
+  width: 75px; }
 
 .standings-graph {
   margin-top: 1em;
   text-align: center; }
 
-.scores {
-  width: 100%; }
+.scores .datetime {
+  text-align: center;
+  width: 100px; }
+.scores .team_home {
+  text-align: right;
+  padding-right: 10px; }
+.scores .result {
+  text-align: center;
+  width: 75px;
+  font-weight: bold; }
+.scores .team_away {
+  text-align: left;
+  padding-left: 10px; }
+
+@media (max-width: 600px) {
+  .standings,
+  .scores {
+    font-size: 90%;
+    width: calc(100% + 20px);
+    max-width: 100%;
+    margin-left: -10px;
+    margin-right: -10px;
+    table-layout: fixed; }
+    .standings th, .standings td,
+    .scores th,
+    .scores td {
+      padding: 2px 3px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      height: 1.5em;
+      line-height: 1.5em;
+      white-space: nowrap; }
+      .standings th.goals, .standings th.goal_difference, .standings th.winpct, .standings td.goals, .standings td.goal_difference, .standings td.winpct,
+      .scores th.goals,
+      .scores th.goal_difference,
+      .scores th.winpct,
+      .scores td.goals,
+      .scores td.goal_difference,
+      .scores td.winpct {
+        display: none; }
+
+  .standings .place {
+    width: 40px; }
+
   .scores .datetime {
-    text-align: center;
-    width: 100px; }
-  .scores .team_home {
-    text-align: right;
-    padding-right: 10px; }
+    width: 90px; }
   .scores .result {
-    text-align: center;
-    width: 75px;
-    font-weight: bold; }
-  .scores .team_away {
-    text-align: left;
-    padding-left: 10px; }
+    width: 65px; } }

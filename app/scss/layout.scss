@@ -29,6 +29,11 @@ section table {
 .main__middle__container {
   .container {
     padding-bottom: 25px;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 }
 
@@ -69,15 +74,32 @@ section table {
 }
 
 .navbar-default .navbar-nav > li {
+  &:hover > a,
+  &.open > a,
+  &.open > a:hover,
+  &.open > a:focus,
   &.active a,
   &.active a:hover,
-  > a:hover {
+  &.active a:focus,
+  > a:hover,
+  > a:focus {
     color: darken($textPrimaryColor, 20%);
-    border-bottom-color: $darkPrimaryColor;
+    border-bottom: 0;
+  }
+  
+  &.dropdown > a {
+    cursor: default;
+    
+    &:after {
+      content: " ▼";
+    }
   }
 
   > a {
     color: $textPrimaryColor;
+    border-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
     
     &.nav-logo {
       padding-top: 10px;
@@ -98,6 +120,17 @@ section table {
     }
   }
 }
+
+@media(max-width:767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: $textPrimaryColor;
+  }
+
+  .dropdown-toggle {
+    color: $textPrimaryColor !important;
+  }
+}
+
 
 .row.home {
   .col-md-3 {
@@ -123,6 +156,11 @@ iframe {
 footer {
   padding: 0;
   color: $textPrimaryColor;
+  
+  h3 {
+    font-size: 20px;
+    padding-bottom: 0;
+  }
 
   a {
     color: darken($textPrimaryColor, 10%);

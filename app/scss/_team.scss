@@ -1,32 +1,41 @@
+.nbb-data {
+  text-align: center;
+}
+
+.standings,
+.scores {
+  width: 100%;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .standings {
-    width: 100%;
+  .place,
+  .points,
+  .played {
+    text-align: center;
+    width: 60px;
+  }
 
-    .place,
-    .points,
-    .played {
-        text-align: center;
-        width: 60px;
-    }
+  .team {
+    text-align: left;
+  }
 
-    .team {
-        text-align: left;
+  .goal_difference {
+    text-align: center;
+    width: 40px;
+  }
 
-    }
+  .goals {
+    text-align: center;
+    width: 100px;
+  }
 
-    .goal_difference {
-        text-align: center;
-        width: 40px;
-    }
-
-    .goals {
-        text-align: center;
-        width: 100px;
-    }
-
-    .winpct {
-        text-align: right;
-        width: 75px;
-    }
+  .winpct {
+    text-align: right;
+    width: 75px;
+  }
 }
 
 .standings-graph {
@@ -35,8 +44,6 @@
 }
 
 .scores {
-    width: 100%;
-
     .datetime {
         text-align: center;
         width: 100px;
@@ -58,4 +65,47 @@
         padding-left: 10px;
     }
 
+}
+
+@media(max-width:600px) {
+  .standings,
+  .scores {
+    font-size: 90%;
+    width: calc(100% + 20px);
+    max-width: 100%;
+    margin-left: -10px;
+    margin-right: -10px;
+    table-layout: fixed;
+    
+    th, td {
+      padding: 2px 3px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      height: 1.5em;
+      line-height: 1.5em;
+      white-space: nowrap;
+
+      &.goals,
+      &.goal_difference,
+      &.winpct {
+        display: none;
+      }
+    }
+  }
+
+  .standings {
+    .place {
+      width: 40px;
+    }
+  }
+
+  .scores {
+    .datetime {
+      width: 90px;
+    }
+
+    .result {
+      width: 65px;
+    }
+  }
 }
