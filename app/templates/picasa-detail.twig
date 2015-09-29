@@ -7,7 +7,7 @@
         <p>{{ record.description }}</p>
     </div>
     <ul class="gallery">
-        {% setcontent photos = "fotos" where { album_id: record.id } orderby 'datepublish ASC' %}
+        {% setcontent photos = "fotos" where { album_id: record.id } orderby 'datepublish ASC' limit 1000 %}
         {% for photo in photos %}
         <li class="col-sm-2">
             <a href="{{ photo.url }}">
