@@ -5,7 +5,7 @@
         {{ record.body }}
     </div>
     <div class="col-md-3">
-        {% setcontent entries = "wedstrijdverslagen/latest/5" where { team_id: record.team_id }  %}
+        {% setcontent entries = "wedstrijdverslagen/latest/5" where { team_id: record.team_id, datepublish: '> last year'  }  %}
         {% for entry in entries %}
             <div class="icon-item">
                 <h4><a href="{{ entry.link }}" title="{{ ( entry.team_id ? entry.team_id ~ ": " ) ~ entry.title }}">{{ ( entry.team_id ? entry.team_id ~ ": " ) ~ entry.title }}</a></h4>
