@@ -1,21 +1,23 @@
 {% extends "page.twig" %}
 
 {% block page_body %}
-    <div class="col-md-9">
+    {% setcontent entries = "wedstrijdverslagen/latest/5" where { team_id: record.team_id, datepublish: '> last year'  }  %}
+    <div class="col-md-{% if entries %}9{% else %}12{% endif %}">
         {{ record.body }}
     </div>
-    <div class="col-md-3">
-        {% setcontent entries = "wedstrijdverslagen/latest/5" where { team_id: record.team_id, datepublish: '> last year'  }  %}
-        {% for entry in entries %}
-            <div class="icon-item">
-                <h4><a href="{{ entry.link }}" title="{{ ( entry.team_id ? entry.team_id ~ ": " ) ~ entry.title }}">{{ ( entry.team_id ? entry.team_id ~ ": " ) ~ entry.title }}</a></h4>
-                {{ entry.date|date("d-m-Y")}}
-                {% if entry.auteur %}
-                    - {{ entry.auteur }}
-                {% endif %}
-            </div>
-        {% endfor %}
-    </div>
+    {% if entries %}
+        <div class="col-md-3">
+            {% for entry in entries %}
+                <div class="icon-item">
+                    <h4><a href="{{ entry.link }}" title="{{ ( entry.team_id ? entry.team_id ~ ": " ) ~ entry.title }}">{{ ( entry.team_id ? entry.team_id ~ ": " ) ~ entry.title }}</a></h4>
+                    {{ entry.date|date("d-m-Y")}}
+                    {% if entry.auteur %}
+                        - {{ entry.auteur }}
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
     
     {% if record.nbb_competitie_id > 0 and record.nbb_team_id > 0 %}
         <div class="col-lg-12 nbb-data">
