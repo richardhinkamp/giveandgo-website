@@ -14,7 +14,8 @@
         {% block news_below %}{% endblock %}
     </div>
     <div class="col-md-3">
-        {% setcontent entries = record.contenttype.slug ~ "/latest/5" where { id: "!" ~ record.id } %}
+        {% set monthsBack = 'now'|date_modify('-3 month')|date('Y-m-d 00:00:00') %}
+        {% setcontent entries = record.contenttype.slug ~ "/latest/5" where { id: "!" ~ record.id, datepublish: '> ' ~ monthsBack } %}
         {% for entry in entries %}
             <div class="icon-item">
                 <h4><a href="{{ entry.link }}" title="{{ ( entry.team_id ? entry.team_id ~ ": " ) ~ entry.title }}">{{ ( entry.team_id ? entry.team_id ~ ": " ) ~ entry.title }}</a></h4>
