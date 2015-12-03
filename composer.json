@@ -28,6 +28,9 @@
     "scripts": {
         "post-create-project-cmd": [
             "Bolt\\Composer\\ScriptHandler::bootstrap"
+        ],
+        "post-update-cmd": [
+            "Bolt\\Composer\\ScriptHandler::installAssets"
         ]
     },
     "extra": {
