@@ -150,17 +150,6 @@ teams:
     recordsperpage: 100
     default_status: publish
 
-headers:
-    name: Headers
-    singular_name: Header
-    fields:
-        title:
-            type: text
-            class: large
-        image:
-            type: image
-    default_status: publish
-
 scores:
     name: Scores
     singular_name: Score
