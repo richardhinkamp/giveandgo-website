@@ -1,7 +1,0 @@
-{% extends "page.twig" %}
-
-{% block page_body %}
-    {{ parent() }}
-    <iframe width="100%" height="1400" src="http://db.basketball.nl/db/overzicht/clubuitslag.pl?&menubalk=off&szn_Naam={{ app.season }}&clb_ID=150&tonen=Uitslagen+tonen&periode=2&poule=on&CSS=http://{{ app.request.host }}/css/nbbdb.css"></iframe>
-    <iframe width="100%" height="600" src="http://db.basketball.nl/db/overzicht/clubuitslag.pl?&menubalk=off&szn_Naam={{ app.season }}&clb_ID=177&tonen=Uitslagen+tonen&periode=2&poule=on&CSS=http://{{ app.request.host }}/css/nbbdb.css"></iframe>
-{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "page.twig" %}
+
+{% block page_body %}
+    {{ parent() }}
+    <iframe width="100%" height="700" src="http://db.basketball.nl/db/wedstrijd/clubprogramma.pl?&menubalk=off&szn_Naam={{ app.config.get('general/season') }}&clb_ID=150&tonen=Schema+tonen&periode=1&CSS=http://{{ app.request.host }}/css/nbbdb.css"></iframe>
+    <iframe width="100%" height="400" src="http://db.basketball.nl/db/wedstrijd/clubprogramma.pl?&menubalk=off&szn_Naam={{ app.config.get('general/season') }}&clb_ID=177&tonen=Schema+tonen&periode=1&CSS=http://{{ app.request.host }}/css/nbbdb.css"></iframe>
+{% endblock %}

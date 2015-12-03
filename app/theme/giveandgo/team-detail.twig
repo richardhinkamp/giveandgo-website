@@ -21,7 +21,7 @@
     
     {% if record.nbb_competitie_id > 0 and record.nbb_team_id > 0 %}
         <div class="col-lg-12 nbb-data">
-            {% setcontent entries = "standings/" where { team_id: record.team_id, season: app.season } orderby 'place ASC' %}
+            {% setcontent entries = "standings/" where { team_id: record.team_id, season: app.config.get('general/season') } orderby 'place ASC' %}
             <a name="stand"></a>
             <h2>Stand</h2>
             {% if entries is not empty %}
@@ -47,14 +47,14 @@
                     {% endfor %}
                 </table>
                 <div class="standings-graph">
-                    <img src="http://west.basketball.nl/db/graphs/grph_multiline_stand.pl?szn_Naam={{ app.season }}&cmp_ID={{ record.nbb_competitie_id }}&date={{ "now"|date("Y-m-d") }}" alt="Stand grafiek">
+                    <img src="http://west.basketball.nl/db/graphs/grph_multiline_stand.pl?szn_Naam={{ app.config.get('general/season') }}&cmp_ID={{ record.nbb_competitie_id }}&date={{ "now"|date("Y-m-d") }}" alt="Stand grafiek">
                 </div>
             {% else %}
                 <p>Nog geen gegevens beschikbaar.</p>
             {% endif %}
             <a name="uitslagen"></a>
             <h2>Uitslagen</h2>
-            {% setcontent entries = "scores/" where { team_id: record.team_id, season: app.season } orderby 'datetime' %}
+            {% setcontent entries = "scores/" where { team_id: record.team_id, season: app.config.get('general/season') } orderby 'datetime' %}
             {% if entries is not empty %}
                 <table class="scores">
                     <tr>

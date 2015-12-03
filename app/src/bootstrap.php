@@ -12,5 +12,3 @@ set_include_path(implode(PATH_SEPARATOR, array(
 )));
 
 require_once( __DIR__ . '/../../vendor/bolt/bolt/app/bootstrap.php' );
-
-$app['season'] = '2015-2016';
