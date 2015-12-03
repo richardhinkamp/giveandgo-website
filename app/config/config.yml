@@ -37,7 +37,7 @@ locale: nl_NL
 #       website, be sure to check for a config.ymlfile in your theme's folder.
 #       If a template is set there, it will override the setting here.
 maintenance_mode: false
-maintenance_template: maintenance_default.twig
+maintenance_template: page-maintenance.twig
 
 # The hour of the day for the internal cron task scheduler to run daily, weekly,
 # monthly and yearly jobs.
