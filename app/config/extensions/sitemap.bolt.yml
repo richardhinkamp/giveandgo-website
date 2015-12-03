@@ -1,0 +1,13 @@
+# sitemap settings
+
+template: sitemap.twig
+xml_template: assets/sitemap_xml.twig
+
+## ignore by "slug" of contenttype
+ignore_contenttype:
+  - scores
+  - standings
+  - fotos
+
+## ignore listing templates
+#ignore_listing: true
