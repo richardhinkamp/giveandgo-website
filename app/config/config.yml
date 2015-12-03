@@ -428,3 +428,7 @@ theme_path: /app/theme
 #        disable: true     # Disable news panel. Defaults to false. "Alerts" will still be shown.
 #    stack:
 #        disable: true     # Disable stack usage. Defaults to false.
+
+bolt_picasa:
+  album_slug: foto-albums
+  photo_slug: fotos

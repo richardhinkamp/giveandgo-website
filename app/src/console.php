@@ -11,5 +11,5 @@ $application->setName("Give & Go console tool");
 $application->setVersion($app->getVersion());
 $application->add(new Giveandgo\Console\SyncTeamScore($app));
 $application->add(new Giveandgo\Console\SyncTeamStandings($app));
-//$application->add(new BoltPicasa\Console\SyncPicasa($app));
+$application->add(new BoltPicasa\Console\SyncPicasa($app));
 $application->run();
