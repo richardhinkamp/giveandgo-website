@@ -10,7 +10,7 @@ wedstrijdverslagen:
             class: large
         slug:
             type: slug
-            uses: [team_id,title]
+            uses: [season,team_id,title]
         date:
             type: date
         auteur:
@@ -21,13 +21,16 @@ wedstrijdverslagen:
             type: select
             label: Team
             values: [ U10, U12, U14, U16, U16M, U18, U18M, U20, D1, H1, H2, RC ]
+        season:
+            type: text
+            default: "2015-2016"
+            class: verynarrow
+            variant: inline
         teaser:
             type: textarea
         body:
             type: html
             height: 300px
-        old_id:
-            type: integer
     record_template: wedstrijdverslagen-detail.twig
     listing_template: layout/news-list.twig
     listing_records: 10
