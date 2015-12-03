@@ -18,7 +18,8 @@
         "bolt/bolt": "~2.2",
         "composer/composer": "1.0.*@dev",
         "ircmaxell/random-lib": "dev-master",
-        "jlong/sass-twitter-bootstrap": "3.0.*"
+        "jlong/sass-twitter-bootstrap": "3.0.*",
+        "guzzle/guzzle": "3.3.*"
     },
     "require-dev": {
     },

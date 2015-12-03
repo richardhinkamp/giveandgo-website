@@ -36,13 +36,13 @@ class SyncTeamScore extends BaseCommand
     }
 
     protected function doTeam($teamId, $nbbTeamId) {
-        $json = $this->guzzleclient->get('?szn_Naam='.$this->app['season'].'&plg_ID='.$nbbTeamId)->send()->getBody(true);
+        $json = $this->guzzleclient->get('?szn_Naam='.$this->app['config']->get('general/season').'&plg_ID='.$nbbTeamId)->send()->getBody(true);
         if ($json) {
             $dummy = array();
-            $scores = $this->app['storage']->getContent('scores',array('limit'=>9999),$dummy,array('team_id'=>$teamId,'season'=>$this->app['season']));
+            $scores = $this->app['storage']->getContent('scores',array('limit'=>9999),$dummy,array('team_id'=>$teamId,'season'=>$this->app['config']->get('general/season')));
             $baseGame = new \Bolt\Content($this->app,'scores',array());
             $baseGame->values['team_id'] = $teamId;
-            $baseGame->values['season'] = $this->app['season'];
+            $baseGame->values['season'] = $this->app['config']->get('general/season');
             $baseGame->values['slug'] = '';
             $baseGame->values['username'] = 'richard';
             $baseGame->values['status'] = 'published';

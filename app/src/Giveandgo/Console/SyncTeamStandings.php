@@ -36,13 +36,13 @@ class SyncTeamStandings extends BaseCommand
     }
 
     protected function doTeam($teamId,$nbbCompId) {
-        $json = $this->guzzleclient->get('?seizoen='.$this->app['season'].'&cmp_ID='.$nbbCompId)->send()->getBody(true);
+        $json = $this->guzzleclient->get('?seizoen='.$this->app['config']->get('general/season').'&cmp_ID='.$nbbCompId)->send()->getBody(true);
         if ($json) {
             $dummy = array();
-            $standings = $this->app['storage']->getContent('standings',array('limit'=>9999),$dummy,array('team_id'=>$teamId,'season'=>$this->app['season']));
+            $standings = $this->app['storage']->getContent('standings',array('limit'=>9999),$dummy,array('team_id'=>$teamId,'season'=>$this->app['config']->get('general/season')));
             $baseGame = new \Bolt\Content($this->app,'standings',array());
             $baseGame->values['team_id'] = $teamId;
-            $baseGame->values['season'] = $this->app['season'];
+            $baseGame->values['season'] = $this->app['config']->get('general/season');
             $baseGame->values['slug'] = '';
             $baseGame->values['username'] = 'richard';
             $baseGame->values['status'] = 'published';
