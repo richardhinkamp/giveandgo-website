@@ -154,6 +154,7 @@ scores:
     name: Scores
     singular_name: Score
     show_on_dashboard: false
+    show_in_menu: false
     fields:
         team_id:
             type: select
@@ -184,6 +185,7 @@ standings:
     name: Standings
     singular_name: Standing
     show_on_dashboard: false
+    show_in_menu: false
     fields:
         team_id:
             type: select
@@ -251,6 +253,7 @@ picasa_photo:
     singular_name: Foto
     singular_slug: foto
     show_on_dashboard: false
+    show_in_menu: false
     fields:
         album_id:
             type: integer
