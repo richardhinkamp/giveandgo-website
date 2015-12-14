@@ -13,6 +13,8 @@ DirectoryIndex index.php index.html index.htm
   RewriteCond %{HTTP_HOST} !.dev$
   RewriteCond %{HTTP_HOST} !^www\. [NC]
   RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  RewriteRule ^upload/(.+)$ ./upload_old/$1 [L]
   
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
