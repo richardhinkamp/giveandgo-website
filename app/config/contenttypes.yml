@@ -16,7 +16,7 @@ wedstrijdverslagen:
         auteur:
             type: select
             label: Auteur
-            values: [ "", "Give & Go", "Ed Nawijn", "Karin Mateman", "Bestuur", "Edward Jansen", "Tom Eugelink", "Richard Hinkamp", "Bart Demkes", "Frank Hakstege", "Foeke Wybrandi" ]
+            values: [ "", "Give & Go", "Ed Nawijn", "Karin Mateman", "Bestuur", "Edward Jansen", "Tom Eugelink", "Richard Hinkamp", "Bart Demkes", "Frank Hakstege", "Foeke Wybrandi", "Marleen Scholten" ]
         team_id:
             type: select
             label: Team
