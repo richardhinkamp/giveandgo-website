@@ -47,7 +47,7 @@
                     {% endfor %}
                 </table>
                 <div class="standings-graph">
-                    <img src="http://west.basketball.nl/db/graphs/grph_multiline_stand.pl?szn_Naam={{ app.config.get('general/season') }}&cmp_ID={{ record.nbb_competitie_id }}&date={{ "now"|date("Y-m-d") }}" alt="Stand grafiek">
+                    <img src="http://db.basketball.nl/db/graphs/grph_multiline_stand.pl?szn_Naam={{ app.config.get('general/season') }}&cmp_ID={{ record.nbb_competitie_id }}&date={{ "now"|date("Y-m-d") }}" alt="Stand grafiek">
                 </div>
             {% else %}
                 <p>Nog geen gegevens beschikbaar.</p>
