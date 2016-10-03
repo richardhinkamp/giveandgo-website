@@ -16,11 +16,11 @@ wedstrijdverslagen:
         auteur:
             type: select
             label: Auteur
-            values: [ "", "Give & Go", "Ed Nawijn", "Karin Mateman", "Bestuur", "Edward Jansen", "Tom Eugelink", "Richard Hinkamp", "Bart Demkes", "Frank Hakstege", "Foeke Wybrandi", "Marleen Scholten", "Igor Hoogakker" ]
+            values: [ "", "Give & Go", "Ed Nawijn", "Karin Mateman", "Bestuur", "Edward Jansen", "Tom Eugelink", "Richard Hinkamp", "Bart Demkes", "Frank Hakstege", "Foeke Wybrandi", "Marleen Scholten", "Igor Hoogakker", "Marca Adema" ]
         team_id:
             type: select
             label: Team
-            values: [ U10, U12, U14, U16, U16M, U18, U18M, U20, D1, H1, H2, RC ]
+            values: [ U10, U12, U14, U16, U16M, U18, U18M, U20M, U20, D1, H1, H2, RC ]
         season:
             type: text
             default: "2015-2016"
@@ -132,7 +132,7 @@ teams:
         team_id:
             type: select
             label: Team
-            values: [ U10, U12, U14, U16, U16M, U18, U18M, U20, D1, H1, H2, RC ]
+            values: [ U10, U12, U14, U16, U16M, U18, U18M, U20M, U20, D1, H1, H2, RC ]
         nbb_competitie_id:
             type: integer
             label: NBB Competitie ID
@@ -159,11 +159,11 @@ scores:
         team_id:
             type: select
             label: Team
-            values: [ U10, U12, U14, U16, U16M, U18, U18M, U20, D1, H1, H2, RC ]
+            values: [ U10, U12, U14, U16, U16M, U18, U18M, U20M, U20, D1, H1, H2, RC ]
         season:
             type: select
             label: Seizoen
-            values: [ 2012-2013, 2013-2014, 2014-2015 ]
+            values: [ 2012-2013, 2013-2014, 2014-2015, 2015-2016, 2016-2017 ]
         datetime:
             type: datetime
             label: Datum + tijd
@@ -190,11 +190,11 @@ standings:
         team_id:
             type: select
             label: Team
-            values: [ U10, U12, U14, U16, U16M, U18, U18M, U20, D1, H1, H2, RC ]
+            values: [ U10, U12, U14, U16, U16M, U18, U18M, U20M, U20, D1, H1, H2, RC ]
         season:
             type: select
             label: Seizoen
-            values: [ 2012-2013, 2013-2014, 2014-2015 ]
+            values: [ 2012-2013, 2013-2014, 2014-2015, 2015-2016, 2016-2017 ]
         place:
             type: integer
             label: Plek
