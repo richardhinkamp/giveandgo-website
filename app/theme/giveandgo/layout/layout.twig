@@ -77,7 +77,7 @@
 
                     <li class="dropdown {% if fotoalbums is defined or ( record is defined and record.contenttype.slug == "foto-album" ) %}active{% endif %}">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Foto's">Foto's</a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu pull-right">
                             {% setcontent albums = "foto-album/latest/10" %}
                             {% for entry in albums %}
                                 <li>
