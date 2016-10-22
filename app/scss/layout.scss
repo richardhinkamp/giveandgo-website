@@ -121,6 +121,13 @@ section table {
   }
 }
 
+@media(min-width:767px) {
+  .navbar-nav.pull-right>li>.dropdown-menu, 
+  .navbar-nav>li>.dropdown-menu.pull-right {
+    left: auto !important;
+  }
+}
+
 @media(max-width:767px) {
   .navbar-default .navbar-nav .open .dropdown-menu>li>a {
     color: $textPrimaryColor;
