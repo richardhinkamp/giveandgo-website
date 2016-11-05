@@ -8,11 +8,17 @@
             </article>
         </div>
         <div class="col-md-3">
-            <h3><a href="/mededelingen">Mededelingen</a></h3>
-            {% setcontent entries = "/mededelingen/latest/3" %}
-            {% for entry in entries %}
+            <h3>Laatste berichten</h3>
+            {% setcontent mededelingen = "/mededelingen/latest/3" %}
+            {% setcontent verslagen = "/wedstrijdverslagen/latest/3" %}
+            {% set messages = mededelingen|merge(verslagen)|articleDateSort|slice(0,4) %}
+            {% for entry in messages %}
                 <div class="icon-item">
-                    <h4><a href="{{ entry.link }}" title="entry.title }}">{{ entry.title }}</a></h4>
+                    {% if entry.team_id %}
+                    <h4><a href="{{ entry.link }}" title="{{ entry.team_id ~ ": " ~ entry.title }}">{{ entry.team_id ~ ": " ~ entry.title }}</a></h4>
+                    {% else %}
+                    <h4><a href="{{ entry.link }}" title="{{ entry.title }}">{{ entry.title }}</a></h4>
+                    {% endif %}
                     {{ entry.date|date("d-m-Y")}}
                     {% if entry.auteur %}
                         - {{ entry.auteur }}
@@ -21,17 +27,38 @@
             {% endfor %}
         </div>
         <div class="col-md-3">
-            <h3><a href="/wedstrijdverslagen">Wedstrijdverslagen</a></h3>
-            {% setcontent entries = "/wedstrijdverslagen/latest/3" %}
-            {% for entry in entries %}
-                <div class="icon-item">
-                    <h4><a href="{{ entry.link }}" title="{{ ( entry.team_id ? entry.team_id ~ ": " ) ~ entry.title }}">{{ ( entry.team_id ? entry.team_id ~ ": " ) ~ entry.title }}</a></h4>
-                    {{ entry.date|date("d-m-Y")}}
-                    {% if entry.auteur %}
-                        - {{ entry.auteur }}
-                    {% endif %}
+            {% setcontent entries = "scores/" where { season: app.config.get('general/season') } orderby '-datetime' %}
+            {% set results = entries|filterResultsHome %}
+            {% if results is not empty %}
+                <div class="latest-results">
+                    <h3>Laatste uitslagen</h3>
+                    <ol class="latest-results">
+                        {% for entry in results %}
+                            <li>
+                                {{ entry|getTeamFromGameResult }}
+                                {{ entry|getOpponentFromGameResult }}
+                                <span class="result {{ entry|getWinLoseGameResult }}">{{ entry.score_home }} - {{ entry.score_away }}</span>
+                            </li>
+                        {% endfor %}
+                    </ol>
                 </div>
-            {% endfor %}
+            {% endif %}
+            {% setcontent entries = "scores/" where { season: app.config.get('general/season'), score_home: 0, score_away: 0 } orderby 'datetime' %}
+            {% set nextGames = entries|filterNextGamesHome %}
+            {% if nextGames is not empty %}
+                <div class="latest-results">
+                    <h3 class="next-games">Volgende wedstrijden</h3>
+                    <ol class="latest-results">
+                        {% for entry in nextGames %}
+                            <li>
+                                <span class="datetime">{{ entry.datetime|date("d-m H:i") }}</span>
+                                {{ entry|getTeamFromGameResult }}
+                                {{ entry|getOpponentFromGameResult }}
+                            </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

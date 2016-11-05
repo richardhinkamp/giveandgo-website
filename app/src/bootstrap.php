@@ -13,3 +13,5 @@ $configuration->setPath("themebase", "$dir/theme");
 $configuration->verify();
 $app = new Bolt\Application(array('resources'=>$configuration));
 $app->initialize();
+
+require_once(__DIR__ . '/twig-ext.php');

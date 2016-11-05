@@ -184,6 +184,47 @@ footer {
   }
 }
 
+.latest-results {
+  text-align: center;
+  
+  h3 {
+    padding-top: 0;
+    font-size: 22px;
+    
+    &.next-games {
+      margin-top: 25px;
+      font-size: 20px;
+    }
+  }
+  
+  ol {
+    list-style: none;
+    padding-left: 0 !important;
+  }
+  
+  .datetime {
+    font-size: 90%;
+  }
+  
+  .result {
+    font-weight: bold;
+  }
+}
+
+.result {
+  &.win {
+    color: green;
+  }
+  &.lose {
+    color: red;
+  }
+  &.unplayed {
+    .score {
+      display: none;
+    }
+  }
+}
+
 // Own special pages
 @import "photos";
 @import "team";

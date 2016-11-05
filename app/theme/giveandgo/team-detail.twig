@@ -37,7 +37,7 @@
                     {% for entry in entries %}
                         <tr>
                             <td class="place">{{ entry.place }}</td>
-                            <td class="team">{{ entry.team_name }}</td>
+                            <td class="team{% if entry.team_name starts with 'Pytheas' %} own-team{% endif %}">{{ entry.team_name }}</td>
                             <td class="played">{{ entry.played }}</td>
                             <td class="points">{{ entry.points }}</td>
                             <td class="goal_difference">{{ entry.goal_difference }}</td>
@@ -66,8 +66,12 @@
                     {% for entry in entries %}
                         <tr>
                             <td class="datetime">{{ entry.datetime|date("d-m H:i") }}</td>
-                            <td class="team_home">{{ entry.team_home }}</td>
-                            <td class="result">{{ entry.score_home }} - {{ entry.score_away }}</td>
+                            <td class="team_home{% if entry.team_name starts with 'p' %} own-team{% endif %}">{{ entry.team_home }}</td>
+                            <td class="result {{ entry|getWinLoseGameResult }}">
+                                <span class="score">{{ entry.score_home }}</span>
+                                -
+                                <span class="score">{{ entry.score_away }}</span>
+                            </td>
                             <td class="team_away">{{ entry.team_away }}</td>
                         </tr>
                     {% endfor %}
