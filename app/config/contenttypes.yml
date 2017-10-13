@@ -23,8 +23,8 @@ wedstrijdverslagen:
             values: [ U10, U12, U14, U16, U16M, U18, U18M, U20M, U20, D1, H1, H2, RC ]
         season:
             type: text
-            default: "2015-2016"
-            class: verynarrow
+            default: "2017-2018"
+            class: narrow
             variant: inline
         teaser:
             type: textarea
