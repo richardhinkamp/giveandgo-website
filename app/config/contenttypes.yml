@@ -20,10 +20,10 @@ wedstrijdverslagen:
         team_id:
             type: select
             label: Team
-            values: [ U10, U12, U14, U16, U16M, U18, U18M, U20M, U20, D1, H1, H2, RC ]
+            values: [ X16, M18, V22, U10, U12, U14, U16, U16M, U18, U18M, U20M, U20, D1, H1, H2, RC ]
         season:
             type: text
-            default: "2017-2018"
+            default: "2018-2019"
             class: narrow
             variant: inline
         teaser:
@@ -132,7 +132,7 @@ teams:
         team_id:
             type: select
             label: Team
-            values: [ U10, U12, U14, U16, U16M, U18, U18M, U20M, U20, D1, H1, H2, RC ]
+            values: [ X16, M18, V22, U10, U12, U14, U16, U16M, U18, U18M, U20M, U20, D1, H1, H2, RC ]
         nbb_competitie_id:
             type: integer
             label: NBB Competitie ID
@@ -159,11 +159,11 @@ scores:
         team_id:
             type: select
             label: Team
-            values: [ U10, U12, U14, U16, U16M, U18, U18M, U20M, U20, D1, H1, H2, RC ]
+            values: [ X16, M18, V22, U10, U12, U14, U16, U16M, U18, U18M, U20M, U20, D1, H1, H2, RC ]
         season:
             type: select
             label: Seizoen
-            values: [ 2012-2013, 2013-2014, 2014-2015, 2015-2016, 2016-2017 ]
+            values: [ 2012-2013, 2013-2014, 2014-2015, 2015-2016, 2016-2017, 2017-2018, 2018-2019 ]
         datetime:
             type: datetime
             label: Datum + tijd
@@ -190,11 +190,11 @@ standings:
         team_id:
             type: select
             label: Team
-            values: [ U10, U12, U14, U16, U16M, U18, U18M, U20M, U20, D1, H1, H2, RC ]
+            values: [ X16, M18, V22, U10, U12, U14, U16, U16M, U18, U18M, U20M, U20, D1, H1, H2, RC ]
         season:
             type: select
             label: Seizoen
-            values: [ 2012-2013, 2013-2014, 2014-2015, 2015-2016, 2016-2017 ]
+            values: [ 2012-2013, 2013-2014, 2014-2015, 2015-2016, 2016-2017, 2017-2018, 2018-2019 ]
         place:
             type: integer
             label: Plek
